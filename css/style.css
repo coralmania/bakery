@@ -5,7 +5,9 @@
 /* Base */
 html {
   overflow-x: hidden; }
-
+  .error{
+    color:red;
+  }
 body {
   line-height: 1.7;
   color: gray;

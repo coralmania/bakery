@@ -70,7 +70,7 @@ session_start();
                   <li><a href="shop.html" class="nav-link text-left">Shop</a></li>
                   <li><a href="contact.html" class="nav-link text-left">Contact</a></li>
                   <?php if (!isset($_SESSION['user_name'])): ?>
-                    <li><a href="loginPage.php" class="nav-link text-left">Login</a></li>
+                    <li> <span class="nav-link text-left"> <a href="loginPage.php">Login</a>|<a href="signinPage.php" class="">Signin</a></span></li>
                   <?php else: ?>
                     <li><a href="logout.php" class="nav-link text-left">Logout</a></li>
                   <?php endif; ?>

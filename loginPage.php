@@ -1,9 +1,4 @@
 <?php require('template/head.php') ?>
-<style media="screen">
-  .error{
-    color:red;
-  }
-</style>
 <br><br><br><br><br>
 <div class="form">
   <form method="POST">
@@ -19,6 +14,7 @@
       <small id="passwordErrorMsg" class="error"></small>
     </div>
     <input  class="btn btn-primary" onclick="login()" value="Submit"></input>
+    <p><a href="signinPage.php">Dont have an Account?</a></p>
   </form>
 </div>
 <?php include('template/footer.php') ?>

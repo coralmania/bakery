@@ -43,8 +43,93 @@ function clearMsg(inputs){
 }
 
 
+  function signin(){
+    var valid_signin = true;
+
+    var emailInputErrorMsg = $('#emailErrorMsg');
+    var passwordInputErrorMsg = $('#passwordErrorMsg');
+
+    var fnameInputErrorMsg = $('#fnameErrorMsg');
+    var lnameInputErrorMsg = $('#lnameErrorMsg');
+    var phoneInputErrorMsg = $('#phoneErrorMsg');
+    var rePasswordInputErrorMsg = $('#re-passwordErrorMsg');
+    var inputs = [
+      emailInputErrorMsg,
+      passwordInputErrorMsg,
+      fnameInputErrorMsg,
+      lnameInputErrorMsg,
+      phoneInputErrorMsg,
+      rePasswordInputErrorMsg
+    ];
+    clearMsg(inputs);
+    var emailInput = $(document.querySelector('input[name="email"]')).val();
+    var passwordInput = $(document.querySelector('input[name="password"]')).val();
+    var fnameInput = $(document.querySelector('input[name="fname"]')).val();
+    var lnameInput = $(document.querySelector('input[name="lname"]')).val();
+    var phoneInput = $(document.querySelector('input[name="phone"]')).val();
+    var rePasswordInput = $(document.querySelector('input[name="re_password"]')).val();
+
+    if (!checkIfEmailValid(emailInput)) {
+      emailInputErrorMsg.html('A valid email is requierd');
+      valid_signin = false;
+    }
+    if (!checkIfPasswordValid(passwordInput)) {
+      passwordInputErrorMsg.html('password is requierd');
+      valid_signin = false;
+    }
+    if (!checkIfStringValid(fnameInput)) {
+      fnameInputErrorMsg.html('First name is requiered');
+      valid_signin = false;
+    }
+    if (!checkIfStringValid(lnameInput)) {
+      lnameInputErrorMsg.html('Last name is requiered');
+      valid_signin = false;
+    }
+    if (!checkIfPhoneValid(phoneInput)) {
+      phoneInputErrorMsg.html('Enter a valid Phone number');
+      valid_signin = false;
+    }
+    if (!checkIfRePasswordValid(passwordInput , rePasswordInput)) {
+      rePasswordInput.html('Confirm your password');
+      valid_signin = false;
+    }
+
+
+    if (valid_signin) {
+      $.ajax({
+        url: "server/signin.php",
+        type:'POST',
+        data:{
+          email:emailInput,
+          password:passwordInput,
+          fname:fnameInput,
+          lname:lnameInput,
+          phone:phoneInput,
+          re_password:rePasswordInput
+        },
+        success:function (data){
+          console.log(data);
+        }
+      })
+    }
+  }
+
+
+function checkIfRePasswordValid(password , rePasswordInput){
+  if (password === rePasswordInput) {
+    return true;
+  }
+}
+
+
+function checkIfPhoneValid(input){
+  if (Number(input) && new RegExp(/^\d{10}$/).test(input)) {
+    return true;
+  }
+}
+
+
 function checkEnter(e){
-  console.log(e);
   if (e.key === 'Enter') {
     login();
   }
@@ -56,6 +141,11 @@ function checkIfPasswordValid(input){
   }
 }
 
+function checkIfStringValid(input){
+  if (input && input.length >= 1) {
+    return true;
+  }
+}
 
 
 
