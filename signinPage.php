@@ -5,7 +5,8 @@ include('template/head.php');
 
 <br><br>
 <center><h1>SignIn</h1></center>
-<div class="form">
+<div class="row">
+<div class="col-md-12 col-lg-6 offset-lg-3">
   <form method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
@@ -48,8 +49,8 @@ include('template/head.php');
     <input  class="btn btn-primary" onclick="signin()" onkeyup="checkEnter(event)" value="Submit"></input>
     <p><a href="loginPage.php">Already Signed ?</a></p>
   </form>
-</div>
-
+  </div>
+  </div>
 
 <?php
 

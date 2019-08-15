@@ -1,6 +1,7 @@
 <?php require('template/head.php') ?>
 <br><br><br><br><br>
-<div class="form">
+<div class="row">
+<div class="col-md-12 col-lg-6 offset-lg-3">
   <form method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
@@ -16,5 +17,6 @@
     <input  class="btn btn-primary" onclick="login()" value="Submit"></input>
     <p><a href="signinPage.php">Dont have an Account?</a></p>
   </form>
+  </div>
 </div>
 <?php include('template/footer.php') ?>
