@@ -43,12 +43,35 @@ function clearMsg(inputs){
 }
 
 
+function onSignIn(googleUser){
+  var token = googleUser.getAuthResponse().id_token;
+  if(token){
+    $.ajax({
+      url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
+      success:function (data){
+        if(data){
+          googleLogin(data);
+        }
+      }
+    })
+  }
+}
+
+  function googleLogin(data){
+    $.ajax({
+      url:'server/logedInGoogle.php',
+      data:{user_info:data},
+      type:'POST',
+      success:function (data){
+        window.location =  'index.php';
+      }
+    })
+  }
+
   function signin(){
     var valid_signin = true;
-
     var emailInputErrorMsg = $('#emailErrorMsg');
     var passwordInputErrorMsg = $('#passwordErrorMsg');
-
     var fnameInputErrorMsg = $('#fnameErrorMsg');
     var lnameInputErrorMsg = $('#lnameErrorMsg');
     var phoneInputErrorMsg = $('#phoneErrorMsg');
