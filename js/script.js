@@ -43,7 +43,7 @@ function clearMsg(inputs){
 }
 
 
-function onSignIn(googleUser){
+function onLogIn(googleUser){
   var token = googleUser.getAuthResponse().id_token;
   if(token){
     $.ajax({
@@ -56,6 +56,93 @@ function onSignIn(googleUser){
     })
   }
 }
+
+function onSignIn(googleUser){
+  var token = googleUser.getAuthResponse().id_token;
+  if(token){
+    $.ajax({
+      url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
+      success:function (data){
+        if(data){
+          if (isUserExists(data)) {
+            // alert();
+            // window.location = 'index.php';
+          }else{
+            fillInForm(data);
+          }
+        }
+      }
+    })
+  }
+}
+function isUserExists(data){
+  $.ajax({
+    url:'server/checkUser.php',
+    type:'POST',
+    acync:true,
+    data:{data:data},
+    success:function (data_temp){
+      if (data_temp == 'have') {
+        $.ajax({
+          url:'server/logedInGoogle.php',
+          data:({user_info:data}),
+          type:'POST',
+          success:function (data){
+            window.location = 'index.php';
+          }
+        })
+      }
+    }
+  })
+}
+
+function fillInForm(data){
+    let email = document.querySelector('input[name="email"]');
+    email = $(email);
+    email.val(data.email);
+    email.attr('disabled' , true)
+
+    let fname = document.querySelector('input[name="fname"]');
+    fname = $(fname);
+    fname.val(data.given_name)
+    fname.attr('disabled' , true)
+
+    let lname = document.querySelector('input[name="lname"]');
+    lname = $(lname);
+    lname.val(data.family_name)
+    lname.attr('disabled' , true)
+
+
+    let passwords = document.querySelectorAll('div[data-id="password"]');
+    passwords.forEach(function (element){
+      element_temp = $(element).find('input');
+      element_temp.val(data.at_hash);
+      element_temp.attr('disabled' , true)
+      $(element).hide(300)
+    })
+
+    var pgoneMsgGoogle = $('#phoneMsgGoogle');
+    console.log(phoneMsgGoogle);
+    pgoneMsgGoogle.text('We Got you info from google, phone requerd');
+    pgoneMsgGoogle.css({
+      "color":"green"
+    })
+    let phone = document.querySelector('input[name="phone"]');
+    phone = $(phone);
+    phone.css({
+      'border': '2px solid green'
+    })
+    phone.focus();
+
+
+
+
+
+
+}
+
+
+
 
   function googleLogin(data){
     $.ajax({
@@ -113,10 +200,9 @@ function onSignIn(googleUser){
       valid_signin = false;
     }
     if (!checkIfRePasswordValid(passwordInput , rePasswordInput)) {
-      rePasswordInput.html('Confirm your password');
+      rePasswordInputErrorMsg.html('Confirm your password');
       valid_signin = false;
     }
-
 
     if (valid_signin) {
       $.ajax({
@@ -131,7 +217,13 @@ function onSignIn(googleUser){
           re_password:rePasswordInput
         },
         success:function (data){
-          console.log(data);
+          if (data == 'OK') {
+            window.location = 'index.php';
+          }else if(data == 'have') {
+            var msg = $('#emailHelp');
+              msg.html('This Email is taken <a href="loginPage.php" > Maby its yours</a>')
+              msg.focus();
+          }
         }
       })
     }

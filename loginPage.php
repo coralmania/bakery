@@ -1,4 +1,4 @@
-<?php 
+<?php
 require('template/head.php');
 if(isset($_SESSION['user_name'])){
   header('location: index.php');
@@ -25,7 +25,7 @@ if(isset($_SESSION['user_name'])){
       <input  class="btn btn-primary" onclick="login()" value="Submit"></input>
       <p><a href="signinPage.php">Dont have an Account?</a></p>
     </form>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="g-signin2" data-onsuccess="onLogIn"></div>
     </div>
 </div>
 <?php include('template/footer.php') ?>

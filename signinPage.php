@@ -30,16 +30,18 @@ include('template/head.php');
     <div class="form-group">
       <label for="exampleInputPhone">Phone Number</label>
       <input type="text" name="phone" class="form-control" onkeyup="checkEnter(event)" placeholder="Phone Number">
+      <small id="phoneMsgGoogle" class=""></small>
+      <br>
       <small id="phoneErrorMsg" class="error"></small>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" data-id="password">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" name="password" class="form-control" onkeyup="checkEnter(event)" id="exampleInputPassword1" placeholder="Password">
       <small id="passwordErrorMsg" class="error"></small>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" data-id="password">
       <label for="exampleInputPassword2">Re-Password</label>
       <input type="password" name="re_password" class="form-control" onkeyup="checkEnter(event)"  placeholder="Confirm">
       <small id="re-passwordErrorMsg" class="error"></small>
@@ -49,6 +51,9 @@ include('template/head.php');
     <input  class="btn btn-primary" onclick="signin()" onkeyup="checkEnter(event)" value="Submit"></input>
     <p><a href="loginPage.php">Already Signed ?</a></p>
   </form>
+  <h2>Or</h2>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
   </div>
   </div>
 

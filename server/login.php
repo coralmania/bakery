@@ -9,7 +9,7 @@ if (checkIfEmailValid($email) && checkIfPasswordValid($password)) {
   if ($result = $connection->query($sql)) {
     if ($result->num_rows == 1) {
       $row = $result->fetch_assoc();
-      if ($row['password'] === $password) {
+      if (password_verify($password, $row['password'])) {
         $_SESSION['user_name'] = $row['fname'];
         $_SESSION['user_role'] = $row['role'];
         echo 'OK';
