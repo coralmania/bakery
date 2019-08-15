@@ -1,8 +1,9 @@
 <?php
 define("DB_HOST", "localhost");
-define("DB_USER", "admin");
+define("DB_USER", "coralma_admin");
 define("DB_PASSWORD", "adminpass");
-define("DB", "konditor");
+define("DB", "coralma_bakery");
+
 
 
 function checkIfEmailValid($str){
