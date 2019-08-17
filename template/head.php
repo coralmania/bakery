@@ -1,5 +1,11 @@
 <?php
 session_start();
+$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+include('server/Cart.php');
+$cart = new Cart();
+
+
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +27,9 @@ session_start();
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="css/style.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
@@ -58,7 +67,7 @@ session_start();
                     <li class="active"><a href="index.php" class="nav-link text-left">Home</a></li>
                     <li><a href="about.php" class="nav-link text-left">About</a></li>
                     <li><a href="shop.php" class="nav-link text-left">Wines</a></li>
-                    <li><a href="shop.php" class="nav-link text-left">Shop</a></li>
+                    <li><a href="shopPage.php" class="nav-link text-left">Shop</a></li>
                     <li><a href="contact.php" class="nav-link text-left">Contact</a></li>
                     <?php if (!isset($_SESSION['user_name'])): ?>
                       <li> <a href="loginPage.php" class="nav-link text-left">Login</a></li>
@@ -66,6 +75,10 @@ session_start();
                     <?php else: ?>
                       <li><a href="logout.php" class="nav-link text-left">Logout</a></li>
                     <?php endif; ?>
+                      <li>
+                        <i class="fa" style="font-size:24px">&#xf07a;</i>
+                        <span class='badge badge-warning' id='lblCartCount'> <?php echo $cart->getTotalCart()->total ?> </span>
+                      </li>
                   </ul>
                 </nav>
               </div>

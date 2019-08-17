@@ -1,0 +1,23 @@
+[17-Aug-2019 12:19:26 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/coralma/public_html/shopPage.php on line 3
+[17-Aug-2019 12:19:31 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/coralma/public_html/shopPage.php on line 3
+[17-Aug-2019 12:19:54 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/coralma/public_html/shopPage.php on line 3
+[17-Aug-2019 12:20:06 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/coralma/public_html/shopPage.php on line 3
+[17-Aug-2019 12:24:10 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/coralma/public_html/shopPage.php on line 6
+[17-Aug-2019 12:25:01 UTC] PHP Warning:  setcookie() expects parameter 2 to be string, array given in /home/coralma/public_html/shopPage.php on line 8
+[17-Aug-2019 12:36:40 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/shopPage.php on line 17
+[17-Aug-2019 12:36:54 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/template/head.php on line 77
+[17-Aug-2019 12:37:32 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/template/head.php on line 77
+[17-Aug-2019 12:43:33 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/shopPage.php on line 9
+[17-Aug-2019 12:57:48 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/template/head.php on line 12
+[17-Aug-2019 14:18:04 UTC] PHP Warning:  include(Cart.php): failed to open stream: No such file or directory in /home/coralma/public_html/template/head.php on line 3
+[17-Aug-2019 14:18:04 UTC] PHP Warning:  include(Cart.php): failed to open stream: No such file or directory in /home/coralma/public_html/template/head.php on line 3
+[17-Aug-2019 14:18:04 UTC] PHP Warning:  include(): Failed opening 'Cart.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/template/head.php on line 3
+[17-Aug-2019 15:08:49 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/coralma/public_html/server/Cart.php on line 25
+[17-Aug-2019 15:22:18 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/server/Cart.php on line 11
+[17-Aug-2019 15:22:20 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/server/Cart.php on line 11
+[17-Aug-2019 15:23:48 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/coralma/public_html/server/Cart.php on line 11
+[17-Aug-2019 15:24:28 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/coralma/public_html/server/Cart.php on line 13
+[17-Aug-2019 15:24:37 UTC] PHP Warning:  in_array() expects parameter 2 to be array, object given in /home/coralma/public_html/server/Cart.php on line 30
+[17-Aug-2019 15:26:44 UTC] PHP Warning:  Attempt to assign property of non-object in /home/coralma/public_html/server/Cart.php on line 33
+[17-Aug-2019 15:35:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/server/Cart.php on line 34
+[17-Aug-2019 15:44:32 UTC] PHP Fatal error:  Using $this when not in object context in /home/coralma/public_html/shopPage.php on line 15
