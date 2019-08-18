@@ -18,18 +18,18 @@ include('template/head.php');
               <div class="form-group row">
                 <div class="col-md-6">
                   <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_fname" name="c_fname" value="<?php echo $_SESSION['user_name'] ?>">
+                  <input type="text" class="form-control" id="c_fname" name="c_fname" value="<?php if ($_SESSION['user_name'] ) {echo $_SESSION['user_name'];}?>">
                 </div>
                 <div class="col-md-6">
                   <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_lname" name="c_lname">
+                  <input type="text" class="form-control" id="c_lname" name="c_lname" value="<?php if ($_SESSION['user_lname'] ) {echo $_SESSION['user_lname'];}?>">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
                   <label for="c_companyname" class="text-black">Phone </label>
-                  <input type="text" class="form-control" id="c_companyname" name="phone">
+                  <input type="text" class="form-control" id="c_companyname" name="phone" value="<?php if ($_SESSION['user_phone'] ) {echo $_SESSION['user_phone'];}?>">
                 </div>
               </div>
 
@@ -48,50 +48,23 @@ include('template/head.php');
                       <th>Total</th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Bioderma <strong class="mx-2">x</strong> 1</td>
-                        <td>$55.00</td>
-                      </tr>
-                      <tr>
-                        <td>Ibuprofeen <strong class="mx-2">x</strong> 1</td>
-                        <td>$45.00</td>
-                      </tr>
-                      <tr>
-                        <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">$350.00</td>
-                      </tr>
+                      <?php foreach ($cart->totalCart as $key => $value): ?>
+                        <?php if ($key != 'total'): ?>
+                          <tr>
+                            <td><?php echo $key ?><strong class="mx-2">x</strong> <?php echo $value ?></td>
+                            <td><?php echo $value * $cart->getPrice($key) ?>$</td>
+                          </tr>
+                      <?php endif; ?>
+                    <?php endforeach; ?>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                        <td class="text-black font-weight-bold"><strong><?php echo $cart->getOrderTotal() ?>$</strong></td>
                       </tr>
                     </tbody>
                   </table>
 
-                  <div class="border mb-3 p-3 rounded">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button"
-                        aria-expanded="false" aria-controls="collapsebank">Direct Bank Transfer</a></h3>
-
-                    <div class="collapse" id="collapsebank">
-                      <div class="py-2 pl-0">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="border mb-3 p-3 rounded">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button"
-                        aria-expanded="false" aria-controls="collapsecheque">Cheque Payment</a></h3>
-
-                    <div class="collapse" id="collapsecheque">
-                      <div class="py-2 pl-0">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
-                          payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                    </div>
-                  </div>
-
                   <div class="border mb-5 p-3">
+                    <input type="radio" checked name="" value="">
                     <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button"
                         aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
 
@@ -104,8 +77,8 @@ include('template/head.php');
                   </div>
 
                   <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
-                      Order</button>
+                    <a href="placeOrderPage.php" class="btn btn-primary btn-lg btn-block" >Place
+                      Order</a>
                   </div>
 
                 </div>
@@ -117,5 +90,6 @@ include('template/head.php');
         <!-- </form> -->
       </div>
     </div>
+
 
 <?php include('template/footer.php') ?>

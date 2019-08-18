@@ -3,10 +3,7 @@ require('template/head.php');
 if(isset($_SESSION['user_name'])){
   header('location: index.php');
 }
-
 ?>
-
-
 <br><br><br><br><br>
 <div class="row">
   <div class="col-md-12 col-lg-6 offset-lg-3">

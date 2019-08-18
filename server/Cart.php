@@ -12,7 +12,6 @@ class Cart
     if (!$this->totalCart->total) {
       $this->updateSession();
     }
-
   }
 
   private function updateSession(){
@@ -25,6 +24,30 @@ class Cart
 
   public function getTotalCart(){
     return $this->totalCart;
+  }
+
+  public function getPrice($item){
+    switch ($item) {
+      case 'red':
+        return 20;
+        break;
+      case 'green':
+        return 40;
+        break;
+      case 'black':
+        return 100;
+        break;
+    }
+  }
+
+  public function getOrderTotal(){
+    $total = 0;
+    foreach ($this->totalCart as $key => $value) {
+      if ($key != 'total') {
+        $total = $total + ($value * $this->getPrice($key));
+      }
+    }
+    return $total;
   }
 
   public function addToCart($input){

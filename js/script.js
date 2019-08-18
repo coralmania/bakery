@@ -25,7 +25,7 @@ function login(){
           if (data == 'OK') {
             window.location = "index.php";
           }else if(data == 'somthing_not_ok'){
-            passwordInputErrorMsg.html('SOMTHING WENT WRONG');
+            passwordInputErrorMsg.html('Email or password are incorrect');
           }
         }
       })

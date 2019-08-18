@@ -11,13 +11,18 @@ if (checkIfEmailValid($email) && checkIfPasswordValid($password)) {
       $row = $result->fetch_assoc();
       if (password_verify($password, $row['password'])) {
         $_SESSION['user_name'] = $row['fname'];
+        $_SESSION['user_lname'] = $row['lname'];
+        $_SESSION['user_phone'] = $row['phone'];
         $_SESSION['user_role'] = $row['role'];
         echo 'OK';
       }else{
         echo 'somthing_not_ok';
       }
+    }else{
+      echo 'somthing_not_ok';
     }
   }
 }
+die;
 
  ?>
