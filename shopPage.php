@@ -2,16 +2,16 @@
 <?php
 
   if (isset($_POST['green'])) {
+    unset($_POST['green']);
     $cart->addToCart('green');
     $cart->totalCart->green = $cart->totalCart->green+1;
-    unset($_POST['green']);
   }elseif (isset($_POST['black'])) {
-    $cart->addToCart('black');
     unset($_POST['black']);
+    $cart->addToCart('black');
     $cart->totalCart->black = $cart->totalCart->black+1;
   }elseif (isset($_POST['red'])) {
-    $cart->addToCart('red');
     unset($_POST['red']);
+    $cart->addToCart('red');
     $cart->totalCart->red = $cart->totalCart->red+1;
   }
 

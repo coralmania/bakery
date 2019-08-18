@@ -1,10 +1,9 @@
 <?php
 session_start();
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+$userName = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : '';
 include('server/Cart.php');
 $cart = new Cart();
-
-
 
  ?>
 <!DOCTYPE html>
@@ -76,8 +75,9 @@ $cart = new Cart();
                       <li><a href="logout.php" class="nav-link text-left">Logout</a></li>
                     <?php endif; ?>
                       <li>
-                        <i class="fa" style="font-size:24px">&#xf07a;</i>
+                      <a href="cartPage.php"><i class="fa" style="font-size:24px">&#xf07a;</i>
                         <span class='badge badge-warning' id='lblCartCount'> <?php echo $cart->getTotalCart()->total ?> </span>
+                        </a>
                       </li>
                   </ul>
                 </nav>
