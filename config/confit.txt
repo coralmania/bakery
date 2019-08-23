@@ -1,11 +1,19 @@
 
 
-GOOGLE API
-
+#GOOGLE API
 koralsadna@gmail.com --> 0523303435
 
-
-GIT 
+# GIT
 koralimenaya@gmail.com --> Km5522077
 
+# SandboxPayPal
+  Sandbox account
+  koralimenaya-facilitator@gmail.com
+  Client ID
+  AUn_OSD_cNUQDSGRxMmsPKzMdL-o5r_RWWLz00QaGVrBxlqjPqimWQkLS6oPpDQvKS6yBpg4q2TxEle9
+  Secret
+  ECDrzcSzm2ESGhwgmbQJWBNzpsgY2eSALHEyJnzYlWSIOzeLUy8CTeRVhJWUocvfS9BdmFBzhaiOQ8N0
 
+
+b8406884@urhen.com
+Qazxsw!234

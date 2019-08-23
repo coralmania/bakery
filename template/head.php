@@ -26,11 +26,10 @@ $cart = new Cart();
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap">
@@ -63,10 +62,10 @@ $cart = new Cart();
                   <?php if (isset($_SESSION['user_name'])): ?>
                     <li class="active"><a class="nav-link text-left">Welcome <?= $_SESSION['user_name'] ?></a></li>
                     <?php endif; ?>
-                    <li class="active"><a href="index.php" class="nav-link text-left">Home</a></li>
-                    <li><a href="about.php" class="nav-link text-left">About</a></li>
-                    <li><a href="shop.php" class="nav-link text-left">Wines</a></li>
-                    <li><a href="shopPage.php" class="nav-link text-left">Shop</a></li>
+                    <li><a href="index.php" class="nav-link text-left">Home</a></li>
+                    <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
+                    <li><a href="lessonsPage.php" class="nav-link text-left">Lessons</a></li>
+                    <li><a href="shopPage.php" class="nav-link text-left">Factorey Shop</a></li>
                     <li><a href="contact.php" class="nav-link text-left">Contact</a></li>
                     <?php if (!isset($_SESSION['user_name'])): ?>
                       <li> <a href="loginPage.php" class="nav-link text-left">Login</a></li>
@@ -86,3 +85,4 @@ $cart = new Cart();
           </div>
         </div>
     </div>
+    <br><br><br><br><br>

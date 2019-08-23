@@ -1,19 +1,18 @@
 <?php include('template/head.php') ?>
 <?php
-
-  if (isset($_POST['green'])) {
-    unset($_POST['green']);
-    $cart->addToCart('green');
-    $cart->totalCart->green = $cart->totalCart->green+1;
-  }elseif (isset($_POST['black'])) {
-    unset($_POST['black']);
-    $cart->addToCart('black');
-    $cart->totalCart->black = $cart->totalCart->black+1;
-  }elseif (isset($_POST['red'])) {
-    unset($_POST['red']);
-    $cart->addToCart('red');
-    $cart->totalCart->red = $cart->totalCart->red+1;
-  }
+if (isset($_POST['green'])) {
+  unset($_POST['green']);
+  $cart->addToCart('green');
+  $cart->totalCart->green = $cart->totalCart->green+1;
+}elseif (isset($_POST['black'])) {
+  unset($_POST['black']);
+  $cart->addToCart('black');
+  $cart->totalCart->black = $cart->totalCart->black+1;
+}elseif (isset($_POST['red'])) {
+  unset($_POST['red']);
+  $cart->addToCart('red');
+  $cart->totalCart->red = $cart->totalCart->red+1;
+}
 
  ?>
 

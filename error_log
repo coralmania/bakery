@@ -30,3 +30,13 @@
 [17-Aug-2019 16:17:15 UTC] PHP Warning:  Attempt to assign property of non-object in /home/coralma/public_html/server/Cart.php on line 39
 [17-Aug-2019 17:13:22 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/coralma/public_html/server/Cart.php on line 21
 [18-Aug-2019 20:28:30 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/coralma/public_html/cartPage.php on line 125
+[19-Aug-2019 20:18:48 UTC] PHP Warning:  include(templates/head.php): failed to open stream: No such file or directory in /home/coralma/public_html/lessonsPage.php on line 1
+[19-Aug-2019 20:18:48 UTC] PHP Warning:  include(templates/head.php): failed to open stream: No such file or directory in /home/coralma/public_html/lessonsPage.php on line 1
+[19-Aug-2019 20:18:48 UTC] PHP Warning:  include(): Failed opening 'templates/head.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/lessonsPage.php on line 1
+[19-Aug-2019 20:18:48 UTC] PHP Warning:  include(templates/footer.php): failed to open stream: No such file or directory in /home/coralma/public_html/lessonsPage.php on line 11
+[19-Aug-2019 20:18:48 UTC] PHP Warning:  include(templates/footer.php): failed to open stream: No such file or directory in /home/coralma/public_html/lessonsPage.php on line 11
+[19-Aug-2019 20:18:48 UTC] PHP Warning:  include(): Failed opening 'templates/footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/lessonsPage.php on line 11
+[21-Aug-2019 19:23:35 UTC] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home/coralma/public_html/placeOrderPage.php on line 93
+[21-Aug-2019 19:24:10 UTC] PHP Catchable fatal error:  Object of class Paypal could not be converted to string in /home/coralma/public_html/placeOrderPage.php on line 96
+[21-Aug-2019 19:45:55 UTC] PHP Parse error:  syntax error, unexpected 'callCurl' (T_STRING), expecting variable (T_VARIABLE) in /home/coralma/public_html/placeOrderPage.php on line 21
+[21-Aug-2019 20:01:56 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/placeOrderPage.php on line 17

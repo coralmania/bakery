@@ -77,19 +77,58 @@ include('template/head.php');
                   </div>
 
                   <div class="form-group">
-                    <a href="placeOrderPage.php" class="btn btn-primary btn-lg btn-block" >Place
-                      Order</a>
+                  <form id="myContainer" action="paypal/paypal_ec_redirect.php" method="POST">
+                    <input type="hidden" name="PAYMENTREQUEST_0_AMT" value="<?php echo $cart->getOrderTotal() ?>"></input>
+                    <input type="hidden" name="currencyCodeType" value="USD"></input>
+                    <input type="hidden" name="paymentType" value="Sale"></input>
+                    <!--Pass additional input parameters based on your shopping cart. For complete list of all the parameters click here -->
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Place Order" >
+                  </form>
                   </div>
-
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-        <!-- </form> -->
       </div>
     </div>
+    
+  <script>
+    var formdata = {PAYMENTREQUEST_0_AMT: 10 , paymentType:'SALE', PAYMENTREQUEST_0_CURRENCYCODE: 'USD'};
+      paypal.Button.render({
+            env: 'sandbox',  // sandbox | production
+            locale: 'en_US',
+            style: {
+            size: 'small',   // tiny | small | medium
+            color: 'gold',	// gold | blue | silver
+            shape: 'pill',	// pill | rect
+            label: 'checkout' // checkout | credit
+            },
+            payment: function(resolve) {
+                jQuery.post(CREATE_PAYMENT_URL,formdata,function(data) {
+                    resolve(data); // no data.token, b/c data.token is json format
+                });
+            },
 
+            /* Optional: show a 'Pay Now' button in the checkout flow rather than Continue */
+            commit: true,
+            onAuthorize: function(data, actions) {
+                var EXECUTE_PAYMENT_URL = 'SetExpressCheckout_URL';
+                jQuery.post(EXECUTE_PAYMENT_URL, { payToken: data.paymentID, payerId: data.payerID }, function(response) {
+                    //if funding error restart
+                    if (response === '10486') {
+                        actions.restart();
+                    }
+                    //success
+                    actions.redirect();
+                });
+            },
+            onCancel: function(data, actions) {
+                actions.redirect('{CANCEL_URL}');
+            }
 
+        }, '#paymentMethods');
+  </script>
+
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <?php include('template/footer.php') ?>
