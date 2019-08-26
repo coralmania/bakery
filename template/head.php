@@ -1,9 +1,41 @@
 <?php
 session_start();
+include('server/db/config.php');
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 $userName = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : '';
 include('server/Cart.php');
 $cart = new Cart();
+
+function get_items($id){
+  $tmp_items = [];
+    $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+    $sql = "SELECT * FROM selling_items AS s INNER JOIN items_role AS i ON i.item_role_id = s.item_role WHERE s.available = 1 AND i.item_role_id = $id";
+    if ($result = $connection->query($sql)) {
+      if ($result->num_rows >= 1) {
+        while($row = $result->fetch_assoc()){
+          $tmp_items[] = $row;
+        }
+      }
+      return $tmp_items;
+    }
+}
+
+function get_item($id){
+  $tmp_items = [];
+    $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+    $sql = "SELECT * FROM selling_items AS s INNER JOIN items_role AS i ON i.item_role_id = s.item_role WHERE s.id = $id";
+    if ($result = $connection->query($sql)) {
+      if ($result->num_rows >= 1) {
+        while($row = $result->fetch_assoc()){
+          $tmp_items[] = $row;
+        }
+      }
+      return $tmp_items;
+    }
+}
+
+
+
 
  ?>
 <!DOCTYPE html>
@@ -85,4 +117,4 @@ $cart = new Cart();
           </div>
         </div>
     </div>
-    <br><br><br><br><br>
+    

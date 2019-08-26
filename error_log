@@ -40,3 +40,27 @@
 [21-Aug-2019 19:24:10 UTC] PHP Catchable fatal error:  Object of class Paypal could not be converted to string in /home/coralma/public_html/placeOrderPage.php on line 96
 [21-Aug-2019 19:45:55 UTC] PHP Parse error:  syntax error, unexpected 'callCurl' (T_STRING), expecting variable (T_VARIABLE) in /home/coralma/public_html/placeOrderPage.php on line 21
 [21-Aug-2019 20:01:56 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/placeOrderPage.php on line 17
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/shopPage.php on line 20
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/shopPage.php on line 20
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:33:23 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/shopPage.php on line 22
+[26-Aug-2019 11:44:11 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/coralma/public_html/shopPage.php on line 48
+[26-Aug-2019 11:44:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/shopPage.php on line 42
+[26-Aug-2019 12:33:47 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lessonsPage.php on line 9
+[26-Aug-2019 12:38:30 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lesson_info_page.php on line 6
+[26-Aug-2019 12:38:53 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lesson_info_page.php on line 6
+[26-Aug-2019 12:38:59 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lesson_info_page.php on line 6

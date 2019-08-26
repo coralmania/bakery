@@ -27,16 +27,13 @@ class Cart
   }
 
   public function getPrice($item){
-    switch ($item) {
-      case 'red':
-        return 20;
-        break;
-      case 'green':
-        return 40;
-        break;
-      case 'black':
-        return 100;
-        break;
+    $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+    $sql = "SELECT price FROM selling_items WHERE item_name = '$item' ";
+    if ($result = $connection->query($sql)) {
+      if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        return $row['price'];
+      }
     }
   }
 

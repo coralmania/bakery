@@ -14,6 +14,7 @@ if (checkIfEmailValid($email) && checkIfPasswordValid($password)) {
         $_SESSION['user_lname'] = $row['lname'];
         $_SESSION['user_phone'] = $row['phone'];
         $_SESSION['user_role'] = $row['role'];
+        $_SESSION['user_email'] = $email;
         echo 'OK';
       }else{
         echo 'somthing_not_ok';

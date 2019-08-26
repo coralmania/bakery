@@ -10,7 +10,6 @@
 		$_POST["L_PAYMENTREQUEST_0_AMT0"]=$_POST["PAYMENTREQUEST_0_ITEMAMT"];
   
    if(!isset($_POST['Confirm']) && isset($_POST['checkout'])){
-
 		if($_REQUEST["checkout"] || isset($_SESSION['checkout'])) {
 			$_SESSION['checkout'] = $_POST['checkout'];
 		}
