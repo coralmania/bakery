@@ -1,1 +1,19 @@
 [15-Aug-2019 12:57:52 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/User.php on line 3
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/User.php on line 3
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5

@@ -67,3 +67,22 @@
 [26-Aug-2019 13:27:03 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/coralma/public_html/lessonsPage.php on line 44
 [26-Aug-2019 13:27:47 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/coralma/public_html/lessonsPage.php on line 48
 [26-Aug-2019 13:31:01 UTC] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/coralma/public_html/lessonsPage.php on line 52
+[26-Aug-2019 17:22:46 UTC] PHP Warning:  Missing argument 1 for User::__construct(), called in /home/coralma/public_html/profilePage.php on line 6 and defined in /home/coralma/public_html/server/User.php on line 11
+[26-Aug-2019 17:32:15 UTC] PHP Fatal error:  Call to undefined function getuserdata() in /home/coralma/public_html/server/User.php on line 14
+[26-Aug-2019 17:32:29 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 20
+[26-Aug-2019 17:33:40 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 20
+[26-Aug-2019 17:34:12 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 20
+[26-Aug-2019 17:34:38 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 21
+[26-Aug-2019 17:34:59 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 17
+[26-Aug-2019 17:35:10 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 17
+[26-Aug-2019 17:37:08 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 21
+[26-Aug-2019 17:37:27 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 21
+[26-Aug-2019 17:37:44 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 22
+[26-Aug-2019 17:38:00 UTC] PHP Fatal error:  Call to a member function query() on null in /home/coralma/public_html/server/User.php on line 21
+[26-Aug-2019 17:38:54 UTC] PHP Fatal error:  Call to undefined method User::getUser() in /home/coralma/public_html/profilePage.php on line 13
+[26-Aug-2019 17:45:48 UTC] PHP Fatal error:  Call to undefined method User::getData() in /home/coralma/public_html/profilePage.php on line 12
+[26-Aug-2019 18:01:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/profilePage.php on line 18
+[26-Aug-2019 18:08:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, object given in /home/coralma/public_html/profilePage.php on line 20
+[26-Aug-2019 18:08:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, object given in /home/coralma/public_html/profilePage.php on line 20
+[26-Aug-2019 18:08:20 UTC] PHP Warning:  in_array() expects parameter 2 to be array, object given in /home/coralma/public_html/profilePage.php on line 20
+[26-Aug-2019 18:09:23 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/coralma/public_html/profilePage.php on line 20

@@ -5,6 +5,12 @@ $id = (int)$_GET['page'];
 if(!$id){
     header('location: index.php');die;
 }
+if(isset($_POST['submit'])){
+  $tmp = $_POST['submit'];
+  unset($_POST['submit']);
+  $cart->addToCart($tmp);
+  $cart->totalCart->$tmp = $cart->totalCart->$tmp+1;
+}
 $item = get_item($id)[0];
 
 ?>
@@ -36,15 +42,12 @@ $item = get_item($id)[0];
                   <span class="icon-star"></span>
                   <span class="icon-star-o"></span>
                 </div>
-                <input type="submit" class="btn add" name="submit" value="
-                
-                <?php if($item['available'] == 1) {
+                <input type="submit" class="btn add" name="submit" value="<?php if($item['available'] == 1) {
                    echo  $item['item_name'] ;
                     }else  {
                       echo "Fully booked";
                     }
-                ?>
-                "
+                ?>"
                 <?php if($item['available'] == 0): ?>
                     disabled
                   <?php endif; ?>

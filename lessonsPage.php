@@ -7,7 +7,7 @@
    $cart->totalCart->$tmp = $cart->totalCart->$tmp+1;
 }
   $items = get_items(2);
-  
+
 ?>
     <div class="site-section mt-5">
       <div class="container">
@@ -25,11 +25,12 @@
               <a href="lesson_info_page.php?page=<?= $value['id'] ?>" class="thumbnail d-block mb-4">
               <img src="images/<?= $value['image'] ?>" alt="Image" class="img-fluid"></a>
               <div>
-                <h3 class="heading mb-1"><a href="#"><?= $value['item_description'] ?></a></h3>
+                <h3 class="heading mb-1"><a href="lesson_info_page.php?page=<?= $value['id'] ?>"><?= $value['item_description'] ?></a></h3>
                 <span class="price"><?= $value['price'] ?></span>
               </div>
               <div class="wine-actions">
-                <h3 class="heading-2"><a href="#"><?= $value['item_description'] ?></a></h3>
+                <h3 class="heading-2"><a href="lesson_info_page.php?page=<?= $value['id'] ?>">
+                  <?= $value['item_description'] ?></a></h3>
                 <span class="price d-block"><?= $value['price'] ?></span>
                 <div class="rating">
                   <span class="icon-star"></span>

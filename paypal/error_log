@@ -1,0 +1,42 @@
+[26-Aug-2019 19:26:12 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/coralma/public_html/paypal/return.php on line 142
+[26-Aug-2019 19:26:52 UTC] PHP Warning:  include(server/Cart.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/return.php on line 109
+[26-Aug-2019 19:26:52 UTC] PHP Warning:  include(server/Cart.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/return.php on line 109
+[26-Aug-2019 19:26:52 UTC] PHP Warning:  include(): Failed opening 'server/Cart.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/return.php on line 109
+[26-Aug-2019 19:26:52 UTC] PHP Fatal error:  Class 'Cart' not found in /home/coralma/public_html/paypal/return.php on line 110
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/return.php on line 116
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/return.php on line 116
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/paypal/return.php on line 118
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:27:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/return.php on line 116
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/return.php on line 116
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/paypal/return.php on line 118
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Cart.php on line 30
+[26-Aug-2019 19:28:02 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/Cart.php on line 32
+[26-Aug-2019 19:31:40 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/script.php on line 10
+[26-Aug-2019 19:31:40 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/script.php on line 10
+[26-Aug-2019 19:31:40 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/paypal/script.php on line 12
+[26-Aug-2019 19:32:23 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/script.php on line 10
+[26-Aug-2019 19:32:23 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/paypal/script.php on line 10
+[26-Aug-2019 19:32:23 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/paypal/script.php on line 12
+[26-Aug-2019 19:33:01 UTC] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/coralma/public_html/paypal/script.php on line 13
