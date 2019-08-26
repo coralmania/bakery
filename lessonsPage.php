@@ -38,7 +38,16 @@
                   <span class="icon-star"></span>
                   <span class="icon-star-o"></span>
                 </div>
-                <input type="submit" class="btn add" name="submit" value="<?= $value['item_name'] ?>">
+                <input type="submit" class="btn add" name="submit" value="<?php if($value['available'] == 1) {
+                   echo  $value['item_name'] ;
+                    }else  {
+                      echo "Fully booked";
+                    }
+                ?>"
+                <?php if($value['available'] == 0): ?>
+                    disabled
+                  <?php endif; ?>
+                >
                   <span class="icon-shopping-bag mr-3"></span>
                 </input>
               </div>

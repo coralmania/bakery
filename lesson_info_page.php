@@ -36,7 +36,19 @@ $item = get_item($id)[0];
                   <span class="icon-star"></span>
                   <span class="icon-star-o"></span>
                 </div>
-                <input type="submit" class="btn add" name="submit" value="<?= $item['item_name'] ?>">
+                <input type="submit" class="btn add" name="submit" value="
+                
+                <?php if($item['available'] == 1) {
+                   echo  $item['item_name'] ;
+                    }else  {
+                      echo "Fully booked";
+                    }
+                ?>
+                "
+                <?php if($item['available'] == 0): ?>
+                    disabled
+                  <?php endif; ?>
+                >
                   <span class="icon-shopping-bag mr-3"></span>
                 </input>
               </div>

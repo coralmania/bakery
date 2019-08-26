@@ -64,3 +64,6 @@
 [26-Aug-2019 12:38:30 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lesson_info_page.php on line 6
 [26-Aug-2019 12:38:53 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lesson_info_page.php on line 6
 [26-Aug-2019 12:38:59 UTC] PHP Fatal error:  Call to undefined function get_item() in /home/coralma/public_html/lesson_info_page.php on line 6
+[26-Aug-2019 13:27:03 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/coralma/public_html/lessonsPage.php on line 44
+[26-Aug-2019 13:27:47 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/coralma/public_html/lessonsPage.php on line 48
+[26-Aug-2019 13:31:01 UTC] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/coralma/public_html/lessonsPage.php on line 52
