@@ -108,7 +108,7 @@ function get_item($id){
                     <?php endif; ?>
                       <li>
                       <a href="cartPage.php"><i class="fa" style="font-size:24px">&#xf07a;</i>
-                        <span class='badge badge-warning' id='lblCartCount'> <?php echo $cart->getTotalCart()->total ?> </span>
+                        <span class='badge badge-warning' id='lblCartCount'> <?php echo $cart->getTotalCart()->total | 0 ?> </span>
                         </a>
                       </li>
                   </ul>

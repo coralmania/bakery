@@ -4,6 +4,9 @@ include('template/head.php');
 if (!isset($_SESSION['user_name'])) {
   header('location: index.php');
 }
+
+
+echo $cart->getItemId('brown_bread');die;
 ?>
 <br><br><br><br>
 <?php

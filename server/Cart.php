@@ -65,6 +65,15 @@ class Cart
     return $this->updateSession();
   }
 
+  public function getItemId($item){
+    $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+    $sql = "SELECT id FROM selling_items WHERE item_name = '$item' ";
+    if ($result = $connection->query($sql)) {
+      $row = $result->fetch_assoc()['id'];
+      return $row;
+    }
+  }
+
 }
 
 
