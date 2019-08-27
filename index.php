@@ -51,7 +51,7 @@
                 <span class="price">$<?= $product['price'] ?></span>
               </div>
               <div class="wine-actions">
-                <h3 class="heading-2"><a href="#">Trius Cabernet France 2011</a></h3>
+                <h3 class="heading-2"><a href="#"><?= $product['item_name'] ?></a></h3>
                 <span class="price d-block">$<?= $product['price'] ?></span>
                 <!-- <div class="rating">
                   <span class="icon-star"></span>
