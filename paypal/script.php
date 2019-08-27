@@ -3,6 +3,7 @@
 include('../server/db/config.php');
 include('../server/Cart.php');
 $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+$connection->set_charset("utf8");
 $cart = new Cart();
 insertUserOrder();
 function insertUserOrder(){

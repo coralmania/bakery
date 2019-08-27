@@ -92,7 +92,7 @@ include('template/head.php');
         </div>
       </div>
     </div>
-    
+
   <script>
     var formdata = {PAYMENTREQUEST_0_AMT: 10 , paymentType:'SALE', PAYMENTREQUEST_0_CURRENCYCODE: 'USD'};
       paypal.Button.render({

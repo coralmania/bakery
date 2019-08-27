@@ -5,256 +5,101 @@ if (!isset($_SESSION['user_name'])) {
   header('location: index.php');
 }
 
-
-echo $cart->getItemId('brown_bread');die;
+if (isset($_POST['submit'])) {
+  $name = !empty($_POST['user_name']) ? $_POST['user_name'] : '';
+  $lname = !empty($_POST['user_lname']) ? $_POST['user_lname'] : '';
+  $email = !empty($_POST['user_email']) ? $_POST['user_email'] : '';
+  $phone = !empty($_POST['user_phone']) ? $_POST['user_phone'] : '';
+  if ($name && $lname && $email && $phone) {
+    if ($userInfo['fname'] != $name || $userInfo['lname'] != $lname || $userInfo['email'] != $email || $userInfo['phone'] != $phone) {
+      $data = ['fname' => $name , 'lname' => $lname , 'email' => $email , 'phone' => $phone];
+      if($user->updateInfo($data)){
+        if($user->updateSession($data)){
+          $_SESSION['post'] = "פרטיך שונו";
+        }
+      }
+    }else{
+        $_SESSION['alert'] = "אין שינוי בפרטים האישיים";
+    }
+  }
+}
 ?>
-<br><br><br><br>
-<?php
-
-
-$user = new User($connection);
-$userInfo = $user->userData();
- ?>
-
- <hr>
- <div class="container bootstrap snippet">
-     <div class="row">
-   		<div class="col-sm-10"><h1><?php echo $userInfo['fname'] ?></h1></div>
-     	<div class="col-sm-2"><a href="/users" class="pull-right">
-        <img title="profile image" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a>
-      </div>
-     </div>
-     <div class="row">
-   		<div class="col-sm-2"><!--left col-->
-
-           <ul class="list-group">
-             <li class="list-group-item text-right"><span class="pull-left"><strong>My Orders</strong></span></li>
-             <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span></li>
-             <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
-             <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
-           </ul>
-         </div><!--/col-3-->
-     	<div class="col-sm-10">
-           <div class="tab-content">
-             <div class="tab-pane active" id="home">
-                 <hr>
-                   <form class="form" action="##" method="post" id="registrationForm">
-                       <div class="form-group">
-                           <div class="col-xs-12">
-                               <label for="first_name"><h4>First name</h4></label>
-                               <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+<br><br><br>
+<?php if (isset($_SESSION['post'])): ?>
+    <div class="alert alert-success" role="alert">
+      <center>
+        <?php echo $_SESSION['post'];
+        unset($_SESSION['post']); ?>
+      </center>
+  </div>
+<?php endif; ?>
+<?php if (isset($_SESSION['alert'])): ?>
+    <div class="alert alert-primary" role="alert">
+      <center>
+        <?php echo $_SESSION['alert'];
+          unset($_SESSION['alert']); ?>
+        </center>
+  </div>
+<?php endif; ?>
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-md-3 ">
+ 		     <div class="list-group ">
+               <a href="profilePage.php" class="list-group-item list-group-item-action active">פרטים אישיים</a>
+               <a href="userOrders.php" class="list-group-item list-group-item-action">ההזמנות שלי</a>
+               <a href="userChangePassword.php" class="list-group-item list-group-item-action">לשנות סיסמא</a>
+             </div>
+ 		</div>
+ 		<div class="col-md-9">
+ 		    <div class="card">
+ 		        <div class="card-body">
+ 		            <div class="row">
+ 		                <div class="col-md-12 ">
+ 		                    <h4 class="pull-right">הפרופיל שלי</h4>
+                        <br>
+ 		                    <hr>
+ 		                </div>
+ 		            </div>
+ 		            <div class="row">
+ 		                <div class="col-md-12">
+	                    <form method="POST" action="#">
+                         <div class="form-group row">
+                           <div class="col-8">
+                             <input value="<?php if ($signed_in): ?><?php echo $_SESSION['user_name'] ?><?php endif; ?>"  id="name" name="user_name" placeholder="First Name" class="form-control here" type="text">
                            </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                             <label for="last_name"><h4>Last name</h4></label>
-                               <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                           <label for="name" class="col-4 col-form-label">שם פרטי</label>
+                         </div>
+                         <div class="form-group row">
+                           <div class="col-8">
+                             <input value="<?php if ($signed_in): ?><?php echo $_SESSION['user_lname'] ?><?php endif; ?>"  id="user_lname" name="user_lname" placeholder="Last Name" class="form-control here" type="text">
                            </div>
-                       </div>
-                       <div class="form-group">
+                           <label for="lastname" class="col-4 col-form-label">שם משפחה</label>
+                         </div>
 
-                           <div class="col-xs-6">
-                               <label for="phone"><h4>Phone</h4></label>
-                               <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                         <div class="form-group row">
+                           <div class="col-8">
+                             <input value="<?php if ($signed_in): ?><?php echo $_SESSION['user_email'] ?><?php endif; ?>"  id="email" name="user_email" placeholder="Email" class="form-control here" required="required" type="text">
                            </div>
-                       </div>
-
-                       <div class="form-group">
-                           <div class="col-xs-6">
-                              <label for="mobile"><h4>Mobile</h4></label>
-                               <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                           <label for="email" class="col-4 col-form-label">אימייל</label>
+                         </div>
+                         <div class="form-group row">
+                           <div class="col-8">
+                             <input value="<?php if ($signed_in): ?><?php echo $_SESSION['user_phone'] ?><?php endif; ?>"  id="email" name="user_phone" placeholder="Email" class="form-control here" required="required" type="text">
                            </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="email"><h4>Email</h4></label>
-                               <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                           <label for="email" class="col-4 col-form-label">טלפון</label>
+                         </div>
+                         <div class="form-group row">
+                           <div class="offset-4 col-8">
+                             <button name="submit" type="submit" class="btn btn-primary">עדכון פרטים אישיים</button>
                            </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="email"><h4>Location</h4></label>
-                               <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="password"><h4>Password</h4></label>
-                               <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                             <label for="password2"><h4>Verify</h4></label>
-                               <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-                            <div class="col-xs-12">
-                                 <br>
-                               	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                                	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                             </div>
-                       </div>
-               	</form>
-
-               <hr>
-
-              </div><!--/tab-pane-->
-              <div class="tab-pane" id="messages">
-
-                <h2></h2>
-
-                <hr>
-                   <form class="form" action="##" method="post" id="registrationForm">
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="first_name"><h4>First name</h4></label>
-                               <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                             <label for="last_name"><h4>Last name</h4></label>
-                               <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                           </div>
-                       </div>
-
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="phone"><h4>Phone</h4></label>
-                               <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                           </div>
-                       </div>
-
-                       <div class="form-group">
-                           <div class="col-xs-6">
-                              <label for="mobile"><h4>Mobile</h4></label>
-                               <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="email"><h4>Email</h4></label>
-                               <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="email"><h4>Location</h4></label>
-                               <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="password"><h4>Password</h4></label>
-                               <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                             <label for="password2"><h4>Verify</h4></label>
-                               <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-                            <div class="col-xs-12">
-                                 <br>
-                               	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                                	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                             </div>
-                       </div>
-               	</form>
-
-              </div><!--/tab-pane-->
-              <div class="tab-pane" id="settings">
-
-
-                   <hr>
-                   <form class="form" action="##" method="post" id="registrationForm">
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="first_name"><h4>First name</h4></label>
-                               <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                             <label for="last_name"><h4>Last name</h4></label>
-                               <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                           </div>
-                       </div>
-
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="phone"><h4>Phone</h4></label>
-                               <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
-                           </div>
-                       </div>
-
-                       <div class="form-group">
-                           <div class="col-xs-6">
-                              <label for="mobile"><h4>Mobile</h4></label>
-                               <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="email"><h4>Email</h4></label>
-                               <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="email"><h4>Location</h4></label>
-                               <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                               <label for="password"><h4>Password</h4></label>
-                               <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-
-                           <div class="col-xs-6">
-                             <label for="password2"><h4>Verify</h4></label>
-                               <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
-                           </div>
-                       </div>
-                       <div class="form-group">
-                            <div class="col-xs-12">
-                                 <br>
-                               	<button class="btn btn-lg btn-success pull-right" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                                	<!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
-                             </div>
-                       </div>
-               	</form>
-               </div>
-
-               </div><!--/tab-pane-->
-           </div><!--/tab-content-->
-
-         </div><!--/col-9-->
-     </div><!--/row-->
+                         </div>
+                       </form>
+ 		                </div>
+ 		            </div>
+ 		        </div>
+ 		    </div>
+ 		</div>
+ 	</div>
+ </div>
 
 <?php include('template/footer.php') ?>

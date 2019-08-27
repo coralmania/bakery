@@ -2,14 +2,16 @@
 session_start();
 include('server/db/config.php');
 include('server/User.php');
+include('server/Workshop.php');
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 $userName = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : '';
 include('server/Cart.php');
 $cart = new Cart();
-
+$signed_in = false;
 function get_items($id){
   $tmp_items = [];
   $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+  $connection->set_charset("utf8");
   $sql = "SELECT * FROM selling_items AS s INNER JOIN items_role AS i ON i.item_role_id = s.item_role WHERE  i.item_role_id = $id";
   if ($result = $connection->query($sql)) {
     if ($result->num_rows >= 1) {
@@ -24,6 +26,7 @@ function get_items($id){
 function get_item($id){
   $tmp_items = [];
     $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+    $connection->set_charset("utf8");
     $sql = "SELECT * FROM selling_items AS s INNER JOIN items_role AS i ON i.item_role_id = s.item_role WHERE s.id = $id";
     if ($result = $connection->query($sql)) {
       if ($result->num_rows >= 1) {
@@ -35,7 +38,11 @@ function get_item($id){
     }
 }
 
-
+if (isset($_SESSION['user_name'])) {
+  $signed_in = true;
+  $user = new User($connection);
+  $userInfo = $user->userData();
+}
 
 
  ?>
@@ -64,6 +71,10 @@ function get_item($id){
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
 </head>
+
+<!-- <div class="alert alert-primary" role="alert">
+  This is a primary alert—check it out!
+</div> -->
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
@@ -93,13 +104,13 @@ function get_item($id){
                 <nav class="site-navigation position-relative text-left" role="navigation">
                   <ul class="site-menu main-menu js-clone-nav mx-auto d-none pl-0 d-lg-block border-none">
                   <?php if (isset($_SESSION['user_name'])): ?>
-                    <li class="active"><a class="nav-link text-left">Welcome <a href="profilePage.php"><?= $_SESSION['user_name'] ?></a></a></li>
+                    <li class="active"><a class="nav-link text-left">Welcome <a href="profilePage.php"><?= $userInfo['fname'] ?></a></a></li>
                     <?php endif; ?>
                     <li><a href="index.php" class="nav-link text-left">Home</a></li>
                     <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
                     <li><a href="lessonsPage.php" class="nav-link text-left">Lessons</a></li>
                     <li><a href="shopPage.php" class="nav-link text-left">Factorey Shop</a></li>
-                    <li><a href="contact.php" class="nav-link text-left">Contact</a></li>
+                    <li><a href="contactPage.php" class="nav-link text-left">Contact</a></li>
                     <?php if (!isset($_SESSION['user_name'])): ?>
                       <li> <a href="loginPage.php" class="nav-link text-left">Login</a></li>
                       <li><a href="signinPage.php" class="nav-link text-left">Signin</a></li>

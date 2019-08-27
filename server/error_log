@@ -17,3 +17,19 @@
 [26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
 [26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
 [26-Aug-2019 17:21:34 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/User.php on line 5
+[27-Aug-2019 15:14:14 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:14:15 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:14:22 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:14:23 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:14:36 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:14:37 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:15:45 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:53 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:55 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:55 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:55 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:55 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:56 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:56 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:16:56 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
+[27-Aug-2019 15:17:59 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/changePassword.php on line 3

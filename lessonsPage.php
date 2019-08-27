@@ -6,57 +6,51 @@
    $cart->addToCart($tmp);
    $cart->totalCart->$tmp = $cart->totalCart->$tmp+1;
 }
-  $items = get_items(2);
+  // $items = get_items(0);
 
 ?>
-    <div class="site-section mt-5">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 section-title text-center mb-5">
-            <h2 class="d-block">Our Products</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, perspiciatis!</p>
-          </div>
-        </div>
-        <form action="#" method="post">
-          <div class="row">
-          <?php foreach ($items as $key => $value): ?>
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4">
-              <a href="lesson_info_page.php?page=<?= $value['id'] ?>" class="thumbnail d-block mb-4">
-              <img src="images/<?= $value['image'] ?>" alt="Image" class="img-fluid"></a>
-              <div>
-                <h3 class="heading mb-1"><a href="lesson_info_page.php?page=<?= $value['id'] ?>"><?= $value['item_description'] ?></a></h3>
-                <span class="price"><?= $value['price'] ?></span>
-              </div>
-              <div class="wine-actions">
-                <h3 class="heading-2"><a href="lesson_info_page.php?page=<?= $value['id'] ?>">
-                  <?= $value['item_description'] ?></a></h3>
-                <span class="price d-block"><?= $value['price'] ?></span>
-                <div class="rating">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star-o"></span>
+<br><br><br>
+<center><h2>הסדנאות שלנו</h2></center>
+<section class="details-card">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="images/pro.jpg" alt="" width="380" height="230">
                 </div>
-                <input type="submit" class="btn add" name="submit" value="<?php if($value['available'] == 1) {
-                   echo  $value['item_name'] ;
-                    }else  {
-                      echo "Fully booked";
-                    }
-                ?>"
-                <?php if($value['available'] == 0): ?>
-                    disabled
-                  <?php endif; ?>
-                >
-                  <span class="icon-shopping-bag mr-3"></span>
-                </input>
-              </div>
+                <div class="card-desc">
+                    <h3>סדנאות התמחות</h3>
+                    <p>מיועד למי שרוצה להיות מומחה התחום מסוים, תוך שימוש במוצרים ביתיים פשוטים ואיכותיים.</p>
+                        <a href="lesson_info_page.php?lesson=pro" class="btn-card">מעבר לסדנאות</a>
+                </div>
             </div>
-          </div>
-           <?php endforeach; ?>
         </div>
-      </form>
-      </div>
+        <div class="col-md-4">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="images/parents.jpg" alt="" width="380" height="230">
+                </div>
+                <div class="card-desc">
+                    <h3>סדנאות הורים וילדים:</h3>
+                    <p>מיועד להורים ולילדים, סבא/סבתא ונכדים</p>
+                        <a href="lesson_info_page.php?lesson=parents" class="btn-card">מעבר לסדנאות</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-content">
+                <div class="card-img">
+                    <img src="images/private.jpg" alt="" width="380" height="230">
+                </div>
+                <div class="card-desc">
+                    <h3>סדנאות פרטיות</h3>
+                    <p>רוצים ללמוד מתכון אפייה ספציפי? מעוניינים בחוויה אינטימית ואישית בקונדיטוריה? בסדנאות הפרטיות של הקונדיטוריה שייכת רק לכם, ואנחנו אופים ומכינים אך ורק את מה שאתם מבקשים.</p>
+                        <a href="lesson_info_page.php?lesson=private" class="btn-card">מעבר לסדנאות</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+</section>
     <?php include('template/footer.php') ?>

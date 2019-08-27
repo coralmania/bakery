@@ -5,6 +5,7 @@ $email = !empty($_POST['email']) ? $_POST['email'] : '';
 $password = !empty($_POST['password']) ? $_POST['password'] : '';
 if (checkIfEmailValid($email) && checkIfPasswordValid($password)) {
   $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+  $connection->set_charset("utf8");
   $sql = "SELECT * FROM users WHERE email = '$email'";
   if ($result = $connection->query($sql)) {
     if ($result->num_rows == 1) {
