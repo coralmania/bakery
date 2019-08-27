@@ -68,7 +68,7 @@ $workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
           <p id="teacher_name"></p>
         </div>
 
-        <input  class="btn btn-primary" onkeyup="" value="Submit"></input>
+        <input class="btn btn-primary" onkeyup="" value="Submit"></input>
       </form>
     </div>
   </div>
