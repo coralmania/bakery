@@ -5,6 +5,22 @@ if(isset($_SESSION['user_name'])){
 }
 ?>
 <br><br><br><br><br>
+<?php if (isset($_SESSION['post'])): ?>
+  <div class="alert alert-success" role="alert">
+    <center>
+      <?php echo $_SESSION['post'];
+      unset($_SESSION['post']); ?>
+    </center>
+  </div>
+<?php endif; ?>
+<?php if (isset($_SESSION['alert'])): ?>
+  <div class="alert alert-primary" role="alert">
+    <center>
+      <?php echo $_SESSION['alert'];
+      unset($_SESSION['alert']); ?>
+    </center>
+  </div>
+<?php endif; ?>
 <div class="row">
   <div class="col-md-12 col-lg-6 offset-lg-3">
     <form method="POST">

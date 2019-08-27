@@ -7,7 +7,7 @@ class Cart
 
   function __construct()
   {
-    $this->totalCart = !empty($_SESSION['cart']) ? json_decode($_SESSION['cart']) : ['total' => 0 ] ;
+    $this->totalCart = !empty($_SESSION['cart']) ? json_decode($_SESSION['cart']) :  ['total' => 0 ] ;
     $this->refresh = false;
     if (!$this->totalCart->total) {
       $this->updateSession();
@@ -49,13 +49,13 @@ class Cart
     return $total;
   }
 
-  public function addToCart($input){
+  public function addToCart($input, $refresh = true){
     if (array_key_exists($input, $this->totalCart)) {
       $this->totalCart->$input = $this->totalCart->$input + 1 ;
     }else{
       $this->totalCart->$input = 1;
     }
-    $this->refresh =true;
+    $this->refresh =$refresh;
     $this->totalCart->total = $this->totalCart->total + 1;
     $this->updateSession();
     return;

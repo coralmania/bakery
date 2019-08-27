@@ -3,6 +3,7 @@ session_start();
 include('server/db/config.php');
 include('server/User.php');
 include('server/Workshop.php');
+include('server/class/Product.php');
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 $userName = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : '';
 include('server/Cart.php');
@@ -90,7 +91,7 @@ if (isset($_SESSION['user_name'])) {
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12 text-center">
-              <a href="index.html" class="site-logo">
+              <a href="index.php" class="site-logo">
                 <img src="images/logo.png" alt="Image" class="img-fluid">
               </a>
             </div>
