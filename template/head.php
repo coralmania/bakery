@@ -104,19 +104,20 @@ if (isset($_SESSION['user_name'])) {
               <div class="mx-auto">
                 <nav class="site-navigation position-relative text-left" role="navigation">
                   <ul class="site-menu main-menu js-clone-nav mx-auto d-none pl-0 d-lg-block border-none">
-                  <?php if (isset($_SESSION['user_name'])): ?>
-                    <li class="active"><a class="nav-link text-left">Welcome <a href="profilePage.php"><?= $userInfo['fname'] ?></a></a></li>
-                    <?php endif; ?>
-                    <li><a href="index.php" class="nav-link text-left">Home</a></li>
-                    <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
-                    <li><a href="lessonsPage.php" class="nav-link text-left">Lessons</a></li>
-                    <li><a href="shopPage.php" class="nav-link text-left">Factorey Shop</a></li>
-                    <li><a href="contactPage.php" class="nav-link text-left">Contact</a></li>
                     <?php if (!isset($_SESSION['user_name'])): ?>
-                      <li> <a href="loginPage.php" class="nav-link text-left">Login</a></li>
-                      <li><a href="signinPage.php" class="nav-link text-left">Signin</a></li>
+                      <li> <a href="loginPage.php" class="nav-link text-left">התחברות</a></li>
+                      <li><a href="signinPage.php" class="nav-link text-left">הרשמה</a></li>
                     <?php else: ?>
-                      <li><a href="logout.php" class="nav-link text-left">Logout</a></li>
+                      <li><a href="logout.php" class="nav-link text-left">התנתק</a></li>
+                    <?php endif; ?>
+                    <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
+                    <li><a href="lessonsPage.php" class="nav-link text-left">הסדנאות שלנו</a></li>
+                    <li><a href="shopPage.php" class="nav-link text-left">חנות מפעל</a></li>
+                    <li><a href="contactPage.php" class="nav-link text-left">צור קשר</a></li>
+                    <li><a href="aboutPage.php" class="nav-link text-left">עלינו</a></li>
+                    <li><a href="index.php" class="nav-link text-left">בית</a></li>
+                    <?php if (isset($_SESSION['user_name'])): ?>
+                      <li class="active"><a style="color:rgb(156, 32, 131)!important" class="nav-link text-left"><a href="profilePage.php"><?= $userInfo['fname'] ?></a>ברוך הבא </a></li>
                     <?php endif; ?>
                       <li>
                       <a href="cartPage.php"><i class="fa" style="font-size:24px">&#xf07a;</i>
