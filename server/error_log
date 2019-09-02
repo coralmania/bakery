@@ -33,3 +33,24 @@
 [27-Aug-2019 15:16:56 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
 [27-Aug-2019 15:16:56 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/checkPassword.php on line 3
 [27-Aug-2019 15:17:59 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/coralma/public_html/server/changePassword.php on line 3
+[02-Sep-2019 18:22:07 UTC] PHP Parse error:  syntax error, unexpected ')', expecting variable (T_VARIABLE) in /home/coralma/public_html/server/shopPageProducts.php on line 10
+[02-Sep-2019 18:23:36 UTC] PHP Parse error:  syntax error, unexpected ')', expecting variable (T_VARIABLE) in /home/coralma/public_html/server/shopPageProducts.php on line 10
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/shopPageProducts.php on line 12
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/shopPageProducts.php on line 12
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 13
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Property access is not allowed yet in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15
+[02-Sep-2019 18:24:21 UTC] PHP Warning:  print_r(): Couldn't fetch mysqli in /home/coralma/public_html/server/shopPageProducts.php on line 15

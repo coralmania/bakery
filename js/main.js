@@ -343,19 +343,24 @@ jQuery(document).ready(function($) {
 	});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+var currentPage;
+
+
+function changeContent(obj){
+  console.log(obj.textContent);
+  page = obj.textContent;
+  if (currentPage != page) {
+    currentPage = page;
+    $.ajax({
+      url:'server/shopPageProducts.php',
+      data:{category:page},
+      type:'post',
+      dataType:'json',
+      success:function (res){
+        console.log(res);
+
+      }
+    })
+  }
+}

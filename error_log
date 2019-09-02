@@ -372,3 +372,9 @@
 [27-Aug-2019 21:33:36 UTC] PHP Warning:  Attempt to assign property of non-object in /home/coralma/public_html/server/Cart.php on line 60
 [27-Aug-2019 21:33:36 UTC] PHP Warning:  Attempt to assign property of non-object in /home/coralma/public_html/addToCart.php on line 10
 [27-Aug-2019 21:35:02 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/coralma/public_html/server/Cart.php on line 10
+[31-Aug-2019 11:28:49 UTC] PHP Warning:  include(tamplate/head.php): failed to open stream: No such file or directory in /home/coralma/public_html/aboutPage.php on line 1
+[31-Aug-2019 11:28:49 UTC] PHP Warning:  include(tamplate/head.php): failed to open stream: No such file or directory in /home/coralma/public_html/aboutPage.php on line 1
+[31-Aug-2019 11:28:49 UTC] PHP Warning:  include(): Failed opening 'tamplate/head.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/aboutPage.php on line 1
+[31-Aug-2019 11:28:49 UTC] PHP Warning:  include(tamplate/footer.php): failed to open stream: No such file or directory in /home/coralma/public_html/aboutPage.php on line 31
+[31-Aug-2019 11:28:49 UTC] PHP Warning:  include(tamplate/footer.php): failed to open stream: No such file or directory in /home/coralma/public_html/aboutPage.php on line 31
+[31-Aug-2019 11:28:49 UTC] PHP Warning:  include(): Failed opening 'tamplate/footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/aboutPage.php on line 31

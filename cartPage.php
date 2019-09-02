@@ -52,13 +52,13 @@ include('template/head.php');
                         <?php if ($key != 'total'): ?>
                           <tr>
                             <td><?php echo $key ?><strong class="mx-2">x</strong> <?php echo $value ?></td>
-                            <td><?php echo $value * $cart->getPrice($key) ?>$</td>
+                            <td><?php echo $value * $cart->getPrice($key) ?>&#8362;</td>
                           </tr>
                       <?php endif; ?>
                     <?php endforeach; ?>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong><?php echo $cart->getOrderTotal() ?>$</strong></td>
+                        <td class="text-black font-weight-bold"><strong><?php echo $cart->getOrderTotal() ?>&#8362;</strong></td>
                       </tr>
                     </tbody>
                   </table>
@@ -77,13 +77,17 @@ include('template/head.php');
                   </div>
 
                   <div class="form-group">
-                  <form id="myContainer" action="paypal/paypal_ec_redirect.php" method="POST">
-                    <input type="hidden" name="PAYMENTREQUEST_0_AMT" value="<?php echo $cart->getOrderTotal() ?>"></input>
-                    <input type="hidden" name="currencyCodeType" value="USD"></input>
-                    <input type="hidden" name="paymentType" value="Sale"></input>
-                    <!--Pass additional input parameters based on your shopping cart. For complete list of all the parameters click here -->
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Place Order" >
-                  </form>
+                    <?php if (!isset($_SESSION['user_name'])): ?>
+                      <a href="loginPage.php">עליך להיות מחובר</a>
+                      <?php else: ?>
+                        <form id="myContainer" action="paypal/paypal_ec_redirect.php" method="POST">
+                          <input type="hidden" name="PAYMENTREQUEST_0_AMT" value="<?php echo $cart->getOrderTotal() ?>"></input>
+                          <input type="hidden" name="currencyCodeType" value="USD"></input>
+                          <input type="hidden" name="paymentType" value="Sale"></input>
+                          <!--Pass additional input parameters based on your shopping cart. For complete list of all the parameters click here -->
+                          <input type="submit" class="btn btn-primary btn-lg btn-block" value="Place Order" >
+                        </form>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>

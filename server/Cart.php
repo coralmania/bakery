@@ -30,7 +30,7 @@ class Cart
     $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
     $connection->set_charset("utf8");
     $sql = "SELECT price FROM selling_items WHERE item_name = '$item' ";
-    
+
     if ($result = $connection->query($sql)) {
       if ($result->num_rows >= 1) {
         $row = $result->fetch_assoc();
