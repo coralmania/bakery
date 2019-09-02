@@ -72,85 +72,38 @@
       </div>
     </div>
 
-    <div class="hero-2" style="background-image: url('images/2.jpg');">
-     <div class="container">
-        <div class="row justify-content-center text-center align-items-center">
-          <div class="col-md-8">
-            <span class="sub-title">הסדנאות</span>
-            <h2> מתוקות, חווייתיות</h2>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="owl-carousel owl-slide-3 owl-slide">
-
-          <blockquote class="testimony">
-            <img src="images/person_1.jpg" alt="Image">
-            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sapiente beatae, nemo quasi quo neque consequatur rem porro reprehenderit, a dignissimos unde ut enim fugiat deleniti quae placeat in cumque?&rdquo;</p>
-            <p class="small text-primary">&mdash; Collin Miller</p>
-          </blockquote>
-          <blockquote class="testimony">
-            <img src="images/person_2.jpg" alt="Image">
-            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sapiente beatae, nemo quasi quo neque consequatur rem porro reprehenderit, a dignissimos unde ut enim fugiat deleniti quae placeat in cumque?&rdquo;</p>
-            <p class="small text-primary">&mdash; Harley Perkins</p>
-          </blockquote>
-          <blockquote class="testimony">
-            <img src="images/person_3.jpg" alt="Image">
-            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sapiente beatae, nemo quasi quo neque consequatur rem porro reprehenderit, a dignissimos unde ut enim fugiat deleniti quae placeat in cumque?&rdquo;</p>
-            <p class="small text-primary">&mdash; Levi Morris</p>
-          </blockquote>
-          <blockquote class="testimony">
-            <img src="images/person_1.jpg" alt="Image">
-            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sapiente beatae, nemo quasi quo neque consequatur rem porro reprehenderit, a dignissimos unde ut enim fugiat deleniti quae placeat in cumque?&rdquo;</p>
-            <p class="small text-primary">&mdash; Allie Smith</p>
-          </blockquote>
-
-        </div>
-      </div>
-    </div>
 
 
     <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 section-title text-center mb-5">
-            <h2 class="d-block">Wine's Blog</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, perspiciatis!</p>
-            <p><a href="#">View All Products <span class="icon-long-arrow-right"></span></a></p>
+            <h2 class="d-block">סדנאות אפייה</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="post-single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              <h2><a href="blog-single.html">What You Need To Know About Premium Rosecco</a></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-              <div class="post-meta">
-                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-              </div>
+
+              <a href="post-single.html"><img src="images/parents.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <h2><a href="blog-single.html">סנדאות הורים וילדים</a></h2>
+              <p>מיועד להורים ולילדים, סבא/סבתא ונכדים</p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="post-single.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-              <h2><a href="blog-single.html">What You Need To Know About Premium Rosecco</a></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-              <div class="post-meta">
-                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-              </div>
+              <a href="post-single.html"><img src="images/pro.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <h2><a href="blog-single.html">סדנאות התמחות</a></h2>
+              <p>מיועד למי שרוצה להיות מומחה התחום מסוים, תוך שימוש במוצרים ביתיים פשוטים ואיכותיים.</p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="post-single.html"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-              <h2><a href="blog-single.html">What You Need To Know About Premium Rosecco</a></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-              <div class="post-meta">
-                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-              </div>
+              <a href="post-single.html"><img src="images/private.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <h2><a href="blog-single.html">סדנאות פרטיות</a></h2>
+              <p>רוצים ללמוד מתכון אפייה ספציפי? מעוניינים בחוויה אינטימית ואישית בקונדיטוריה?
+                בסדנאות הפרטיות של הקונדיטוריה שייכת רק לכם, ואנחנו אופים ומכינים אך ורק את מה שאתם מבקשים.</p>
             </div>
           </div>
         </div>
@@ -163,10 +116,10 @@
 $('.prevent').on('click', function(e) {
       e.preventDefault();
     })
- 
+
   $('.product-add-to-cart').on('click', function(e) {
-    e.preventDefault();    
-    
+    e.preventDefault();
+
     $.ajax({
       url: 'addToCart.php',
       type: 'POST',
@@ -177,5 +130,5 @@ $('.prevent').on('click', function(e) {
     })
   })
 
-    
+
  </script>
