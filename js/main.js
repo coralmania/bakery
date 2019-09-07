@@ -344,23 +344,70 @@ jQuery(document).ready(function($) {
 
 
 });
-var currentPage;
+var currentPage = 'all';
 
-
-function changeContent(obj){
-  console.log(obj.textContent);
-  page = obj.textContent;
-  if (currentPage != page) {
+function changeContent(obj, first = false){
+  console.log(obj);
+  page = obj;
+  if (currentPage != page || first) {
+    var x = document.querySelector('li[data-id="'+currentPage+'"]');
+    console.log(x);
+    x.classList.remove('selected');
+    var y = document.querySelector('li[data-id="'+page+'"]');
+    y.classList.add('selected');
     currentPage = page;
     $.ajax({
-      url:'server/shopPageProducts.php',
+      url:'server/getProdects.php',
       data:{category:page},
       type:'post',
       dataType:'json',
       success:function (res){
-        console.log(res);
-
+        replaceContent(res);
       }
     })
   }
+}
+
+function addToCart(obj){
+  $.ajax({
+    url: 'addToCart.php',
+    type: 'POST',
+    data: { product: obj.getAttribute("data-name") },
+    success: function(res) {
+      window.location.reload();
+    }
+  })
+}
+
+function replaceContent(data){
+  var wrapper = $('.container-fluid');
+  wrapper.hide(300);
+  wrapper.html('');
+  var content = '';
+  for (var i = 0; i < data.length; i++) {
+  //
+  // content +=   '<div class="col-lg-4 mb-5 col-md-6">'+
+  //   '  <div class="wine_v_1 text-center pb-4">'+
+  //   '    <a href="#" class="prevent thumbnail d-block mb-4"><img src="images/'+data[i].image+'" alt="Image" class="img-fluid">'+
+  //   '    </a>'+
+  //   '    <div>'+
+  //   '      <h3 class="heading mb-1"><a href="#">'+data[i].item_name+'</a></h3>'+
+  //   '      <span class="price">'+data[i].price+'</span>'+
+  //   '    </div>'+
+  //   '    <div class="wine-actions">'+
+  //   '      <h3 class="heading-2"><a href="#">'+data[i].item_name+'</a></h3>'+
+  //   '      <span class="price d-block">'+data[i].price+'</span>'+
+  //   '      <a href="#" data-name="'+data[i].item_name+'" class="product-add-to-cart btn add"><span class="icon-shopping-bag mr-3"></span>'+
+  //   '       הוסף לסל'+
+  //   '       </a>'+
+  //   '    </div>'+
+  //   '  </div>'+
+  //   '</div>'
+    content += '<div class="col-lg-4 mb-4 col-md-4" style="display:inline-block"><div class="wine_v_1 text-center pb-4"><img class="img_product"  src="images/'+data[i].image+'" alt="Image" class="img-fluid">  <div>  <h3 class="heading mb-1">'+data[i].item_description+'</h3><span class="price">'+data[i].price+'&#8362;</span></div><div class="wine-actions"><h3 class="heading-2"><a href="#"></a></h3><span class="price d-block">60</span>  <div class="rating">  <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-o"></span></div>'+
+    '<a href="#" data-name="'+data[i].item_name+'" class="prevent product-add-to-cart btn add" onclick="addToCart(this)">הוסף לסל</a></span>'+
+    '</div></div></div>';
+  }
+  // console.log(content);
+  wrapper.html(content);
+  wrapper.fadeIn(300);
 }

@@ -1,11 +1,5 @@
 <?php
-
 $category = $_POST['category'];
-
-if (!$category) {
-  die;
-}
-
 include('db/config.php');
 /**
  *
@@ -23,7 +17,11 @@ class SellingProdects
 
   public function getProducts($category){
     $data = [];
-    $sql = "SELECT * FROM `selling_items` WHERE category = '$category'";
+    if ($category == 'all') {
+      $sql = "SELECT * FROM `selling_items` where item_role = 1";
+    }else{
+      $sql = "SELECT * FROM `selling_items` WHERE category = '$category'";
+    }
     if ($result = $this->connection->query($sql)) {
       while ($row = $result->fetch_assoc()) {
         $data[] = $row;
@@ -33,11 +31,22 @@ class SellingProdects
       return $data;
     }
   }
+
+
+  public function getCategories(){
+
+    $sql = "SELECT category FROM `selling_items` group by category";
+
+
+
+  }
+
+
 }
 
 
-$items = new SellingProdects();
-$itemsPerCategory = $items->getProducts($category);
-echo json_encode($itemsPerCategory,JSON_UNESCAPED_UNICODE);die;
+// $items = new SellingProdects();
+// $itemsPerCategory = $items->getProducts($category);
+// echo json_encode($itemsPerCategory,JSON_UNESCAPED_UNICODE);die;
 
  ?>

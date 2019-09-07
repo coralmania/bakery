@@ -61,7 +61,7 @@
                   <span class="icon-star-o"></span>
                 </div> -->
                 <a href="#" data-name="<?= $product['item_name'] ?>" class="product-add-to-cart btn add"><span class="icon-shopping-bag mr-3"></span>
-                 Add to Cart
+                 הוסף לסל
                  </a>
               </div>
             </div>

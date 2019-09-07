@@ -72,7 +72,11 @@ if (isset($_SESSION['user_name'])) {
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
 </head>
-
+<style media="screen">
+  .logo{
+    width: 14%;
+  }
+</style>
 <!-- <div class="alert alert-primary" role="alert">
   This is a primary alert—check it out!
 </div> -->
@@ -92,7 +96,7 @@ if (isset($_SESSION['user_name'])) {
           <div class="row align-items-center">
             <div class="col-12 text-center">
               <a href="index.php" class="site-logo">
-                <img src="images/logo.png" alt="Image" class="img-fluid">
+                <img src="images/logo.png" class="logo" alt="Image" class="img-fluid">
               </a>
             </div>
             <a href="#" class="mx-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
