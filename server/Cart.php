@@ -30,11 +30,18 @@ class Cart
     $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
     $connection->set_charset("utf8");
     $sql = "SELECT price FROM selling_items WHERE item_name = '$item' ";
-
     if ($result = $connection->query($sql)) {
       if ($result->num_rows >= 1) {
         $row = $result->fetch_assoc();
         return $row['price'];
+      }else{
+        $sql = "SELECT price FROM workshops WHERE title = '$item' ";
+        if($result = $connection->query($sql)){
+          if($result->num_rows >= 1){
+            $row = $result->fetch_assoc();
+            return $row['price'];
+          }
+        }
       }
     }
   }
@@ -49,7 +56,19 @@ class Cart
     return $total;
   }
 
-  public function addToCart($input, $refresh = true){
+  public function addToCart($input, $refresh = true , $amount = 1){
+    if (array_key_exists($input, $this->totalCart)) {
+      $this->totalCart->$input = $this->totalCart->$input + $amount ;
+    }else{
+      $this->totalCart->$input = $amount;
+    }
+    $this->refresh =$refresh;
+    $this->totalCart->total = $this->totalCart->total + $amount;
+    $this->updateSession();
+    return;
+  }
+
+  public function addLessonToCart($input, $refresh = true){
     if (array_key_exists($input, $this->totalCart)) {
       $this->totalCart->$input = $this->totalCart->$input + 1 ;
     }else{

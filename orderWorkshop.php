@@ -8,10 +8,22 @@ if(!$workshop_role){
   $_SESSION['alert'] = "ראשית יש להכנס למערכת";
   header('location: loginPage.php');die;
 }
-// echo '<pre>';
-// print_r($userInfo);die;
+
 $workshop = new Workshop();
 $workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
+if(isset($_POST['submit'])){
+  
+  $fname = !empty($_POST['fname']) ? trim($_POST['fname']) : '';
+  $email = !empty($_POST['email']) ? trim($_POST['email']) : '';
+  $phone = !empty($_POST['phone']) ? trim($_POST['phone']) : '';
+  $attending = !empty($_POST['attending']) ? trim($_POST['attending']) : '';
+  $date = !empty($_POST['date']) ? trim($_POST['date']) : '';
+  if($fname && $email && $phone && $attending && $date ){
+      $cart->addToCart($workshopsByTitle[0]['title'],true, $attending);
+  }
+}
+
+
 ?>
 <br><br>
 <div class="row">
@@ -19,28 +31,28 @@ $workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
     <form method="POST">
 
       <div class="form-group">
-        <label for="exampleInputFirstName">שם מלא</label>
-        <input type="text" name="fname" class="form-control"  onkeyup="" placeholder="First Name">
+        <label for="exampleInputFirstName">שם</label>
+        <input type="text" name="fname" class="form-control"  onkeyup="" placeholder="First Name" value="<?= $userInfo['fname']?> " require>
         <small id="fnameErrorMsg" class="error"></small>
       </div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">אימייל</label>
-          <input type="text" name="email" class="form-control" id="exampleInputEmail1" onkeyup="" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="text" name="email" class="form-control" require id="exampleInputEmail1" onkeyup="" value="<?= $userInfo['email'] ?>" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted"></small>
           <small id="emailErrorMsg" class="error"></small>
         </div>
 
         <div class="form-group">
           <label for="exampleInputPhone">טלפון</label>
-          <input type="text" name="phone" class="form-control" onkeyup="" placeholder="Phone Number">
+          <input type="text" name="phone" class="form-control" onkeyup="" placeholder="Phone Number" value="<?= $userInfo['phone'] ?>" require>
           <small id="phoneMsgGoogle" class=""></small>
           <br>
           <small id="phoneErrorMsg" class="error"></small>
         </div>
 
         <div class="form-group">
-          <select class="" name="">
+          <select class="" name="attending" require>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -52,7 +64,7 @@ $workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
 
 
         <div class="form-group">
-          <select class="" name="" onchange="chenge_teacher(this)">
+          <select class="" name="date" onchange="chenge_teacher(this)" require>
             <option value="" >בחר תאריך</option>
             <?php foreach ($workshopsByTitle as $key => $value): ?>
               <option value="<?php echo $value['id_workshop'] ?>"><?php echo $value['be_at'] ?></option>
@@ -68,10 +80,19 @@ $workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
           <p id="teacher_name"></p>
         </div>
 
-        <input class="btn btn-primary" onkeyup="" value="Submit"></input>
+        <input type="submit" name="submit" class="btn btn-primary" onkeyup="" value="הזמן"></input>
       </form>
     </div>
   </div>
+
+<?php
+
+echo '<pre>';
+print_r($_POST);
+
+?>
+
+
   <script type="text/javascript">
     var workshopsByTitle = '<?php echo json_encode($workshopsByTitle) ?>';
     var teacher;

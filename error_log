@@ -378,3 +378,7 @@
 [31-Aug-2019 11:28:49 UTC] PHP Warning:  include(tamplate/footer.php): failed to open stream: No such file or directory in /home/coralma/public_html/aboutPage.php on line 31
 [31-Aug-2019 11:28:49 UTC] PHP Warning:  include(tamplate/footer.php): failed to open stream: No such file or directory in /home/coralma/public_html/aboutPage.php on line 31
 [31-Aug-2019 11:28:49 UTC] PHP Warning:  include(): Failed opening 'tamplate/footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/aboutPage.php on line 31
+[18-Sep-2019 12:08:14 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/orderWorkshop.php on line 30
+[18-Sep-2019 12:09:15 UTC] PHP Fatal error:  Cannot access empty property in /home/coralma/public_html/server/Cart.php on line 68
+[18-Sep-2019 12:24:31 UTC] PHP Fatal error:  Cannot access empty property in /home/coralma/public_html/server/Cart.php on line 56
+[18-Sep-2019 12:26:15 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/coralma/public_html/orderWorkshop.php on line 22

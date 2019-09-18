@@ -4,6 +4,7 @@ include('server/db/config.php');
 include('server/User.php');
 include('server/Workshop.php');
 include('server/class/Product.php');
+include('server/Recipes.php');
 $actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 $userName = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : '';
 include('server/Cart.php');
@@ -71,6 +72,7 @@ if (isset($_SESSION['user_name'])) {
   <link rel="stylesheet" href="css/style.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+   <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <style media="screen">
   .logo{
@@ -117,6 +119,7 @@ if (isset($_SESSION['user_name'])) {
                     <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
                     <li><a href="lessonsPage.php" class="nav-link text-left">הסדנאות שלנו</a></li>
                     <li><a href="shopPage.php" class="nav-link text-left">חנות מפעל</a></li>
+                    <li><a href="recipesPage.php" class="nav-link text-left">מתכונים</a></li>
                     <li><a href="contactPage.php" class="nav-link text-left">צור קשר</a></li>
                     <li><a href="aboutPage.php" class="nav-link text-left">עלינו</a></li>
                     <li><a href="index.php" class="nav-link text-left">בית</a></li>
