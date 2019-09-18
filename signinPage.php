@@ -4,54 +4,54 @@ include('template/head.php');
 ?>
 
 <br><br>
-<center><h1>SignIn</h1></center>
+<center><h1>טופס הרשמה</h1></center>
 <div class="row">
 <div class="col-md-12 col-lg-6 offset-lg-3">
   <form method="POST">
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="text" name="email" class="form-control" id="exampleInputEmail1" onkeyup="checkEnter(event)" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <label for="exampleInputEmail1">אימייל</label>
+      <input type="text" name="email" class="form-control" id="exampleInputEmail1" onkeyup="checkEnter(event)" aria-describedby="emailHelp" placeholder="אימייל">
+      <small id="emailHelp" class="form-text text-muted">לעולם לא נשתף את פרטייך</small>
       <small id="emailErrorMsg" class="error"></small>
     </div>
 
     <div class="form-group">
-      <label for="exampleInputFirstName">First Name</label>
-      <input type="text" name="fname" class="form-control"  onkeyup="checkEnter(event)" placeholder="First Name">
+      <label for="exampleInputFirstName">שם פרטי</label>
+      <input type="text" name="fname" class="form-control"  onkeyup="checkEnter(event)" placeholder="שם פרטי">
       <small id="fnameErrorMsg" class="error"></small>
     </div>
 
     <div class="form-group">
-      <label for="exampleInputLastName">Last Name</label>
-      <input type="text" name="lname" class="form-control" onkeyup="checkEnter(event)"  placeholder="Last Name">
+      <label for="exampleInputLastName">שם משפחה</label>
+      <input type="text" name="lname" class="form-control" onkeyup="checkEnter(event)"  placeholder="שם משפחה">
       <small id="lnameErrorMsg" class="error"></small>
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPhone">Phone Number</label>
-      <input type="text" name="phone" class="form-control" onkeyup="checkEnter(event)" placeholder="Phone Number">
+      <label for="exampleInputPhone">טלפון</label>
+      <input type="text" name="phone" class="form-control" onkeyup="checkEnter(event)" placeholder="טלפון">
       <small id="phoneMsgGoogle" class=""></small>
       <br>
       <small id="phoneErrorMsg" class="error"></small>
     </div>
 
     <div class="form-group" data-id="password">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" name="password" class="form-control" onkeyup="checkEnter(event)" id="exampleInputPassword1" placeholder="Password">
+      <label for="exampleInputPassword1">סיסמא</label>
+      <input type="password" name="password" class="form-control" onkeyup="checkEnter(event)" id="exampleInputPassword1" placeholder="סיסמא">
       <small id="passwordErrorMsg" class="error"></small>
     </div>
 
     <div class="form-group" data-id="password">
-      <label for="exampleInputPassword2">Re-Password</label>
-      <input type="password" name="re_password" class="form-control" onkeyup="checkEnter(event)"  placeholder="Confirm">
+      <label for="exampleInputPassword2">אימות</label>
+      <input type="password" name="re_password" class="form-control" onkeyup="checkEnter(event)"  placeholder="אימות">
       <small id="re-passwordErrorMsg" class="error"></small>
     </div>
 
 
-    <input  class="btn btn-primary" onclick="signin()" onkeyup="checkEnter(event)" value="Submit"></input>
-    <p><a href="loginPage.php">Already Signed ?</a></p>
+    <input  class="btn btn-primary" onclick="signin()" onkeyup="checkEnter(event)" value="הרשם"></input>
+    <p><a href="loginPage.php">רשום כבר ?</a></p>
   </form>
-  <h2>Or</h2>
+  <h3>או לחילופין , ניתן להתחבר באמצעות גוגל</h3>
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
   </div>

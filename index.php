@@ -1,8 +1,6 @@
 <?php
  include('template/head.php') ;
-
   $product = new Product;
-
   $products = $product->get_products(3);
 
 ?>
@@ -36,23 +34,22 @@
         <div class="row mb-5">
           <div class="col-12 section-title text-center mb-5">
             <h2 class="d-block">הפופולריים ביותר: </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, perspiciatis!</p>
-            <p><a href="shopPage.php">View All Products <span class="icon-long-arrow-right"></span></a></p>
+            <p><a href="shopPage.php">מוצרי החנות<span class="icon-long-arrow-right"></span></a></p>
           </div>
         </div>
         <div class="row">
           <?php foreach($products as $product): ?>
           <div class="col-lg-4 mb-5 col-md-6">
             <div class="wine_v_1 text-center pb-4">
-              <a href="#" class="prevent thumbnail d-block mb-4"><img src="images/<?= $product['image'] ?>" alt="Image" class="img-fluid">
+              <a href="shopPage.php" class="thumbnail d-block mb-4"><img src="images/<?= $product['image'] ?>" alt="Image" class="img-fluid">
               </a>
               <div>
                 <h3 class="heading mb-1"><a href="#"><?= $product['item_name'] ?></a></h3>
-                <span class="price">$<?= $product['price'] ?></span>
+                <span class="price"><?= $product['price'] ?>&#8362;</span>
               </div>
               <div class="wine-actions">
                 <h3 class="heading-2"><a href="#"><?= $product['item_name'] ?></a></h3>
-                <span class="price d-block">$<?= $product['price'] ?></span>
+                <span class="price d-block"><?= $product['price'] ?>&#8362;</span>
                 <!-- <div class="rating">
                   <span class="icon-star"></span>
                   <span class="icon-star"></span>
@@ -86,22 +83,22 @@
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
 
-              <a href="post-single.html"><img src="images/parents.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
-              <h2><a href="blog-single.html">סנדאות הורים וילדים</a></h2>
+              <a href="lesson_info_page.php?lesson=parents"><img src="images/parents.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <h2><a href="lesson_info_page.php?lesson=parents">סנדאות הורים וילדים</a></h2>
               <p>מיועד להורים ולילדים, סבא/סבתא ונכדים</p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="post-single.html"><img src="images/pro.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
-              <h2><a href="blog-single.html">סדנאות התמחות</a></h2>
+              <a href="lesson_info_page.php?lesson=pro"><img src="images/pro.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <h2><a href="lesson_info_page.php?lesson=pro">סדנאות התמחות</a></h2>
               <p>מיועד למי שרוצה להיות מומחה התחום מסוים, תוך שימוש במוצרים ביתיים פשוטים ואיכותיים.</p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="post-single.html"><img src="images/private.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
-              <h2><a href="blog-single.html">סדנאות פרטיות</a></h2>
+              <a href="lesson_info_page.php?lesson=private"><img src="images/private.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <h2><a href="lesson_info_page.php?lesson=private">סדנאות פרטיות</a></h2>
               <p>רוצים ללמוד מתכון אפייה ספציפי? מעוניינים בחוויה אינטימית ואישית בקונדיטוריה?
                 בסדנאות הפרטיות של הקונדיטוריה שייכת רק לכם, ואנחנו אופים ומכינים אך ורק את מה שאתם מבקשים.</p>
             </div>

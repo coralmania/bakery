@@ -22,8 +22,8 @@ if ($email && $fname && $lname && $tel && $msg) {
  <div class="container">
     <div class="row justify-content-center text-center align-items-center">
       <div class="col-md-8">
-        <span class="sub-title">Get In Touch</span>
-        <h2>Contact</h2>
+        <span class="sub-title"></span>
+        <h2>צרו קשר!</h2>
       </div>
     </div>
   </div>
@@ -35,35 +35,35 @@ if ($email && $fname && $lname && $tel && $msg) {
     <div class="row">
 
       <div class="col-lg-12">
-        <div class="section-title mb-5">
-          <h2>Contact Us</h2>
+        <div class="section-title mb-5 ">
+          <center><h2>תרגישו חופשי!</h2></center>
         </div>
         <form method="post" action="#">
 
               <div class="row">
                   <div class="col-md-6 form-group">
-                      <label for="fname">First Name</label>
+                      <label for="fname">שם פרטי</label>
                       <input type="text" id="fname" name="fname" class="form-control form-control-lg"
                       value="<?php if ($signed_in): ?><?php echo $_SESSION['user_name'] ?><?php endif; ?>">
                   </div>
                   <div class="col-md-6 form-group">
-                      <label for="lname">Last Name</label>
+                      <label for="lname">משפחה</label>
                       <input type="text" id="lname" name="lname" class="form-control form-control-lg" required value="<?php if ($signed_in): ?><?php echo $_SESSION['user_lname'] ?><?php endif; ?>" >
                   </div>
               </div>
               <div class="row">
                   <div class="col-md-6 form-group">
-                      <label for="eaddress">Email Address</label>
+                      <label for="eaddress">כתובת אימייל</label>
                       <input type="text" id="eaddress" name="email" class="form-control form-control-lg" required value="<?php if ($signed_in): ?><?php echo $_SESSION['user_email'] ?><?php endif; ?>" >
                   </div>
                   <div class="col-md-6 form-group">
-                      <label for="tel">Tel. Number</label>
+                      <label for="tel">טלפון</label>
                       <input type="text" id="tel" name="tel" class="form-control form-control-lg" required value="<?php if ($signed_in): ?><?php echo $_SESSION['user_phone'] ?><?php endif; ?>" >
                   </div>
               </div>
               <div class="row">
                   <div class="col-md-12 form-group">
-                      <label for="message">Message</label>
+                      <label for="message">תוכן ההודעה</label>
                       <textarea  id="message" name="msg" cols="30" rows="10" class="form-control" required ></textarea>
                   </div>
               </div>

@@ -51,7 +51,7 @@ if (isset($_SESSION['user_name'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Wines &mdash; Website Template by Colorlib</title>
+  <title>קונדטוריה ובית מאפה</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="google-signin-client_id" content="522541522704-s9qq0asmov39gfc9kn91scjmtf20kpqf.apps.googleusercontent.com">

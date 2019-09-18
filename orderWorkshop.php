@@ -85,13 +85,6 @@ if(isset($_POST['submit'])){
     </div>
   </div>
 
-<?php
-
-echo '<pre>';
-print_r($_POST);
-
-?>
-
 
   <script type="text/javascript">
     var workshopsByTitle = '<?php echo json_encode($workshopsByTitle) ?>';
