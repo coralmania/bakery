@@ -8,6 +8,7 @@ if(!$workshop_role){
 
 $workshop = new Workshop();
 $workshops = $workshop->getWorkShops($workshop_role);
+
 ?>
 <br><br>
 <center><h2>הסדנאות שלנו</h2></center>

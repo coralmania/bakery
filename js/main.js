@@ -385,24 +385,6 @@ function replaceContent(data){
   wrapper.html('');
   var content = '';
   for (var i = 0; i < data.length; i++) {
-  //
-  // content +=   '<div class="col-lg-4 mb-5 col-md-6">'+
-  //   '  <div class="wine_v_1 text-center pb-4">'+
-  //   '    <a href="#" class="prevent thumbnail d-block mb-4"><img src="images/'+data[i].image+'" alt="Image" class="img-fluid">'+
-  //   '    </a>'+
-  //   '    <div>'+
-  //   '      <h3 class="heading mb-1"><a href="#">'+data[i].item_name+'</a></h3>'+
-  //   '      <span class="price">'+data[i].price+'</span>'+
-  //   '    </div>'+
-  //   '    <div class="wine-actions">'+
-  //   '      <h3 class="heading-2"><a href="#">'+data[i].item_name+'</a></h3>'+
-  //   '      <span class="price d-block">'+data[i].price+'</span>'+
-  //   '      <a href="#" data-name="'+data[i].item_name+'" class="product-add-to-cart btn add"><span class="icon-shopping-bag mr-3"></span>'+
-  //   '       הוסף לסל'+
-  //   '       </a>'+
-  //   '    </div>'+
-  //   '  </div>'+
-  //   '</div>'
     content += '<div class="col-lg-4 mb-4 col-md-4" style="display:inline-block"><div class="wine_v_1 text-center pb-4"><img class="img_product"  src="images/'+data[i].image+'" alt="Image" class="img-fluid">  <div>  <h3 class="heading mb-1">'+data[i].item_description+'</h3><span class="price">'+data[i].price+'&#8362;</span></div><div class="wine-actions"><h3 class="heading-2"><a href="#"></a></h3><span class="price d-block">'+data[i].price+'&#8362;</span>  <div class="rating">  <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-o"></span></div>'+
     '<a href="#" data-name="'+data[i].item_name+'" class="prevent product-add-to-cart btn add" onclick="addToCart(this)">הוסף לסל</a></span>'+
     '</div></div></div>';
@@ -410,4 +392,33 @@ function replaceContent(data){
   // console.log(content);
   wrapper.html(content);
   wrapper.fadeIn(300);
+}
+
+
+function subCategoryChange(obj){
+  var subCategoryBox = $('#subCategory');
+  subCategoryBox.hide();
+  var strUser = obj.options[obj.selectedIndex].value;
+  var subCategoryOptions = $('#subCategoryOptions');
+  subCategoryOptions.html('');
+  if (strUser) {
+    switch (strUser) {
+      case 'pro':
+        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="שמרים">שמרים</option>');
+        break;
+      case 'private':
+        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="סדנת רווקות">סדנת רווקות</option>');
+        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="בישול ואפיה">בישול ואפיה</option>');
+        break;
+      case 'parents':
+        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="סדנת שוקולד">סדנת שוקולד</option>');
+        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="סדנת קאפקייקס">סדנת קאפקייקס</option>');
+        break;
+      default:
+    }
+    subCategoryBox.show(300);
+  }else{
+    subCategoryBox.hide(300);
+
+  }
 }

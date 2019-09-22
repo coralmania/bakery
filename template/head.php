@@ -44,6 +44,11 @@ if (isset($_SESSION['user_name'])) {
   $signed_in = true;
   $user = new User($connection);
   $userInfo = $user->userData();
+  if ($userInfo['role'] == 1) {
+      $_SESSION['user_admin'] = true;
+    }else{
+      $_SESSION['user_admin'] = false;
+    }
 }
 
 
@@ -73,6 +78,8 @@ if (isset($_SESSION['user_name'])) {
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <style media="screen">
   .logo{
@@ -123,6 +130,9 @@ if (isset($_SESSION['user_name'])) {
                     <li><a href="contactPage.php" class="nav-link text-left">צור קשר</a></li>
                     <li><a href="aboutPage.php" class="nav-link text-left">עלינו</a></li>
                     <li><a href="index.php" class="nav-link text-left">בית</a></li>
+                    <?php if ($_SESSION['user_admin']): ?>
+                      <li><a href="dashboard.php" style="color:red" class="nav-link text-left">איזור עריכת אתר</a></li>
+                    <?php endif; ?>
                     <?php if (isset($_SESSION['user_name'])): ?>
                       <li class="active"><a style="color:rgb(156, 32, 131)!important" class="nav-link text-left"><a href="profilePage.php"><?= $userInfo['fname'] ?></a>ברוך הבא </a></li>
                     <?php endif; ?>

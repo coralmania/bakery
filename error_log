@@ -382,3 +382,7 @@
 [18-Sep-2019 12:09:15 UTC] PHP Fatal error:  Cannot access empty property in /home/coralma/public_html/server/Cart.php on line 68
 [18-Sep-2019 12:24:31 UTC] PHP Fatal error:  Cannot access empty property in /home/coralma/public_html/server/Cart.php on line 56
 [18-Sep-2019 12:26:15 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/coralma/public_html/orderWorkshop.php on line 22
+[22-Sep-2019 15:13:39 UTC] PHP Parse error:  syntax error, unexpected '}', expecting identifier (T_STRING) in /home/coralma/public_html/server/Workshop.php on line 45
+[22-Sep-2019 16:11:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/lesson_info_page.php on line 17
+[22-Sep-2019 16:14:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/lesson_info_page.php on line 17
+[22-Sep-2019 16:18:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/lesson_info_page.php on line 18

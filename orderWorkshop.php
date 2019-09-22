@@ -12,7 +12,7 @@ if(!$workshop_role){
 $workshop = new Workshop();
 $workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
 if(isset($_POST['submit'])){
-  
+
   $fname = !empty($_POST['fname']) ? trim($_POST['fname']) : '';
   $email = !empty($_POST['email']) ? trim($_POST['email']) : '';
   $phone = !empty($_POST['phone']) ? trim($_POST['phone']) : '';
