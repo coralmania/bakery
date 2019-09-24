@@ -28,6 +28,18 @@ class Recipes
     }
   }
 
+  public function getRecipe($id){
+    $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE id_recipe = '$id' ";
+    if ($result = $this->connection->query($sql)) {
+      $data = [];
+      while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
   public function addRecipe($arr){
     //
 

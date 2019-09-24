@@ -1,9 +1,9 @@
 <?php
 $relevantRecipes = [];
 include('template/head.php');
-if (isset($_POST['submit'])) {
-  $key_note = !empty($_POST['search']) ? trim($_POST['search']) : '';
-  $hours = !empty($_POST['hours']) ? trim($_POST['hours']) : '';
+if (isset($_GET['submit'])) {
+  $key_note = !empty($_GET['search']) ? trim($_GET['search']) : '';
+  $hours = !empty($_GET['hours']) ? trim($_GET['hours']) : '';
   if ($key_note && $hours) {
     $recipes = new Recipes();
     $relevantRecipes = $recipes->getRecipes($key_note, $hours);
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
 <center><h1>מתכונים</h1></center>
 <div class="row">
 <div class="col-md-12 col-lg-6 offset-lg-3 ">
-  <form method="POST" action="#">
+  <form method="GET" action="#">
     <div class="form-group pull-right">
       <label for="exampleInputEmail1" class="pull-right">:חיפוש</label>
       <input type="text" name="search" class="form-control" aria-describedby="emailHelp" >
@@ -35,32 +35,62 @@ if (isset($_POST['submit'])) {
   </form>
   </div>
   </div>
+  <br>
   <?php if (count($relevantRecipes)): ?>
     <hr>
+    <div class="container-fluid" style="margin-left:15%">
     <?php foreach ($relevantRecipes as $key => $value): ?>
-      <div class="site-section mt-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="owl-carousel hero-slide owl-style">
-                <img src="images/<?php echo $value['image'] ?>" alt="Image" class="img-fluid my_image">
+          <div class="col-lg-4 mb-4 col-md-4" style="display:inline-block">
+            <div class="wine_v_1 text-center pb-4">
+              <img class="img_product" width="360" height="240" src="images/<?php echo $value['image'] ?>" alt="Image">
+                <div>
+                  <h3 class="heading mb-1"><?php echo $value['title'] ?></h3><span class="price"><?php echo $value['time_frame'] ?>₪</span>
+                </div>
+                <div class="wine-actions">
+                  <h3 class="heading-2"><a href="#"></a></h3><span class="price d-block"><?php echo $value['fname'] ?>  <?php echo $value['lname'] ?> :מאת</span>
+                  <div class="rating"> <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                    <span class="icon-star-o"></span></div>
+                    <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>"  class=" product-add-to-cart btn add" >עבור למתכון</a>
+                </div>
               </div>
-            </div>
-            <div class="col-lg-5 ml-auto">
-              <h2 class="text-primary"><?php echo $value['title'] ?></h2>
-              <small><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b>:מאת</small>
-              <br>
-              <small><b><?php echo $value['time_frame'] ?></b>: זמן הכנה</small>
-              <p><?php echo $value['preparation'] ?>:הוראות הכנה</p>
-              בתאבון!
-            </div>
           </div>
-        </div>
-      </div>
-      <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <?php endforeach; ?>
+  </div>
+
 <?php endif; ?>
 
 <?php include('template/footer.php') ?>
