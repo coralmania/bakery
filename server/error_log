@@ -67,3 +67,12 @@
 [22-Sep-2019 15:45:27 UTC] PHP Fatal error:  Call to private method Workshop::addWorkshop() from context '' in /home/coralma/public_html/server/postNewWorkshop.php on line 30
 [22-Sep-2019 15:49:27 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in /home/coralma/public_html/server/postNewWorkshop.php on line 30
 [22-Sep-2019 15:49:47 UTC] PHP Fatal error:  Call to undefined method Workshop::addWorkshop() in /home/coralma/public_html/server/postNewWorkshop.php on line 32
+[24-Sep-2019 16:34:00 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Recipes.php on line 10
+[24-Sep-2019 16:34:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Recipes.php on line 10
+[24-Sep-2019 16:34:00 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/Recipes.php on line 11
+[24-Sep-2019 16:34:49 UTC] PHP Warning:  include(config/db.php): failed to open stream: No such file or directory in /home/coralma/public_html/server/Recipes.php on line 2
+[24-Sep-2019 16:34:49 UTC] PHP Warning:  include(config/db.php): failed to open stream: No such file or directory in /home/coralma/public_html/server/Recipes.php on line 2
+[24-Sep-2019 16:34:49 UTC] PHP Warning:  include(): Failed opening 'config/db.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/server/Recipes.php on line 2
+[24-Sep-2019 16:34:49 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Recipes.php on line 11
+[24-Sep-2019 16:34:49 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/Recipes.php on line 11
+[24-Sep-2019 16:34:49 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/Recipes.php on line 12

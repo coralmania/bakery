@@ -10,7 +10,7 @@ if(!$workshop_role){
 }
 
 $workshop = new Workshop();
-$workshopsByTitle = $workshop->getWorkShopsByTitle($workshop_role);
+$workshopsByTitle = $workshop->getWorkShopsById($workshop_role);
 if(isset($_POST['submit'])){
 
   $fname = !empty($_POST['fname']) ? trim($_POST['fname']) : '';
@@ -23,11 +23,22 @@ if(isset($_POST['submit'])){
   }
 }
 
-
 ?>
 <br><br>
+
+<div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/images/<?php echo $workshopsByTitle[0]['image'] ?>" alt="" width="34%" height="34%">
+      <h2 ><?php echo $workshopsByTitle[0]['title'] ?></h2>
+      <p class="lead title_konditor"><?php echo $workshopsByTitle[0]['discription'] ?></p>
+      <p class="lead">קונדיטורה : <?php echo $workshopsByTitle[0]['fname'] . ' ' . $workshopsByTitle[0]['fname']  ?></p>
+
+    </div>
+
 <div class="row">
 <div class="col-md-12 col-lg-6 offset-lg-3">
+
+
+
     <form method="POST">
 
       <div class="form-group">
@@ -65,19 +76,10 @@ if(isset($_POST['submit'])){
 
         <div class="form-group">
           <select class="" name="date" onchange="chenge_teacher(this)" require>
-            <option value="" >בחר תאריך</option>
-            <?php foreach ($workshopsByTitle as $key => $value): ?>
-              <option value="<?php echo $value['id_workshop'] ?>"><?php echo $value['be_at'] ?></option>
-            <?php endforeach; ?>
+              <option value="<?php echo $workshopsByTitle[0]['id_workshop'] ?>"><?php echo $workshopsByTitle[0]['be_at'] ?></option>
           </select>
           <small id="lnameErrorMsg" class="error"></small>
           <label for="exampleInputLastName">בחר תאריך</label>
-        </div>
-
-
-        <div class="form-group">
-          <label for="exampleInputPhone">:שם המרצה</label>
-          <p id="teacher_name"></p>
         </div>
 
         <input type="submit" name="submit" class="btn btn-primary" onkeyup="" value="הזמן"></input>

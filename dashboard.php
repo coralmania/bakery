@@ -28,6 +28,7 @@ if (!isset($_SESSION['user_admin'])) {
 	     <div class="list-group ">
            <a href="dashboard.php" class="list-group-item list-group-item-action active">הוספת מוצרים</a>
            <a href="addSadna.php" class="list-group-item list-group-item-action">הוספת סדנא</a>
+           <a href="addRecipe.php" class="list-group-item list-group-item-action">הוספת מתכון</a>
          </div>
  		</div>
  		<div class="col-md-9">

@@ -386,3 +386,7 @@
 [22-Sep-2019 16:11:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/lesson_info_page.php on line 17
 [22-Sep-2019 16:14:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/lesson_info_page.php on line 17
 [22-Sep-2019 16:18:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/lesson_info_page.php on line 18
+[24-Sep-2019 15:47:01 UTC] PHP Fatal error:  Call to undefined method Workshop::getWorkShopsByTitle() in /home/coralma/public_html/orderWorkshop.php on line 13
+[24-Sep-2019 15:48:07 UTC] PHP Parse error:  syntax error, unexpected ']', expecting ',' or ';' in /home/coralma/public_html/orderWorkshop.php on line 33
+[24-Sep-2019 16:38:59 UTC] PHP Fatal error:  Cannot redeclare checkIfEmailValid() (previously declared in /home/coralma/public_html/server/db/config.php:9) in /home/coralma/public_html/server/db/config.php on line 9
+[24-Sep-2019 16:47:54 UTC] PHP Fatal error:  Cannot redeclare checkIfEmailValid() (previously declared in /home/coralma/public_html/server/db/config.php:9) in /home/coralma/public_html/server/db/config.php on line 9

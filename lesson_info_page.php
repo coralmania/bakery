@@ -8,7 +8,8 @@ if(!$workshop_role){
 
 $workshop = new Workshop();
 $workshops = $workshop->getWorkShops($workshop_role);
-
+// echo '<pre>';
+// print_r($workshop);die;
 ?>
 <br><br>
 <center><h2>הסדנאות שלנו</h2></center>
@@ -24,7 +25,7 @@ $workshops = $workshop->getWorkShops($workshop_role);
                 <div class="card-desc">
                     <h3><?php echo $workshop['title'] ?></h3>
                     <p><?php echo $workshop['discription'] ?></p>
-                      <a href="orderWorkshop.php?lesson=<?php echo $workshop['title'] ?>" class="btn-card">הזמן עכשיו!</a>
+                      <a href="orderWorkshop.php?lesson=<?php echo $workshop['id_workshop'] ?>" class="btn-card">הזמן עכשיו!</a>
                 </div>
             </div>
         </div>

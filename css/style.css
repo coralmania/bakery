@@ -8,11 +8,23 @@ html {
   .error{
     color:red;
   }
+  .title_konditor{
+    width: 75%;
+    margin-left: 13%;
+  }
 body {
   line-height: 1.7;
   color: gray;
   font-weight: 300;
   font-size: 1rem; }
+
+
+
+  .my_image{
+    height: 193px;
+    width: 70%!important;
+    margin-left: 22%;
+  }
 
 ::-moz-selection {
   background: #000;

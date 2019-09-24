@@ -1,4 +1,5 @@
 <?php
+$relevantRecipes = [];
 include('template/head.php');
 if (isset($_POST['submit'])) {
   $key_note = !empty($_POST['search']) ? trim($_POST['search']) : '';
@@ -8,7 +9,6 @@ if (isset($_POST['submit'])) {
     $relevantRecipes = $recipes->getRecipes($key_note, $hours);
   }
 }
-
 
  ?>
 
@@ -35,27 +35,32 @@ if (isset($_POST['submit'])) {
   </form>
   </div>
   </div>
-  <?php if (isset($relevantRecipes) && count($relevantRecipes) > 0): ?>
+  <?php if (count($relevantRecipes)): ?>
+    <hr>
     <?php foreach ($relevantRecipes as $key => $value): ?>
-    <div class="row">
-      <div class="col-md-12 col-lg-6 offset-lg-3 ">
-        <div class="pull-right" dir="rtl">
-        <p class="pull-right">  <u><?php echo $value['title'] ?></u> מאת <u><?php echo $value['fname'] ?></u> </p><br><br>
-        <?php $steps = explode('#' , $value['preparation']); ?>
-        <ul>
-         <?php foreach ($steps as $index => $val): ?>
-           <?php if ($val): ?>
-             <li>
-               <p class="pull-right"><?php echo $val ?> </p>
-             </li>
-           <?php endif; ?>
-        <?php endforeach; ?>
-      </ul>
+      <div class="site-section mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="owl-carousel hero-slide owl-style">
+                <img src="images/<?php echo $value['image'] ?>" alt="Image" class="img-fluid my_image">
+              </div>
+            </div>
+            <div class="col-lg-5 ml-auto">
+              <h2 class="text-primary"><?php echo $value['title'] ?></h2>
+              <small><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b>:מאת</small>
+              <br>
+              <small><b><?php echo $value['time_frame'] ?></b>: זמן הכנה</small>
+              <p><?php echo $value['preparation'] ?>:הוראות הכנה</p>
+              בתאבון!
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <hr>
-  <?php endforeach; ?>
-  <?php endif; ?>
+      <hr>
+
+
+    <?php endforeach; ?>
+<?php endif; ?>
 
 <?php include('template/footer.php') ?>

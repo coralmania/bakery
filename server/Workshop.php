@@ -16,22 +16,23 @@ class Workshop
   public function getWorkShops($role){
     $data = [];
     $today = date('Y-m-d');
-    $sql = "SELECT * FROM `workshops` WHERE `workshop_role` = '$role' AND `be_at` > '$today' AND `image` != '' AND `max_attending` > `current_attending` group by `title` order by created_at desc";
+    $sql = "SELECT * FROM `workshops` WHERE `workshop_role` = '$role' AND `be_at` > '$today' AND `image` != '' AND `max_attending` > `current_attending`  order by `created_at` desc";
     $result = $this->connection->query($sql);
     if ($result) {
       while ($row = $result->fetch_assoc()) {
         $data[] = $row;
       }
+
       $this->workshops = $data;
       return $data;
     }
   }
 
 
-  public function getWorkShopsByTitle($title){
+  public function getWorkShopsById($id){
     $data = [];
     $today = date('Y-m-d');
-    $sql = "SELECT * FROM `workshops` as w  INNER JOIN `users` as u ON u.user_id = w.id_teacher WHERE `title` = '$title'";
+    $sql = "SELECT * FROM `workshops` as w  INNER JOIN `users` as u ON u.user_id = w.id_teacher WHERE `id_workshop` = '$id'";
     $result = $this->connection->query($sql);
     if ($result) {
       while ($row = $result->fetch_assoc()) {
