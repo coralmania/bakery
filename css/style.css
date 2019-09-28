@@ -18,7 +18,9 @@ body {
   font-weight: 300;
   font-size: 1rem; }
 
-
+.footer{
+   padding: 0!important;
+}
 
   .my_image{
     height: 193px;

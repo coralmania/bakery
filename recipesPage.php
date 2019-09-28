@@ -8,6 +8,9 @@ if (isset($_GET['submit'])) {
     $recipes = new Recipes();
     $relevantRecipes = $recipes->getRecipes($key_note, $hours);
   }
+}else{
+  $recipes = new Recipes();
+  $relevantRecipes = $recipes->getRecipes(false, false);
 }
 
  ?>
@@ -44,13 +47,13 @@ if (isset($_GET['submit'])) {
             <div class="wine_v_1 text-center pb-4">
               <img class="img_product" width="360" height="240" src="images/<?php echo $value['image'] ?>" alt="Image">
                 <div>
-                  <h3 class="heading mb-1"><?php echo $value['title'] ?></h3><span class="price"><?php echo $value['time_frame'] ?>₪</span>
+                  <h3 class="heading mb-1"><?php echo $value['title'] ?></h3><span class="price"><?php echo $value['time_frame'] ?> (בדקות)</span>
                 </div>
                 <div class="wine-actions">
                   <h3 class="heading-2"><a href="#"></a></h3><span class="price d-block"><?php echo $value['fname'] ?>  <?php echo $value['lname'] ?> :מאת</span>
                   <div class="rating"> <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
                     <span class="icon-star-o"></span></div>
-                    <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>"  class=" product-add-to-cart btn add" >עבור למתכון</a>
+                    <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>" class=" product-add-to-cart btn add" >עבור למתכון</a>
                 </div>
               </div>
           </div>

@@ -13,11 +13,14 @@ class Recipes
     $this->connection->set_charset("utf8");
   }
   public function getRecipes($keyNote , $hours){
-    if($hours == 'all'){
-      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  WHERE `title` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%'";
+
+    if ($keyNote === false && $hours === false) {
+      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  order by id_recipe DESC";
+    }elseif($hours == 'all'){
+      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  WHERE `ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' ";
 
     }else{
-      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`title` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' ) AND `time_frame` >= '$hours' ";
+      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%') AND `time_frame` >= '$hours' ";
     }
     if ($result = $this->connection->query($sql)) {
       $data = [];
@@ -46,12 +49,13 @@ class Recipes
     $baker_id = $arr['id_teacher'];
     $title = $arr['title'];
     $time_frame = $arr['time_frame'];
+    $ingredients = $arr['ingredients'];
     $image_name = $arr['image']['fileToUpload']['name'];
     $preparation = str_replace("'","",trim($arr['preparation'] , "\n\r"));
     if ($this->checkImage($arr['image']['fileToUpload'])) {
       if ($this->uploadImage($arr['image']['fileToUpload'])) {
-        $sql = "INSERT INTO `recipes` ( `title`, `time_frame`, `image` , `preparation` , `baker_id`) VALUES
-         ( '$title' , '$time_frame',  '$image_name' , '$preparation',$baker_id )";
+        $sql = "INSERT INTO `recipes` ( `title`, `time_frame`, `image` , `preparation` , `baker_id`, `ingredients`) VALUES
+         ( '$title' , '$time_frame',  '$image_name' , '$preparation',$baker_id , '$ingredients')";
          // echo $sql;die;
             if ($this->connection->query($sql)) {
               $_SESSION['post'] = "מתכון חדש מתבשל";

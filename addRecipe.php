@@ -56,6 +56,14 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
+                             <input type="text" name="ingredients" value="" class="form-control">
+                           </div>
+                           <label for="name" class="col-4 col-form-label">מצרכים</label>
+                         </div>
+
+
+                         <div class="form-group row">
+                           <div class="col-8">
                              <textarea required class="form-control here" rows="16" name="preparation"></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">אופן ההכנה</label>
@@ -71,13 +79,9 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <select class="form-control" name="time_frame" required>
-                               <option value="30">30</option>
-                               <option value="60">60</option>
-                               <option value="120">120</option>
-                             </select>
+                             <input type="number" name="time_frame" value="" class="form-control">
                            </div>
-                           <label for="name" class="col-4 col-form-label">משך זמן ההכנה</label>
+                           <label for="name" class="col-4 col-form-label"> זמן הכנה בדקות</label>
                          </div>
 
                          <div class="form-group row">

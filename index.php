@@ -7,7 +7,7 @@
 
 
     <div class="owl-carousel hero-slide owl-style">
-      <div class="intro-section container" style="background-image: url('images/hero_1.jpg');">
+      <div class="intro-section container" style="background-image: url('images/home_pic.png');">
         <div class="row justify-content-center text-center align-items-center">
           <div class="col-md-8">
             <span class="sub-title">הקונדיטוריה</span>
@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <div class="intro-section container" style="background-image: url('images/1.png');">
+      <div class="intro-section container" style="background-image: url('images/home_pic2.png');">
         <div class="row justify-content-center text-center align-items-center">
           <div class="col-md-8">
             <span class="sub-title">כותרת קטנה</span>
@@ -41,7 +41,7 @@
           <?php foreach($products as $product): ?>
           <div class="col-lg-4 mb-5 col-md-6">
             <div class="wine_v_1 text-center pb-4">
-              <a href="shopPage.php" class="thumbnail d-block mb-4"><img src="images/<?= $product['image'] ?>" alt="Image" class="img-fluid">
+              <a href="shopPage.php" class="thumbnail d-block mb-4"><img width="350" height="197" src="images/<?= $product['image'] ?>" alt="Image" >
               </a>
               <div>
                 <h3 class="heading mb-1"><a href="#"><?= $product['item_name'] ?></a></h3>
@@ -83,21 +83,21 @@
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
 
-              <a href="lesson_info_page.php?lesson=parents"><img src="images/parents.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <a href="lesson_info_page.php?lesson=parents"><img src="images/parents.jpg"  width="350" height="197" alt="Image" ></a>
               <h2><a href="lesson_info_page.php?lesson=parents">סנדאות הורים וילדים</a></h2>
               <p>מיועד להורים ולילדים, סבא/סבתא ונכדים</p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="lesson_info_page.php?lesson=pro"><img src="images/pro.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <a href="lesson_info_page.php?lesson=pro"><img src="images/pro.jpg" width="350" height="197" alt="Image" ></a>
               <h2><a href="lesson_info_page.php?lesson=pro">סדנאות התמחות</a></h2>
               <p>מיועד למי שרוצה להיות מומחה התחום מסוים, תוך שימוש במוצרים ביתיים פשוטים ואיכותיים.</p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="lesson_info_page.php?lesson=private"><img src="images/private.jpg" width="350" height="231" alt="Image" class="img-fluid"></a>
+              <a href="lesson_info_page.php?lesson=private"><img src="images/private.jpg" width="350" height="197" alt="Image" ></a>
               <h2><a href="lesson_info_page.php?lesson=private">סדנאות פרטיות</a></h2>
               <p>רוצים ללמוד מתכון אפייה ספציפי? מעוניינים בחוויה אינטימית ואישית בקונדיטוריה?
                 בסדנאות הפרטיות של הקונדיטוריה שייכת רק לכם, ואנחנו אופים ומכינים אך ורק את מה שאתם מבקשים.</p>

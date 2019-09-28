@@ -14,7 +14,7 @@ if (!empty($_GET['id'])) {
   <br>
   <?php if (count($relevantRecipes)): ?>
     <hr>
-    <div class="container-fluid" >
+    <div class="container-fluid" style="font-size:16px!important">
     <?php foreach ($relevantRecipes as $key => $value): ?>
       <div class="site-section mt-5">
         <div class="container">
@@ -29,6 +29,19 @@ if (!empty($_GET['id'])) {
               <small><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b>:מאת</small>
               <br>
               <small><b><?php echo $value['time_frame'] ?></b>: זמן הכנה</small>
+              <br>
+              רכיבים:
+                <ul style="font-size: 16px!important">
+                <?php
+                  $ingredients = explode(',', $value['ingredients']);
+                  foreach ($ingredients as $index => $ingredient) {
+                    ?>
+                      <li><?php echo trim($ingredient) ?></li>
+                    <?php
+                  }
+                  ?>
+                </ul>
+                <br>
               <p><?php echo $value['preparation'] ?>:הוראות הכנה</p>
               בתאבון!
             </div>

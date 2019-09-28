@@ -25,7 +25,7 @@ $workshops = $workshop->getWorkShops($workshop_role);
                 <div class="card-desc">
                     <h3><?php echo $workshop['title'] ?></h3>
                     <p><?php echo $workshop['discription'] ?></p>
-                      <a href="orderWorkshop.php?lesson=<?php echo $workshop['id_workshop'] ?>" class="btn-card">הזמן עכשיו!</a>
+                      <a href="workshopItemPage.php?id=<?php echo $workshop['id_workshop'] ?>" class="btn-card">עוד פרטים</a>
                 </div>
             </div>
         </div>

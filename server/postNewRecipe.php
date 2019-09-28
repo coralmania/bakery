@@ -12,6 +12,7 @@ if (isset($_POST['submit'])) {
   $title = !empty($_POST['title']) ? trim($_POST['title']) : '';
   $preparation = !empty($_POST['preparation']) ? trim($_POST['preparation']) : '';
   $time_frame = !empty($_POST['time_frame']) ? trim($_POST['time_frame']) : '';
+  $ingredients = !empty($_POST['ingredients']) ? trim($_POST['ingredients']) : '';
 
 
 
@@ -23,6 +24,7 @@ if (isset($_POST['submit'])) {
       'preparation' => $preparation,
       'time_frame' => $time_frame,
       'image' => $_FILES,
+      'ingredients' => $ingredients,
       ];
     if ($recipe->addRecipe($newRecipe)) {
     }

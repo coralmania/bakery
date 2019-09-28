@@ -17,7 +17,7 @@
         <div class="col-md-4">
             <div class="card-content">
                 <div class="card-img">
-                    <img src="images/pro.jpg" alt="" width="380" height="230">
+                    <img src="images/pro.jpg" alt="" width="335" height="197">
                 </div>
                 <div class="card-desc">
                     <h3>סדנאות התמחות</h3>
@@ -29,7 +29,7 @@
         <div class="col-md-4">
             <div class="card-content">
                 <div class="card-img">
-                    <img src="images/parents.jpg" alt="" width="380" height="230">
+                    <img src="images/parents.jpg" alt="" width="335" height="197">
                 </div>
                 <div class="card-desc">
                     <h3>סדנאות הורים וילדים:</h3>
@@ -41,7 +41,7 @@
         <div class="col-md-4">
             <div class="card-content">
                 <div class="card-img">
-                    <img src="images/private.jpg" alt="" width="380" height="230">
+                    <img src="images/private.jpg" alt="" width="335" height="197">
                 </div>
                 <div class="card-desc">
                     <h3>סדנאות פרטיות</h3>

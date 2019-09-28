@@ -18,17 +18,6 @@ if ($email && $fname && $lname && $tel && $msg) {
 
 
 
-<div class="hero-2" style="background-image: url('images/hero_2.jpg');">
- <div class="container">
-    <div class="row justify-content-center text-center align-items-center">
-      <div class="col-md-8">
-        <span class="sub-title"></span>
-        <h2>צרו קשר!</h2>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <div class="site-section bg-light">
   <div class="container">

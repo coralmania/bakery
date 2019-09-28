@@ -62,6 +62,7 @@ if (isset($_SESSION['user_name'])) {
   <meta name="google-signin-client_id" content="522541522704-s9qq0asmov39gfc9kn91scjmtf20kpqf.apps.googleusercontent.com">
   <meta name="google-site-verification" content="GLNzY2aZpyf1f581VUZSjOM5BoYhEomUjK7L_Bycldk" />
   <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Montserrat:400,700|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Secular+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
@@ -82,6 +83,9 @@ if (isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <style media="screen">
+  body{
+    font-family: 'Secular One', sans-serif;
+  }
   .logo{
     width: 14%;
   }
@@ -125,7 +129,7 @@ if (isset($_SESSION['user_name'])) {
                     <?php endif; ?>
                     <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
                     <li><a href="lessonsPage.php" class="nav-link text-left">הסדנאות שלנו</a></li>
-                    <li><a href="shopPage.php" class="nav-link text-left">חנות מפעל</a></li>
+                    <li><a href="shopPage.php" class="nav-link text-left">המוצרים שלנו</a></li>
                     <li><a href="recipesPage.php" class="nav-link text-left">מתכונים</a></li>
                     <li><a href="contactPage.php" class="nav-link text-left">צור קשר</a></li>
                     <li><a href="aboutPage.php" class="nav-link text-left">עלינו</a></li>

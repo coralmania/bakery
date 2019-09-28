@@ -14,6 +14,7 @@
     if (test_email($email) && phone_validation($phone) && string_validation($fname, $lname) && validate_password($password, $re_password)) {
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
       $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+      $connection->set_charset("utf8");
       $sql = "INSERT INTO `users` (`fname`,`lname`,`email`,`phone`,`password` , `role`) VALUES ('$fname' , '$lname' , '$email' , '$phone' , '$hashed_password' , 3) ";
       if ($connection->query($sql)) {
         echo 'OK';
@@ -22,7 +23,6 @@
       }
     }
   }
-
 
 function run_array($array){
   foreach ($array as $key => $value) {
@@ -49,9 +49,7 @@ function test_email($email){
 
 function string_validation($str, $str2){
   $str = trim($str);
-  $str = preg_match("/^[A-Za-z]+$/", $str);
   $str2 = trim($str2);
-  $str2 = preg_match("/^[A-Za-z]+$/", $str2);
   if ($str && $str2) {
     return true;
   }

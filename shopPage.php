@@ -21,10 +21,10 @@
   height: 264px;
 }
 .under-nav:hover{
-  background-color:rgb(206, 30, 171);
+  background-color:rgb(234, 187, 232) ;
 }
 .selected{
-  background-color:rgb(206, 30, 171);
+  background-color:rgb(234, 187, 232);
 }
 </style>
 

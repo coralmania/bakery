@@ -171,12 +171,13 @@ function fillInForm(data){
       phoneInputErrorMsg,
       rePasswordInputErrorMsg
     ];
+    console.log(inputs);
     clearMsg(inputs);
     var emailInput = $(document.querySelector('input[name="email"]')).val();
-    var passwordInput = $(document.querySelector('input[name="password"]')).val();
     var fnameInput = $(document.querySelector('input[name="fname"]')).val();
     var lnameInput = $(document.querySelector('input[name="lname"]')).val();
     var phoneInput = $(document.querySelector('input[name="phone"]')).val();
+    var passwordInput = $(document.querySelector('input[name="password"]')).val();
     var rePasswordInput = $(document.querySelector('input[name="re_password"]')).val();
 
     if (!checkIfEmailValid(emailInput)) {

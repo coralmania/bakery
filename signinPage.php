@@ -48,7 +48,7 @@ include('template/head.php');
     </div>
 
 
-    <input  class="btn btn-primary" onclick="signin()"  value="הרשם"></input>
+    <input class="btn btn-primary" onclick="signin()"  value="הרשם"></input>
     <p><a href="loginPage.php">רשום כבר ?</a></p>
   </form>
   <h3>או לחילופין , ניתן להתחבר באמצעות גוגל</h3>
