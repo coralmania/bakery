@@ -29,7 +29,11 @@
 </style>
 
 <br><br>
+<?php
 
+// echo '<pre>';
+// print_r($_SESSION);die;
+?>
 
   <div class="d-flex" id="wrapper">
     <!-- Page Content -->

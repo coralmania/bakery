@@ -13,7 +13,7 @@ $workshops = $workshop->getWorkShops($workshop_role);
 ?>
 <br><br>
 <center><h2>הסדנאות שלנו</h2></center>
-<section class="details-card">
+<!-- <section class="details-card">
 <div class="container">
     <div class="row">
       <?php foreach ($workshops as $key => $workshop): ?>
@@ -32,7 +32,49 @@ $workshops = $workshop->getWorkShops($workshop_role);
       <?php endforeach; ?>
     </div>
 </div>
-</section>
+</section> -->
+
+
+<?php if (count($workshops)): ?>
+<div class="row">
+  <?php foreach ($workshops as $key => $value): ?>
+  <div class="col-lg-4 mb-5 col-md-6">
+    <div class="wine_v_1 text-center pb-4">
+      <a href="workshopItemPage.php?id=<?php echo $value['id_workshop'] ?>" class="thumbnail d-block mb-4">
+        <img src="images/<?php echo $value['image'] ?>" alt="Image" width="350" height="197"></a>
+      <div>
+        <h3 class="heading-2"><?php echo $value['title'] ?></h3>
+      </div>
+      <div class="wine-actions">
+        <h3 class="heading-2"><a href="workshopItemPage.php?id=<?php echo $value['id_workshop'] ?>"> <?php echo $value['title'] ?></a></h3>
+        <span class="price d-block"></span>
+        <!-- <div class="rating">
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+          <span class="icon-star"></span>
+          <span class="icon-star-o"></span>
+        </div> -->
+        <a href="workshopItemPage.php?id=<?php echo $value['id_workshop'] ?>" class="btn "><span class="icon-shopping-bag mr-3"></span>עוד פרטים</a>
+      </div>
+    </div>
+  </div>
+<?php endforeach; ?>
+
+</div>
+<?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php include('template/footer.php') ?>

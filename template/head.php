@@ -54,7 +54,7 @@ if (isset($_SESSION['user_name'])) {
 
  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
   <title>קונדטוריה ובית מאפה</title>
   <meta charset="utf-8">

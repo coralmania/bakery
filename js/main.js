@@ -385,7 +385,7 @@ function replaceContent(data){
   wrapper.html('');
   var content = '';
   for (var i = 0; i < data.length; i++) {
-    content += '<div class="col-lg-4 mb-4 col-md-4" style="display:inline-block"><div class="wine_v_1 text-center pb-4"><img class="img_product"  src="images/'+data[i].image+'" alt="Image" class="img-fluid">  <div>  <h3 class="heading mb-1">'+data[i].item_description+'</h3><span class="price">'+data[i].price+'&#8362;</span></div><div class="wine-actions"><h3 class="heading-2"><a href="#"></a></h3><span class="price d-block">'+data[i].price+'&#8362;</span>  <div class="rating">  <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-o"></span></div>'+
+    content += '<div class="col-lg-4 mb-4 col-md-4" style="display:inline-block"><div class="wine_v_1 text-center pb-4"><img class="img_product"  src="images/'+data[i].image+'" alt="Image" class="img-fluid">  <div>  <h3 class="heading mb-1">'+data[i].item_name+'</h3><span class="price">'+data[i].price+'&#8362;</span></div><div class="wine-actions"><h3 class="heading-2"><a>'+data[i].item_name+'</a></h3><span class="price d-block">'+data[i].price+'&#8362;</span>  <div class="rating">  <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-o"></span></div>'+
     '<a href="#" data-name="'+data[i].item_name+'" class="prevent product-add-to-cart btn add" onclick="addToCart(this)">הוסף לסל</a></span>'+
     '</div></div></div>';
   }
@@ -404,15 +404,19 @@ function subCategoryChange(obj){
   if (strUser) {
     switch (strUser) {
       case 'pro':
-        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="שמרים">שמרים</option>');
+		$('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="שמרים">שמרים</option>');
+		$('#subCategoryOptions').append('<option class="subCategoryOptionsPro" value="חלות לשבת">חלות לשבת</option>');
+		$('#subCategoryOptions').append('<option class="subCategoryOptionsPro" value="בצק עלים למומחים">בצק עלים למומחים</option>');
         break;
       case 'private':
         $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="סדנת רווקות">סדנת רווקות</option>');
-        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="בישול ואפיה">בישול ואפיה</option>');
+		$('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="בישול ואפיה">בישול ואפיה</option>');
+		$('#subCategoryOptions').append('<option class="subCategoryOptionsPro" value="יום הולדת">יום הולדת</option>')
         break;
       case 'parents':
         $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="סדנת שוקולד">סדנת שוקולד</option>');
         $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="סדנת קאפקייקס">סדנת קאפקייקס</option>');
+        $('#subCategoryOptions').append('<option  class="subCategoryOptionsPro" value="בישול לקטנטנים">בישול לקטנטנים</option>');
         break;
       default:
     }

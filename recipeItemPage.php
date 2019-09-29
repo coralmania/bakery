@@ -14,7 +14,7 @@ if (!empty($_GET['id'])) {
   <br>
   <?php if (count($relevantRecipes)): ?>
     <hr>
-    <div class="container-fluid" style="font-size:16px!important">
+    <div class="container-fluid " style="font-size:16px!important">
     <?php foreach ($relevantRecipes as $key => $value): ?>
       <div class="site-section mt-5">
         <div class="container">
@@ -25,25 +25,36 @@ if (!empty($_GET['id'])) {
               </div>
             </div>
             <div class="col-lg-5 ml-auto">
-              <h2 class="text-primary"><?php echo $value['title'] ?></h2>
-              <small><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b>:מאת</small>
+              <h2 class=" right_pulling text-primary"><?php echo $value['title'] ?></h2>
+              <br><br>
+              <h3 class="right_pulling"><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b>:מאת</h3>
               <br>
-              <small><b><?php echo $value['time_frame'] ?></b>: זמן הכנה</small>
               <br>
-              רכיבים:
+              <span class="right_pulling">
+                <?php if ($value['ingredients']): ?>
+
+                <p>:רכיבים</p>
                 <ul style="font-size: 16px!important">
                 <?php
                   $ingredients = explode(',', $value['ingredients']);
-                  foreach ($ingredients as $index => $ingredient) {
-                    ?>
-                      <li><?php echo trim($ingredient) ?></li>
-                    <?php
-                  }
+                    foreach ($ingredients as $index => $ingredient) {
+                      if ($ingredient) {
+                      ?>
+                        <li style="direction:rtl;"><?php echo trim($ingredient) ?></li>
+                        <?php
+                      }
+                    }
                   ?>
                 </ul>
-                <br>
-              <p><?php echo $value['preparation'] ?>:הוראות הכנה</p>
-              בתאבון!
+              </span>
+                <br><br><br><br><br>
+              <?php endif; ?>
+                <br><br>
+              <p class="right_pulling">:הוראות הכנה</p>
+              <br>
+              <p class="right_pulling"><?php echo $value['preparation'] ?></p>
+              <p class="right_pulling">  !בתאבון</p><br><br>
+              <p class="right_pulling" style="background-color:rgb(234, 187, 232)"> <?php echo $value['lname'] . ' ' . $value['fname'] ?> מאת </p>
             </div>
           </div>
         </div>

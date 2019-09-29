@@ -17,10 +17,10 @@ class Recipes
     if ($keyNote === false && $hours === false) {
       $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  order by id_recipe DESC";
     }elseif($hours == 'all'){
-      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  WHERE `ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' ";
+      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  WHERE `ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%' ";
 
     }else{
-      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%') AND `time_frame` >= '$hours' ";
+      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%') AND `time_frame` >= '$hours' ";
     }
     if ($result = $this->connection->query($sql)) {
       $data = [];

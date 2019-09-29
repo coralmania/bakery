@@ -181,27 +181,27 @@ function fillInForm(data){
     var rePasswordInput = $(document.querySelector('input[name="re_password"]')).val();
 
     if (!checkIfEmailValid(emailInput)) {
-      emailInputErrorMsg.html('A valid email is requierd');
+      emailInputErrorMsg.html('כתובת אימייל תקינה נדרשת');
       valid_signin = false;
     }
     if (!checkIfPasswordValid(passwordInput)) {
-      passwordInputErrorMsg.html('password is requierd');
+      passwordInputErrorMsg.html('סיסמא תקינה נדרשת');
       valid_signin = false;
     }
     if (!checkIfStringValid(fnameInput)) {
-      fnameInputErrorMsg.html('First name is requiered');
+      fnameInputErrorMsg.html('שם נדרש');
       valid_signin = false;
     }
     if (!checkIfStringValid(lnameInput)) {
-      lnameInputErrorMsg.html('Last name is requiered');
+      lnameInputErrorMsg.html('שם משפחה נדרש');
       valid_signin = false;
     }
     if (!checkIfPhoneValid(phoneInput)) {
-      phoneInputErrorMsg.html('Enter a valid Phone number');
+      phoneInputErrorMsg.html('מספר טלפון תקין נדרש');
       valid_signin = false;
     }
     if (!checkIfRePasswordValid(passwordInput , rePasswordInput)) {
-      rePasswordInputErrorMsg.html('Confirm your password');
+      rePasswordInputErrorMsg.html('אימות סיסמא');
       valid_signin = false;
     }
 

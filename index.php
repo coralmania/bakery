@@ -64,14 +64,10 @@
             </div>
           </div>
           <?php endforeach; ?>
-
         </div>
       </div>
     </div>
-
-
-
-
+    
     <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-5">
@@ -84,23 +80,23 @@
             <div class="post-entry-1">
 
               <a href="lesson_info_page.php?lesson=parents"><img src="images/parents.jpg"  width="350" height="197" alt="Image" ></a>
-              <h2><a href="lesson_info_page.php?lesson=parents">סנדאות הורים וילדים</a></h2>
-              <p>מיועד להורים ולילדים, סבא/סבתא ונכדים</p>
+              <h2><center><a href="lesson_info_page.php?lesson=parents">סנדאות הורים וילדים</a></center></h2>
+              <p><center>מיועד להורים ולילדים, סבא/סבתא ונכדים</center></p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
               <a href="lesson_info_page.php?lesson=pro"><img src="images/pro.jpg" width="350" height="197" alt="Image" ></a>
-              <h2><a href="lesson_info_page.php?lesson=pro">סדנאות התמחות</a></h2>
-              <p>מיועד למי שרוצה להיות מומחה התחום מסוים, תוך שימוש במוצרים ביתיים פשוטים ואיכותיים.</p>
+              <h2><center><a href="lesson_info_page.php?lesson=pro">סדנאות התמחות</a></center></h2>
+              <p><center>מיועד למי שרוצה להיות מומחה התחום מסוים, תוך שימוש במוצרים ביתיים פשוטים ואיכותיים.</center></p>
             </div>
           </div>
           <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
             <div class="post-entry-1">
-              <a href="lesson_info_page.php?lesson=private"><img src="images/private.jpg" width="350" height="197" alt="Image" ></a>
-              <h2><a href="lesson_info_page.php?lesson=private">סדנאות פרטיות</a></h2>
-              <p>רוצים ללמוד מתכון אפייה ספציפי? מעוניינים בחוויה אינטימית ואישית בקונדיטוריה?
-                בסדנאות הפרטיות של הקונדיטוריה שייכת רק לכם, ואנחנו אופים ומכינים אך ורק את מה שאתם מבקשים.</p>
+              <a href="lesson_info_page.php?lesson=private"><img src="images/private.jpg" width="350" height="197" alt="Image" ></center></a>
+              <h2><center><a href="lesson_info_page.php?lesson=private">סדנאות פרטיות</a></center></h2>
+              <p><center>רוצים ללמוד מתכון אפייה ספציפי? מעוניינים בחוויה אינטימית ואישית בקונדיטוריה?
+                בסדנאות הפרטיות של הקונדיטוריה שייכת רק לכם, ואנחנו אופים ומכינים אך ורק את מה שאתם מבקשים.</center></p>
             </div>
           </div>
         </div>
