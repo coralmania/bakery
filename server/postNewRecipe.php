@@ -27,11 +27,11 @@ if (isset($_POST['submit'])) {
       'ingredients' => $ingredients,
       ];
     if ($recipe->addRecipe($newRecipe)) {
+      header('location: ../addRecipe.php');
     }
   }
 }
 
-header('location: ../addRecipe.php');
 
 
 

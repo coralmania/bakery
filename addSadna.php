@@ -69,7 +69,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <textarea required class="form-control here" name="item_description" dir="rtl"  ></textarea>
+                             <textarea required class="form-control here" name="item_description" dir="rtl"  ><?php echo oldPost('item_description') ?></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">תיאור הסדנא</label>
                          </div>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <input required type="number" min="1" class="form-control here" name="price"></input>
+                             <input required type="number" min="1" class="form-control here" name="price" value="<?php echo oldPost('price') ?>"></input>
                            </div>
                            <label for="name" class="col-4 col-form-label">מחיר</label>
                          </div>
@@ -103,7 +103,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <input required type="text" id="datepicker" name="date" class="form-control here">
+                             <input required type="text" id="datepicker" name="date" class="form-control here" value="<?php echo oldPost('date') ?>">
                            </div>
                            <label for="name" class="col-4 col-form-label">בתאריך</label>
                          </div>

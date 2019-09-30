@@ -58,7 +58,7 @@ class Workshop
       if ($this->uploadImage($arr['image']['fileToUpload'])) {
         $sql = "INSERT INTO `workshops` (`id_teacher`,`max_attending`, `be_at` ,  `workshop_role` , `title` , `long_in_hours` , `discription`,`image`, `price`) VALUES ('$id_teacher' , '$max_attending' , '$be_at' , '$workshop_role' , '$title' , '$long_in_hours', '$item_description','$image_name' , '$price')";
             if ($this->connection->query($sql)) {
-              $_SESSION['post'] = "סדנא חדשה באוויר!";
+              $_SESSION['post'] = "סדנא חדשה באוויר";
               return true;
             }
       }else{

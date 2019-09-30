@@ -29,6 +29,8 @@ $userItemsOrders = $user->getUserItemsOrders();
                </div>
                <div class="row">
                    <div class="col-md-12">
+                     <?php if ($userItemsOrders): ?>
+
                      <?php foreach ($userItemsOrders as $key => $value): ?>
                         <div class="form-group row">
                           <div class="col-8">
@@ -49,6 +51,11 @@ $userItemsOrders = $user->getUserItemsOrders();
                       <?php endforeach; ?>
                       <hr>
                       <?php endforeach; ?>
+                      <?php else: ?>
+                        <p class="right_pulling">
+                          אין הזמנות קודמות
+                        </p>
+                    <?php endif; ?>
                    </div>
                </div>
            </div>

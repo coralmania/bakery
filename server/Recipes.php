@@ -61,7 +61,6 @@ class Recipes
       if ($this->uploadImage($arr['image']['fileToUpload'])) {
         $sql = "INSERT INTO `recipes` ( `title`, `time_frame`, `image` , `preparation` , `baker_id`, `ingredients`) VALUES
          ( '$title' , '$time_frame',  '$image_name' , '$preparation',$baker_id , '$ingredients')";
-         // echo $sql;die;
             if ($this->connection->query($sql)) {
               $_SESSION['post'] = "מתכון חדש מתבשל";
               return true;

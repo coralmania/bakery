@@ -16,12 +16,18 @@ $workshops = $workshop->getWorkShops($workshop_role);
 <?php if (count($workshops)): ?>
 <div class="row">
   <?php foreach ($workshops as $key => $value): ?>
+
   <div class="col-lg-4 mb-5 col-md-6">
     <div class="wine_v_1 text-center pb-4">
       <a href="workshopItemPage.php?id=<?php echo $value['id_workshop'] ?>" class="thumbnail d-block mb-4">
-        <img src="images/<?php echo $value['image'] ?>" alt="Image" width="350" height="197"></a>
+        <img src="images/<?php echo $value['image'] ?>" alt="Image" width="420px" height="197"></a>
       <div>
         <h3 class="heading-2"><?php echo $value['title'] ?></h3>
+        <small>
+          <?php $teacherInfo =  getTeacherName($value['id_teacher']); ?>
+          <?php echo $teacherInfo["fname"] . ' ' . $teacherInfo['lname']  ?>
+
+        </small>
       </div>
       <div class="wine-actions">
         <h3 class="heading-2"><a href="workshopItemPage.php?id=<?php echo $value['id_workshop'] ?>"> <?php echo $value['title'] ?></a></h3>
@@ -30,6 +36,10 @@ $workshops = $workshop->getWorkShops($workshop_role);
       </div>
     </div>
   </div>
+
+
+
+
 <?php endforeach; ?>
 
 </div>

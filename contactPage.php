@@ -59,7 +59,7 @@ if ($email && $fname && $lname && $tel && $msg) {
 
               <div class="row">
                   <div class="col-12">
-                      <input type="submit" name="submit" value="Send Message" class="btn btn-primary py-3 px-5;right_pulling">
+                      <input type="submit" name="submit" value="שלחו לנו" class="btn btn-primary py-3 px-5 right_pulling">
                   </div>
               </div>
 

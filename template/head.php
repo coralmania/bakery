@@ -40,6 +40,20 @@ function get_item($id){
     }
 }
 
+
+function getTeacherName($id){
+  $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
+  $connection->set_charset("utf8");
+  $sql = "SELECT fname , lname FROM users WHERE user_id = $id";
+  if ($result = $connection->query($sql)) {
+      return $result->fetch_assoc();
+  }
+}
+
+function oldPost($str){
+  return isset($_POST[$str]) ? $_POST[$str] : '';
+}
+
 if (isset($_SESSION['user_name'])) {
   $signed_in = true;
   $user = new User($connection);
@@ -58,6 +72,7 @@ if (isset($_SESSION['user_name'])) {
 <head>
   <title>קונדטוריה ובית מאפה</title>
   <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico"  sizes="16x16">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="google-signin-client_id" content="522541522704-s9qq0asmov39gfc9kn91scjmtf20kpqf.apps.googleusercontent.com">
   <meta name="google-site-verification" content="GLNzY2aZpyf1f581VUZSjOM5BoYhEomUjK7L_Bycldk" />
@@ -137,9 +152,10 @@ if (isset($_SESSION['user_name'])) {
                       <li class="active">
                           <a style="color:rgb(156, 32, 131)!important;font-size:15px" class="nav-link text-left">
                           <a href="profilePage.php" style= "font-size:15px" >
-                              <?= $userInfo['fname'] ?>
+                              <!-- <?= $userInfo['fname'] ?> -->
+                              איזור אישי
                               </a>
-                              <a class="nav-link text-left" style="font-size:15px"> 
+                              <a class="nav-link text-left" style="font-size:15px">
                               ברוך הבא
                               </a>
                               </a></li>

@@ -48,7 +48,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                           <div class="form-group row">
                             <div class="col-8">
-                              <input required type="text" min="1" class="form-control here" name="title" dir="rtl"></input>
+                              <input required type="text" min="1" class="form-control here" name="title" dir="rtl" value="<?php echo oldPost('title') ?>"></input>
                             </div>
                             <label for="name" class="col-4 col-form-label">שם המוצר</label>
                           </div>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <textarea type="text" name="ingredients" rows="8"  value="" class="form-control" dir="rtl"></textarea>
+                             <textarea type="text" name="ingredients" rows="8"  value="" class="form-control" dir="rtl"><?php echo oldPost('ingredients') ?></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">מצרכים</label>
                          </div>
@@ -64,7 +64,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <textarea required class="form-control here" rows="16" name="preparation" dir="rtl" ></textarea>
+                             <textarea required class="form-control here" rows="16" name="preparation" dir="rtl" value="<?php echo oldPost('preparation') ?>" ></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">אופן ההכנה</label>
                          </div>
@@ -79,7 +79,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <input type="number" name="time_frame" value="" class="form-control">
+                             <input type="number" name="time_frame" value="" class="form-control" value="<?php echo oldPost('time_frame') ?>">
                            </div>
                            <label for="name" class="col-4 col-form-label"> זמן הכנה בדקות</label>
                          </div>

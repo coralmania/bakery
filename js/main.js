@@ -385,7 +385,7 @@ function replaceContent(data){
   wrapper.html('');
   var content = '';
   for (var i = 0; i < data.length; i++) {
-    content += '<div class="col-lg-4 mb-4 col-md-4" style="display:inline-block"><div class="wine_v_1 text-center pb-4"><img class="img_product"  src="images/'+data[i].image+'" alt="Image" class="img-fluid">  <div>  <h3 class="heading mb-1">'+data[i].item_name+'</h3><span class="price">'+data[i].price+'&#8362;</span></div><div class="wine-actions"><h3 class="heading-2"><a>'+data[i].item_name+'</a></h3><span class="price d-block">'+data[i].price+'&#8362;</span>  <div class="rating">  <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-o"></span></div>'+
+    content += '<div class="col-lg-4 mb-4 col-md-4" style="display:inline-block"><div class="wine_v_1 text-center pb-4"><img class="img_product"  src="images/'+data[i].image+'" alt="Image" class="img-fluid">  <div>  <h3 class="heading mb-1">'+data[i].item_name+'</h3><span class="price">₪ '+data[i].price+'</span></div><div class="wine-actions"><h3 class="heading-2"><a>'+data[i].item_description+'</a></h3><span class="price d-block">'+data[i].price+'&#8362;</span>  <div class="rating">  <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-o"></span></div>'+
     '<a href="#" data-name="'+data[i].item_name+'" class="prevent product-add-to-cart btn add" onclick="addToCart(this)">הוסף לסל</a></span>'+
     '</div></div></div>';
   }

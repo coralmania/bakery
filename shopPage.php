@@ -52,30 +52,6 @@
 
       <center>
       <div class="container-fluid">
-          <!-- <div class="col-lg-3 mb-4 col-md-4" style="display:inline-block">
-            <div class="wine_v_1 text-center pb-4">
-              <a href="" class="thumbnail d-block mb-4">
-                <img src="images/cheeseCake.jpg" alt="Image" class="img-fluid"></a>
-                <div>
-                  <h3 class="heading mb-1"><a href="#">בלה בלה</a></h3>
-                  <span class="price">60&#8362;</span>
-                </div>
-                <div class="wine-actions">
-                  <h3 class="heading-2"><a href="#">בלה בלה בלה</a></h3>
-                  <span class="price d-block">60</span>
-                  <div class="rating">
-                    <span class="icon-star"></span>
-                    <span class="icon-star"></span>
-                    <span class="icon-star"></span>
-                    <span class="icon-star"></span>
-                    <span class="icon-star-o"></span>
-                  </div>
-                  <input type="submit" class="btn add" name="submit" value="עוגת גבינה">
-                  <span class="icon-shopping-bag mr-3"></span>
-                </input>
-              </div>
-            </div>
-          </div> -->
       </div>
     </center>
 

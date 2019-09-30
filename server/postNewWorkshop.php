@@ -34,12 +34,12 @@ if (isset($_POST['submit'])) {
       'price' => $price
       ];
     if ($workshop->addWorkshop($newWorkshop)) {
-
+      header('location: ../addSadna.php');
     }
   }
 }
 
-header('location: ../addSadna.php');
+
 
 
 

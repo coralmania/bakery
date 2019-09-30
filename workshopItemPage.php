@@ -14,7 +14,7 @@ $workshopsById = $workshop->getWorkShopsById($id)[0];
         <div class="row">
           <div class="col-lg-6">
             <div class="owl-carousel hero-slide owl-style">
-              <img src="images/<?php echo $workshopsById['image'] ?>" style="height: 340px;width: 419px!important;" alt="Image" class=" my_image">
+              <img src="images/<?php echo $workshopsById['image'] ?>" style="height: 340px;width: 70%!important;border-radius: 60px 60px 60px 60px;" alt="Image" class=" my_image">
             </div>
           </div>
           <div class="col-lg-5">
@@ -44,7 +44,7 @@ $workshopsById = $workshop->getWorkShopsById($id)[0];
         <?php endif; ?>
             <br><br>
 
-            <p class="right_pulling">  <a href="orderWorkshop.php?lesson=<?php echo $workshopsById['id_workshop'] ?>">הזמן!</a></p>
+            <p class="right_pulling">  <a href="orderWorkshop.php?lesson=<?php echo $workshopsById['id_workshop'] ?>">הזמן כאן</a></p>
             <br>
             </div>
               <br>

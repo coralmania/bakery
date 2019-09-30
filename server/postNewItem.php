@@ -10,10 +10,10 @@ if (isset($_POST['submit'])) {
     $products = new SellingProdects();
     $newProduct = ['category' => $category , 'name' => $product_name , 'dec' => $item_description , 'price'=>$price , 'image' => $_FILES];
     if ($products->addProduct($newProduct)) {
+      header('location: ../dashboard.php');
     }
   }
 }
-header('location: ../dashboard.php');
 
 
 
