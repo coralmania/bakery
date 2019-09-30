@@ -52,7 +52,7 @@ class Workshop
     $title = $arr['title'];
     $long_in_hours = $arr['long_in_hours'];
     $image_name = $arr['image']['fileToUpload']['name'];
-    $item_description = trim("\n\r",$arr['item_description']);
+    $item_description = $arr['item_description'];
     $price = $arr['price'];
     if ($this->checkImage($arr['image']['fileToUpload'])) {
       if ($this->uploadImage($arr['image']['fileToUpload'])) {

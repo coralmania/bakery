@@ -123,7 +123,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="offset-4 col-8">
-                             <input name="submit" type="submit" class="btn btn-primary" value="הוספת מוצר"></input>
+                             <input name="submit" type="submit" class="btn btn-primary" value="הוספת סדנא"></input>
                            </div>
                          </div>
                        </form>

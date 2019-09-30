@@ -9,7 +9,7 @@
   // $items = get_items(0);
 
 ?>
-<br><br><br>
+<br><br><br><br>
 <center><h2>הסדנאות שלנו</h2></center>
 <section class="details-card">
 <div class="container">

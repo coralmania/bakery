@@ -119,22 +119,30 @@ if (isset($_SESSION['user_name'])) {
                 <nav class="site-navigation position-relative text-left" role="navigation">
                   <ul class="site-menu main-menu js-clone-nav mx-auto d-none pl-0 d-lg-block border-none">
                     <?php if (!isset($_SESSION['user_name'])): ?>
-                      <li> <a href="loginPage.php" class="nav-link text-left">התחברות</a></li>
-                      <li><a href="signinPage.php" class="nav-link text-left">הרשמה</a></li>
+                      <li> <a href="loginPage.php" class="nav-link text-left" style= "font-size:15px">התחברות</a></li>
+                      <li><a href="signinPage.php" class="nav-link text-left " style= "font-size:15px">הרשמה</a></li>
                     <?php else: ?>
-                      <li><a href="logout.php" class="nav-link text-left">התנתק</a></li>
+                      <li><a href="logout.php" class="nav-link text-left" style= "font-size:15px" >התנתק</a></li>
                     <?php endif; ?>
-                    <li><a href="lessonsPage.php" class="nav-link text-left">הסדנאות שלנו</a></li>
-                    <li><a href="shopPage.php" class="nav-link text-left">המוצרים שלנו</a></li>
-                    <li><a href="recipesPage.php" class="nav-link text-left">מתכונים</a></li>
-                    <li><a href="contactPage.php" class="nav-link text-left">צור קשר</a></li>
-                    <li><a href="aboutPage.php" class="nav-link text-left">עלינו</a></li>
-                    <li><a href="index.php" class="nav-link text-left">בית</a></li>
+                    <li><a href="lessonsPage.php" class="nav-link text-left" style= "font-size:15px">הסדנאות שלנו</a></li>
+                    <li><a href="shopPage.php" class="nav-link text-left" style= "font-size:15px">המוצרים שלנו</a></li>
+                    <li><a href="recipesPage.php" class="nav-link text-left" style= "font-size:15px">מתכונים</a></li>
+                    <li><a href="contactPage.php" class="nav-link text-left" style= "font-size:15px">צור קשר</a></li>
+                    <li><a href="aboutPage.php" class="nav-link text-left" style= "font-size:15px">עלינו</a></li>
+                    <li><a href="index.php" class="nav-link text-left" style= "font-size:15px">בית</a></li>
                     <?php if ($_SESSION['user_admin']): ?>
-                      <li><a href="dashboard.php" style="color:red" class="nav-link text-left">עריכת האתר</a></li>
+                      <li><a href="dashboard.php" style="color:red; font-size:15px" class="nav-link text-left" >עריכת האתר</a></li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user_name'])): ?>
-                      <li class="active"><a style="color:rgb(156, 32, 131)!important" class="nav-link text-left"><a href="profilePage.php"><?= $userInfo['fname'] ?></a>ברוך הבא </a></li>
+                      <li class="active">
+                          <a style="color:rgb(156, 32, 131)!important;font-size:15px" class="nav-link text-left">
+                          <a href="profilePage.php" style= "font-size:15px" >
+                              <?= $userInfo['fname'] ?>
+                              </a>
+                              <a class="nav-link text-left" style="font-size:15px"> 
+                              ברוך הבא
+                              </a>
+                              </a></li>
                     <?php endif; ?>
                       <li>
                       <a href="cartPage.php"><i class="fa" style="font-size:24px">&#xf07a;</i>

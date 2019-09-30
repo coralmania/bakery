@@ -41,7 +41,7 @@
           <?php foreach($products as $product): ?>
           <div class="col-lg-4 mb-5 col-md-6">
             <div class="wine_v_1 text-center pb-4">
-              <a href="shopPage.php" class="thumbnail d-block mb-4"><img width="350" height="197" src="images/<?= $product['image'] ?>" alt="Image" >
+              <a href="shopPage.php" class="thumbnail d-block mb-4"><img width="100%" height="197" src="images/<?= $product['image'] ?>" alt="Image" >
               </a>
               <div>
                 <h3 class="heading mb-1"><a href="#"><?= $product['item_name'] ?></a></h3>

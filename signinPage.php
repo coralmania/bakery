@@ -15,16 +15,15 @@ include('template/head.php');
       <br>  <small id="emailErrorMsg" class="error right_pulling"></small>
     </div>
 
-    <br><br>
     <div class="form-group">
       <label class="right_pulling" for="exampleInputFirstName">שם פרטי</label>
-      <input type="text" name="fname" class="form-control">
+      <input type="text" name="fname" class="form-control" dir="rtl">
       <br>  <small  id="fnameErrorMsg" class="error right_pulling"></small>
     </div>
 
     <div class="form-group">
       <label class="right_pulling" for="exampleInputLastName">שם משפחה</label>
-      <input type="text" name="lname" class="form-control">
+      <input type="text" name="lname" class="form-control" dir="rtl">
     <br>    <small id="lnameErrorMsg" class="error right_pulling"></small>
     </div>
 
@@ -32,7 +31,6 @@ include('template/head.php');
       <label class="right_pulling" for="exampleInputPhone">טלפון</label>
       <input type="text" name="phone" class="form-control"  >
       <small id="phoneMsgGoogle" class="right_pulling"></small>
-      <br>
     <br>    <small id="phoneErrorMsg" class="error right_pulling"></small>
     </div>
 
@@ -46,14 +44,15 @@ include('template/head.php');
       <label class="right_pulling" for="exampleInputPassword2">אימות</label>
       <input type="password" name="re_password" class="form-control"  >
       <small id="re-passwordErrorMsg" class="error right_pulling"></small>
+      <br>
     </div>
 
 
-    <input class="btn btn-primary right_pulling" onclick="signin()"  value="הרשם"></input>
+    <input class="btn btn-primary right_pulling " onclick="signin()"  value=" הרשם"></input>
+     <div class="g-signin2 right_pulling " style="margin-right: 6%" data-onsuccess="onSignIn"></div>
     <br><br>
-    <p class="right_pulling"><a href="loginPage.php">רשום כבר ?</a></p>
+    <p class="right_pulling"><a href="loginPage.php">?רשום כבר </a></p>
   </form>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
   </div>
 

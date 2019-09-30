@@ -45,7 +45,7 @@ if (isset($_GET['submit'])) {
         </div>
         <div class="wine-actions">
           <h3 class="heading-2"><a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>"><?php echo $value['title'] ?></a></h3>
-          <span class="price d-block"><?php echo $value['time_frame'] ?>דקות</span>
+          <span class="price d-block"><?php echo $value['time_frame'] ?> דקות</span>
           <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>" class="btn "><span class="icon-shopping-bag mr-3"></span> עבור למתכון</a>
         </div>
       </div>
