@@ -53,3 +53,159 @@
 [29-Sep-2019 05:22:12 UTC] PHP Fatal error:  Cannot access empty property in /home/coralma/public_html/paypal/script.php on line 36
 [29-Sep-2019 05:24:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/paypal/script.php on line 92
 [29-Sep-2019 05:29:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/paypal/script.php on line 98
+[29-Sep-2019 11:02:52 UTC] PHP Fatal error:  Class 'Google_AccessToken_Verify' not found in /home/coralma/public_html/paypal/google-calendar/src/Google/Client.php on line 723
+[29-Sep-2019 11:05:10 UTC] PHP Fatal error:  Class 'Google_AccessToken_Verify' not found in /home/coralma/public_html/paypal/google-calendar/src/Google/Client.php on line 723
+[29-Sep-2019 11:05:25 UTC] PHP Fatal error:  Class 'Google_AccessToken_Verify' not found in /home/coralma/public_html/paypal/google-calendar/src/Google/Client.php on line 723
+[29-Sep-2019 11:06:56 UTC] PHP Fatal error:  Class 'Google_AccessToken_Verify' not found in /home/coralma/public_html/paypal/google-calendar/src/Google/Client.php on line 723
+[29-Sep-2019 11:09:03 UTC] PHP Fatal error:  Class 'Google_AccessToken_Verify' not found in /home/coralma/public_html/paypal/google-calendar/src/Google/Client.php on line 723
+[29-Sep-2019 11:42:39 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'This library must be installed via composer or by downloading the full package. See the instructions at https://github.com/google/google-api-php-client#installation.' in /home/coralma/public_html/paypal/google-calendar/src/Google/autoload.php:14
+Stack trace:
+#0 /home/coralma/public_html/paypal/script.php(74): require_once()
+#1 /home/coralma/public_html/paypal/script.php(41): setEventGoogleCalendar(Array)
+#2 /home/coralma/public_html/paypal/script.php(10): insertUserOrder()
+#3 {main}
+  thrown in /home/coralma/public_html/paypal/google-calendar/src/Google/autoload.php on line 14
+[29-Sep-2019 11:43:54 UTC] PHP Warning:  require_once(/home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 74
+[29-Sep-2019 11:43:54 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 74
+[29-Sep-2019 11:44:30 UTC] PHP Warning:  require_once(google-api-php-client-master/src/Google/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 74
+[29-Sep-2019 11:44:30 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-master/src/Google/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 74
+[29-Sep-2019 11:45:11 UTC] PHP Warning:  require_once(google-api-php-client-master/src/Google/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 74
+[29-Sep-2019 11:45:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-master/src/Google/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 74
+[29-Sep-2019 11:46:04 UTC] PHP Warning:  require_once(google-api-php-client-master/src/Google/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 76
+[29-Sep-2019 11:46:04 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-master/src/Google/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 76
+[29-Sep-2019 11:47:51 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'This library must be installed via composer or by downloading the full package. See the instructions at https://github.com/google/google-api-php-client#installation.' in /home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php:14
+Stack trace:
+#0 /home/coralma/public_html/paypal/script.php(76): require_once()
+#1 /home/coralma/public_html/paypal/script.php(41): setEventGoogleCalendar(Array)
+#2 /home/coralma/public_html/paypal/script.php(10): insertUserOrder()
+#3 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php on line 14
+[29-Sep-2019 12:03:23 UTC] PHP Warning:  require_once(google-api-php-client-master/src/Google/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 76
+[29-Sep-2019 12:03:23 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-master/src/Google/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 76
+[29-Sep-2019 12:03:57 UTC] PHP Fatal error:  Call to a member function set() on null in /home/coralma/public_html/paypal/script.php on line 93
+[29-Sep-2019 12:07:41 UTC] PHP Fatal error:  Call to a member function set() on null in /home/coralma/public_html/paypal/script.php on line 93
+[29-Sep-2019 12:43:53 UTC] PHP Warning:  require_once(google-api-php-client-master/src/Google/Service/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 12:43:53 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-master/src/Google/Service/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 12:45:04 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'This library must be installed via composer or by downloading the full package. See the instructions at https://github.com/google/google-api-php-client#installation.' in /home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php:14
+Stack trace:
+#0 /home/coralma/public_html/paypal/script.php(152): require_once()
+#1 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php on line 14
+[29-Sep-2019 12:45:28 UTC] PHP Fatal error:  Class 'Google_Auth_AssertionCredentials' not found in /home/coralma/public_html/paypal/script.php on line 168
+[29-Sep-2019 12:45:45 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'This library must be installed via composer or by downloading the full package. See the instructions at https://github.com/google/google-api-php-client#installation.' in /home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php:14
+Stack trace:
+#0 /home/coralma/public_html/paypal/script.php(152): require_once()
+#1 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-master/src/Google/autoload.php on line 14
+[29-Sep-2019 12:51:47 UTC] PHP Warning:  require_once(google-api-php-client-master/src/Google/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 12:51:47 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-master/src/Google/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 13:01:39 UTC] PHP Deprecated:  google-api-php-client's autoloader was moved to vendor/autoload.php in 2.0.0. This redirect will be removed in 2.1. Please adjust your code to use the new location. in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/autoload.php on line 19
+[29-Sep-2019 13:01:39 UTC] PHP Fatal error:  Class 'Google_Auth_AssertionCredentials' not found in /home/coralma/public_html/paypal/script.php on line 168
+[29-Sep-2019 13:02:23 UTC] PHP Warning:  require_once(google-api-php-client-2.4.0/src/Google/vendor/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 13:02:23 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-2.4.0/src/Google/vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 13:02:42 UTC] PHP Deprecated:  google-api-php-client's autoloader was moved to vendor/autoload.php in 2.0.0. This redirect will be removed in 2.1. Please adjust your code to use the new location. in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/autoload.php on line 19
+[29-Sep-2019 13:02:42 UTC] PHP Fatal error:  Class 'Google_Auth_AssertionCredentials' not found in /home/coralma/public_html/paypal/script.php on line 168
+[29-Sep-2019 13:03:49 UTC] PHP Warning:  require_once(google-api-php-client-2.4.0/src/vendor/autoload.php): failed to open stream: No such file or directory in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 13:03:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'google-api-php-client-2.4.0/src/vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/coralma/public_html/paypal/script.php on line 152
+[29-Sep-2019 13:04:04 UTC] PHP Fatal error:  Class 'Google_Auth_AssertionCredentials' not found in /home/coralma/public_html/paypal/script.php on line 168
+[29-Sep-2019 13:08:31 UTC] PHP Fatal error:  Uncaught exception 'BadMethodCallException' with message 'This function no longer exists. See UPGRADING.md for more information' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:508
+Stack trace:
+#0 /home/coralma/public_html/paypal/script.php(174): Google_Client->getAuth()
+#1 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 508
+[29-Sep-2019 13:19:39 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(185): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:19:54 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(185): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:22:53 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(185): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:23:26 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(185): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:24:57 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(187): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:26:13 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(187): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:28:04 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(187): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:28:48 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(187): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:30:53 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(187): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:32:39 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Invalid code' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php:187
+Stack trace:
+#0 /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php(174): Google_Client->fetchAccessTokenWithAuthCode(NULL)
+#1 /home/coralma/public_html/paypal/script.php(187): Google_Client->authenticate(NULL)
+#2 {main}
+  thrown in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/src/Google/Client.php on line 187
+[29-Sep-2019 13:32:53 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:32:53 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:33:04 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:33:04 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:36:48 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:36:48 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:39:43 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:39:43 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:45:34 UTC] PHP Fatal error:  Undefined class constant 'Calendar_READONLY' in /home/coralma/public_html/paypal/script.php on line 163
+[29-Sep-2019 13:46:22 UTC] PHP Fatal error:  Class 'Google_CalendarService' not found in /home/coralma/public_html/paypal/script.php on line 190
+[29-Sep-2019 13:46:51 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:46:51 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:46:52 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:46:52 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:49:36 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/coralma/public_html/paypal/script.php on line 191
+[29-Sep-2019 13:49:58 UTC] PHP Fatal error:  Call to undefined method Google_Service_Calendar_Resource_CalendarList::getItems() in /home/coralma/public_html/paypal/script.php on line 191
+[29-Sep-2019 13:49:59 UTC] PHP Fatal error:  Call to undefined method Google_Service_Calendar_Resource_CalendarList::getItems() in /home/coralma/public_html/paypal/script.php on line 191
+[29-Sep-2019 13:50:00 UTC] PHP Fatal error:  Call to undefined method Google_Service_Calendar_Resource_CalendarList::getItems() in /home/coralma/public_html/paypal/script.php on line 191
+[29-Sep-2019 13:50:25 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:50:25 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 13:57:31 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 13:57:31 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:12:12 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 14:12:12 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:21:11 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 14:21:11 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:27:19 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 14:27:19 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:27:40 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 14:27:40 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:28:09 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 14:28:09 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:32:09 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/script.php on line 2
+[29-Sep-2019 14:32:10 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 1
+[29-Sep-2019 14:32:10 UTC] PHP Parse error:  syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in /home/coralma/public_html/paypal/google-api-php-client-2.4.0/vendor/monolog/monolog/src/Monolog/Logger.php on line 33
+[29-Sep-2019 14:36:09 UTC] PHP Fatal error:  Call to a member function authenticate() on null in /home/coralma/public_html/paypal/oauth2callback.php on line 6

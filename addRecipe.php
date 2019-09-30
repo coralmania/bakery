@@ -27,9 +27,9 @@ if (!isset($_SESSION['user_admin'])) {
  	<div class="row">
  		<div class="col-md-3 ">
 	     <div class="list-group ">
-           <a href="dashboard.php" class="list-group-item list-group-item-action ">הוספת מוצרים</a>
-           <a href="addSadna.php" class="list-group-item list-group-item-action ">הוספת סדנא</a>
-            <a href="addRecipe.php" class="list-group-item list-group-item-action active">הוספת מתכון</a>
+           <a href="dashboard.php" class="list-group-item list-group-item-action center ">הוספת מוצרים</a>
+           <a href="addSadna.php" class="list-group-item list-group-item-action center">הוספת סדנא</a>
+            <a href="addRecipe.php" class="list-group-item list-group-item-action active center">הוספת מתכון</a>
          </div>
  		</div>
  		<div class="col-md-9">
@@ -48,7 +48,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                           <div class="form-group row">
                             <div class="col-8">
-                              <input required type="text" min="1" class="form-control here" name="title"></input>
+                              <input required type="text" min="1" class="form-control here" name="title" dir="rtl"></input>
                             </div>
                             <label for="name" class="col-4 col-form-label">שם המוצר</label>
                           </div>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <input type="text" name="ingredients" value="" class="form-control">
+                             <textarea type="text" name="ingredients" rows="8"  value="" class="form-control" dir="rtl"></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">מצרכים</label>
                          </div>
@@ -64,7 +64,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <textarea required class="form-control here" rows="16" name="preparation"></textarea>
+                             <textarea required class="form-control here" rows="16" name="preparation" dir="rtl" ></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">אופן ההכנה</label>
                          </div>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="offset-4 col-8">
-                             <input name="submit" type="submit" class="btn btn-primary" value="הוספת מוצר"></input>
+                             <input name="submit" type="submit" class="btn btn-primary" value="הוספת מתכון"></input>
                            </div>
                          </div>
                        </form>
@@ -98,7 +98,7 @@ if (!isset($_SESSION['user_admin'])) {
  	</div>
  </div>
 
-
+<br>
 <?php include('template/footer.php') ?>
 <script type="text/javascript">
 $( function() {

@@ -7,11 +7,11 @@ function login(){
   var emailInput = $(document.querySelector('input[name="email"]')).val();
   var passwordInput = $(document.querySelector('input[name="password"]')).val();
     if (!checkIfEmailValid(emailInput)) {
-      emailInputErrorMsg.html('A valid email is requierd');
+      emailInputErrorMsg.html('אימייל תקין נדרש');
       valid_login = false;
     }
     if (!checkIfPasswordValid(passwordInput)) {
-      passwordInputErrorMsg.html('password is requierd');
+      passwordInputErrorMsg.html('סיסמא תקינה צריכה להיות יותר מ5 תווים');
       valid_login = false;
     }
 
@@ -25,12 +25,10 @@ function login(){
           if (data == 'OK') {
             window.location = "index.php";
           }else if(data == 'somthing_not_ok'){
-            passwordInputErrorMsg.html('Email or password are incorrect');
+            passwordInputErrorMsg.html('אחד מפרטי הזיהוי אינם נכונים');
           }
         }
       })
-    }else{
-      console.log('here');
     }
 }
 
@@ -122,7 +120,6 @@ function fillInForm(data){
     })
 
     var pgoneMsgGoogle = $('#phoneMsgGoogle');
-    console.log(phoneMsgGoogle);
     pgoneMsgGoogle.text('We Got you info from google, phone requerd');
     pgoneMsgGoogle.css({
       "color":"green"
@@ -133,10 +130,6 @@ function fillInForm(data){
       'border': '2px solid green'
     })
     phone.focus();
-
-
-
-
 
 
 }
@@ -171,7 +164,6 @@ function fillInForm(data){
       phoneInputErrorMsg,
       rePasswordInputErrorMsg
     ];
-    console.log(inputs);
     clearMsg(inputs);
     var emailInput = $(document.querySelector('input[name="email"]')).val();
     var fnameInput = $(document.querySelector('input[name="fname"]')).val();

@@ -37,7 +37,7 @@
 
   <div class="d-flex" id="wrapper">
     <!-- Page Content -->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" style="width: 100%;">
     <center>
       <ul>
         <li class="under-nav" data-id="מלוחים" onclick="changeContent('מלוחים')" > מלוחים </li>

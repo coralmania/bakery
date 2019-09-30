@@ -84,15 +84,12 @@ if (isset($_SESSION['user_name'])) {
 </head>
 <style media="screen">
   body{
-    font-family: 'Secular One', sans-serif;
+    font-family: 'Secular One', Sans-serif;
   }
   .logo{
-    width: 14%;
+    width: 20%;
   }
 </style>
-<!-- <div class="alert alert-primary" role="alert">
-  This is a primary alert—check it out!
-</div> -->
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
@@ -127,7 +124,6 @@ if (isset($_SESSION['user_name'])) {
                     <?php else: ?>
                       <li><a href="logout.php" class="nav-link text-left">התנתק</a></li>
                     <?php endif; ?>
-                    <!-- <li><a href="about.php" class="nav-link text-left">About</a></li> -->
                     <li><a href="lessonsPage.php" class="nav-link text-left">הסדנאות שלנו</a></li>
                     <li><a href="shopPage.php" class="nav-link text-left">המוצרים שלנו</a></li>
                     <li><a href="recipesPage.php" class="nav-link text-left">מתכונים</a></li>
@@ -135,7 +131,7 @@ if (isset($_SESSION['user_name'])) {
                     <li><a href="aboutPage.php" class="nav-link text-left">עלינו</a></li>
                     <li><a href="index.php" class="nav-link text-left">בית</a></li>
                     <?php if ($_SESSION['user_admin']): ?>
-                      <li><a href="dashboard.php" style="color:red" class="nav-link text-left">איזור עריכת אתר</a></li>
+                      <li><a href="dashboard.php" style="color:red" class="nav-link text-left">עריכת האתר</a></li>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['user_name'])): ?>
                       <li class="active"><a style="color:rgb(156, 32, 131)!important" class="nav-link text-left"><a href="profilePage.php"><?= $userInfo['fname'] ?></a>ברוך הבא </a></li>

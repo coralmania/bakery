@@ -8,10 +8,6 @@ if (!empty($_GET['id'])) {
 
  ?>
 
-
-<br><br>
-<center><h1>מתכונים</h1></center>
-  <br>
   <?php if (count($relevantRecipes)): ?>
     <hr>
     <div class="container-fluid " style="font-size:16px!important">
@@ -27,13 +23,14 @@ if (!empty($_GET['id'])) {
             <div class="col-lg-5 ml-auto">
               <h2 class=" right_pulling text-primary"><?php echo $value['title'] ?></h2>
               <br><br>
-              <h3 class="right_pulling"><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b>:מאת</h3>
+              <h3 class="right_pulling"><b><?php echo $value['fname'] . ' ' . $value['lname'] ?></b></h3>
               <br>
               <br>
               <span class="right_pulling">
                 <?php if ($value['ingredients']): ?>
 
-                <p>:רכיבים</p>
+                <p class="right_pulling">:רכיבים</p>
+                <br><br
                 <ul style="font-size: 16px!important">
                 <?php
                   $ingredients = explode(',', $value['ingredients']);
@@ -49,12 +46,12 @@ if (!empty($_GET['id'])) {
               </span>
                 <br><br><br><br><br>
               <?php endif; ?>
-                <br><br>
+                <br><br><br><br><br>
               <p class="right_pulling">:הוראות הכנה</p>
               <br>
-              <p class="right_pulling"><?php echo $value['preparation'] ?></p>
-              <p class="right_pulling">  !בתאבון</p><br><br>
-              <p class="right_pulling" style="background-color:rgb(234, 187, 232)"> <?php echo $value['lname'] . ' ' . $value['fname'] ?> מאת </p>
+              <p class="right_pulling"><?php echo nl2br($value['preparation']) ?></p><br><br>
+              <p class="right_pulling">  !בתאבון</p>
+              <br>
             </div>
           </div>
         </div>

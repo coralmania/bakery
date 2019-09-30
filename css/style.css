@@ -5,6 +5,9 @@
   width: 24%;
   margin-left: 36%;
 }
+.center{
+  text-align: center;
+}
 /* Base */
 html {
   overflow-x: hidden; }

@@ -11,16 +11,16 @@
         <div class="row justify-content-center text-center align-items-center">
           <div class="col-md-8">
             <span class="sub-title">הקונדיטוריה</span>
-            <h1>מתוקות, חווייתיות ובעיקר מרגשות</h1>
+            <h1>בית של טעמים, מתחיל מבית של אנשים</h1>
           </div>
         </div>
       </div>
 
-      <div class="intro-section container" style="background-image: url('images/home_pic2.png');">
+      <div class="intro-section container" style="background-image: url('images/sadna.png');">
         <div class="row justify-content-center text-center align-items-center">
           <div class="col-md-8">
-            <span class="sub-title">כותרת קטנה</span>
-            <h1>בית של טעמים, מתחיל מבית</h1>
+            <span class="sub-title">הסדנאות</span>
+            <h1>מתוקות, חווייתיות ובעיקר מרגשות</h1>
           </div>
         </div>
       </div>
@@ -33,8 +33,8 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 section-title text-center mb-5">
-            <h2 class="d-block">הפופולריים ביותר: </h2>
-            <p><a href="shopPage.php">מוצרי החנות<span class="icon-long-arrow-right"></span></a></p>
+            <h2 class="d-block">:הפופולארים ביותר </h2>
+            <p><a href="shopPage.php">מוצרי החנות  <span class="icon-long-arrow-left"></span></a></p>
           </div>
         </div>
         <div class="row">
@@ -50,13 +50,6 @@
               <div class="wine-actions">
                 <h3 class="heading-2"><a href="#"><?= $product['item_name'] ?></a></h3>
                 <span class="price d-block"><?= $product['price'] ?>&#8362;</span>
-                <!-- <div class="rating">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star-o"></span>
-                </div> -->
                 <a href="#" data-name="<?= $product['item_name'] ?>" class="product-add-to-cart btn add"><span class="icon-shopping-bag mr-3"></span>
                  הוסף לסל
                  </a>

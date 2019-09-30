@@ -26,9 +26,9 @@ if (!isset($_SESSION['user_admin'])) {
  	<div class="row">
  		<div class="col-md-3 ">
 	     <div class="list-group ">
-           <a href="dashboard.php" class="list-group-item list-group-item-action active">הוספת מוצרים</a>
-           <a href="addSadna.php" class="list-group-item list-group-item-action">הוספת סדנא</a>
-           <a href="addRecipe.php" class="list-group-item list-group-item-action">הוספת מתכון</a>
+           <a href="dashboard.php" class="list-group-item list-group-item-action active center">הוספת מוצרים</a>
+           <a href="addSadna.php" class="list-group-item list-group-item-action center ">הוספת סדנא</a>
+           <a href="addRecipe.php" class="list-group-item list-group-item-action center">הוספת מתכון</a>
          </div>
  		</div>
  		<div class="col-md-9">
@@ -46,19 +46,19 @@ if (!isset($_SESSION['user_admin'])) {
                      <form method="POST" action="server/postNewItem.php" enctype="multipart/form-data">
                          <div class="form-group row">
                            <div class="col-8">
-                             <input required value="" name="product_name" class="form-control here" type="text">
+                             <input required value="" name="product_name" class="form-control here" dir="rtl" type="text">
                            </div>
                            <label for="name" class="col-4 col-form-label">שם המוצר</label>
                          </div>
                          <div class="form-group row">
                            <div class="col-8">
-                             <textarea required class="form-control here" name="item_description"  ></textarea>
+                             <textarea required class="form-control here" name="item_description" dir="rtl" ></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">תיאור המוצר</label>
                          </div>
                          <div class="form-group row">
                            <div class="col-8">
-                             <select class="form-control" required  name="category">
+                             <select class="form-control" required  name="category" dir="rtl" >
                                <option value="">בחר..</option>
                                <option value="מתוקים">מתוקים</option>
                                <option value="מלוחים">מלוחים</option>

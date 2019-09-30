@@ -27,9 +27,9 @@ if (!isset($_SESSION['user_admin'])) {
  	<div class="row">
  		<div class="col-md-3 ">
 	     <div class="list-group ">
-           <a href="dashboard.php" class="list-group-item list-group-item-action ">הוספת מוצרים</a>
-           <a href="addSadna.php" class="list-group-item list-group-item-action active">הוספת סדנא</a>
-           <a href="addRecipe.php" class="list-group-item list-group-item-action ">הוספת מתכון</a>
+           <a href="dashboard.php" class="list-group-item list-group-item-action center">הוספת מוצרים</a>
+           <a href="addSadna.php" class="list-group-item list-group-item-action active center">הוספת סדנא</a>
+           <a href="addRecipe.php" class="list-group-item list-group-item-action center">הוספת מתכון</a>
 
          </div>
  		</div>
@@ -49,7 +49,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                        <div class="form-group row">
                          <div class="col-8">
-                           <select class="form-control" required  name="category" onchange="subCategoryChange(this)">
+                           <select class="form-control" required  name="category" onchange="subCategoryChange(this)" dir="rtl">
                              <option value="">בחר..</option>
                              <option value="pro">סדנאות התמחות</option>
                              <option value="private">סדנאות פרטיות</option>
@@ -61,7 +61,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                        <div class="form-group row" style="display:none" id="subCategory" >
                          <div class="col-8">
-                           <select class="form-control" required name="subCategory" id="subCategoryOptions">
+                           <select class="form-control" required name="subCategory" id="subCategoryOptions" dir="rtl" >
                            </select>
                          </div>
                          <label for="name" class="col-4 col-form-label"> תת קטגוריה </label>
@@ -69,7 +69,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <textarea required class="form-control here" name="item_description"  ></textarea>
+                             <textarea required class="form-control here" name="item_description" dir="rtl"  ></textarea>
                            </div>
                            <label for="name" class="col-4 col-form-label">תיאור הסדנא</label>
                          </div>
@@ -91,7 +91,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <select class="form-control" name="attending" required>
+                             <select class="form-control" name="attending" dir="rtl" required>
                                <option value="5">5</option>
                                <option value="10">10</option>
                                <option value="20">20</option>
@@ -110,7 +110,7 @@ if (!isset($_SESSION['user_admin'])) {
 
                          <div class="form-group row">
                            <div class="col-8">
-                             <select class="form-control" name="hours" required>
+                             <select class="form-control" dir="rtl"  name="hours" required>
                                <option value="5">5</option>
                                <option value="10">10</option>
                                <option value="20">20</option>

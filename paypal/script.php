@@ -1,5 +1,6 @@
 
-<?php
+<?php 
+
 session_start();
 include('../server/db/config.php');
 include('../server/Cart.php');
@@ -7,7 +8,6 @@ $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);
 $connection->set_charset("utf8");
 $cart = new Cart();
 insertUserOrder();
-
 
 function insertUserOrder(){
   global $connection;
@@ -36,8 +36,9 @@ function insertUserOrder(){
     }
   }
   unset($cart->total);
-  sendMailWorkShop($workShops);
-  sendMailItems($items);
+  // sendMailWorkShop($workShops);
+  // sendMailItems($items);
+  setEventGoogleCalendar($workShops);
 }
 
 
@@ -65,6 +66,37 @@ EOT;
   $sql = "INSERT INTO `workshop_orders` (`item_id`, `amount` , `user_id`) VALUES ($itemId, $price ,$user_id )";
   $connection->query($sql);
   }
+  setEventGoogleCalendar();
+}
+
+function setEventGoogleCalendar($workShops) {
+  require_once ('vendor/autoload.php');
+
+  // $client = new Google_Client();
+  // $client->setAuthConfig('client_secret_522541522704-lhhvic5no1kv2lgbsb42o61a28jca3jh.apps.googleusercontent.com.json');
+  // $client->addScope(Google_Service_Drive::Calendar);
+  // $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+  // $client->setRedirectUri($redirect_uri);
+
+  // if (isset($_GET['code'])) {
+  //   $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+  // var_dump($token);
+  // }
+
+  // https://www.googleapis.com/auth/admin.directory.resource.calendar
+  // Create a state token to prevent request forgery.
+  // Store it in the session for later validation.
+  // $client = new Google_Client();
+  // $client->setApplicationName("Client_Library_Examples");
+  // $client->setDeveloperKey("YOUR_APP_KEY");
+
+  // $service = new Google_Service_Books($client);
+  // $optParams = array('filter' => 'free-ebooks');
+  // $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
+
+  // foreach ($results as $item) {
+  //   echo $item['volumeInfo']['title'], "<br /> \n";
+  // }
 }
 
 
@@ -112,4 +144,53 @@ function insertToDB(){
 }
 
 
-?>
+
+
+
+session_start();
+require_once 'vendor/autoload.php';
+require_once 'google-api-php-client-2.4.0/vendor/autoload.php';
+require_once 'google-api-php-client-2.4.0/src/Google/Client.php';
+// require_once 'google-api-php-client-master/src/Google/Service/Analytics.php';
+
+// Values from APIs console for your app    
+$client_id = 'Client ID';
+$service_account_name = 'Email address';
+$key_file_location = 'client_secret_522541522704-lhhvic5no1kv2lgbsb42o61a28jca3jh.apps.googleusercontent.com.json';
+
+$client = new Google_Client();
+$client->setAuthConfig($key_file_location);
+$client->addScope(Google_Service_Calendar::CALENDAR);
+$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/paypal/script.php');
+// offline access will give you both an access and refresh token so that
+// your app can refresh the access token without user interaction.
+$client->setAccessType('offline');
+// Using "consent" ensures that your application always receives a refresh token.
+// If you are not using offline access, you can omit this.
+$client->setApprovalPrompt("force");
+$client->setIncludeGrantedScopes(true);   // incremental auth
+
+
+
+if(isset($_GET['code'])) {
+  $client->authenticate($_GET['code']);
+  $token = $_GET['code'];
+} elseif($client->getAccessToken()) {
+  $token = $client->getAccessToken();
+} else {
+  $auth_url = $client->createAuthUrl();
+  header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
+  exit;
+}  
+
+
+// declare(ticks=1);
+
+$_SESSION['google_token'] = $token;
+
+$client->authenticate($token);
+
+$cal = new Google_Service_Calendar($client);
+var_dump($cal->calendarList->listCalendarList());
+// $calList = $cal->calendarList->listCalendarList();
+//   print "<h1>Calendar List</h1><pre>" . print_r($calList, true) . "</pre>";

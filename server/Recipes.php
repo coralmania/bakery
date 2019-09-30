@@ -13,14 +13,19 @@ class Recipes
     $this->connection->set_charset("utf8");
   }
   public function getRecipes($keyNote , $hours){
-
     if ($keyNote === false && $hours === false) {
       $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  order by id_recipe DESC";
     }elseif($hours == 'all'){
       $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id  WHERE `ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%' ";
-
     }else{
-      $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%') AND `time_frame` >= '$hours' ";
+      if ($hours == 60) {
+        $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%') AND `time_frame` <= 60 ";
+      }elseif ($hours == 120) {
+        $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%') AND `time_frame` <= 120 ";
+      }else {
+        $sql = "SELECT * FROM `recipes` as r INNER JOIN `users` as u ON u.user_id = r.baker_id WHERE (`ingredients` LIKE '%$keyNote%' OR `preparation` LIKE '%$keyNote%' OR `title` LIKE '%$keyNote%') AND `time_frame` > 120 ";
+      }
+
     }
     if ($result = $this->connection->query($sql)) {
       $data = [];
@@ -51,7 +56,7 @@ class Recipes
     $time_frame = $arr['time_frame'];
     $ingredients = $arr['ingredients'];
     $image_name = $arr['image']['fileToUpload']['name'];
-    $preparation = str_replace("'","",trim($arr['preparation'] , "\n\r"));
+    $preparation = str_replace("'","", $arr['preparation']);
     if ($this->checkImage($arr['image']['fileToUpload'])) {
       if ($this->uploadImage($arr['image']['fileToUpload'])) {
         $sql = "INSERT INTO `recipes` ( `title`, `time_frame`, `image` , `preparation` , `baker_id`, `ingredients`) VALUES
