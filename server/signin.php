@@ -1,8 +1,5 @@
 <?php
   session_start();
-  if (isset($_SESSION['user_name'])) {
-    die;
-  }
   include('db/config.php');
   $fname = !empty($_POST['fname']) ? $_POST['fname'] : '';
   $lname = !empty($_POST['lname']) ? $_POST['lname'] : '';
@@ -17,9 +14,36 @@
       $connection->set_charset("utf8");
       $sql = "INSERT INTO `users` (`fname`,`lname`,`email`,`phone`,`password` , `role`) VALUES ('$fname' , '$lname' , '$email' , '$phone' , '$hashed_password' , 3) ";
       if ($connection->query($sql)) {
-        echo 'OK';
+        $_SESSION['user_name'] = $fname;
+        $_SESSION['user_lname'] = $lname;
+        $_SESSION['user_phone'] = $phone;
+        $_SESSION['user_role'] = 3;
+        $_SESSION['user_id'] = get_id($email);
+        $_SESSION['user_email'] = $email;
+        echo 'OK';die;
       }else{
-        echo 'have';
+        $sql = "SELECT * from users WHERE email = '$email'";
+        if ($result = $connection->query($sql)) {
+          while ($row = $result->fetch_assoc()) {
+            $_SESSION['user_name'] = $row['fname'];
+            $_SESSION['user_lname'] = $row['lname'];
+            $_SESSION['user_phone'] = $row['phone'];
+            $_SESSION['user_role'] = $row['role'];
+            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['user_email'] = $email;
+          }
+          echo 'OK';die;
+        }
+      }
+    }
+  }
+
+  function get_id($email){
+    global $connection;
+    $sql = "SELECT user_id from users WHERE email = '$email'";
+    if ($result = $connection->query($sql)) {
+      while ($row = $result->fetch_assoc()) {
+        return $row['user_id'];
       }
     }
   }

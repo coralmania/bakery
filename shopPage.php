@@ -8,6 +8,7 @@
 }
   $items = get_items(1);
 ?>
+
 <style>
 .under-nav{
   display:inline-block;
@@ -28,12 +29,9 @@
 }
 </style>
 
-<br><br>
-<?php
 
-// echo '<pre>';
-// print_r($_SESSION);die;
-?>
+<br><br>
+
 
   <div class="d-flex" id="wrapper">
     <!-- Page Content -->
@@ -61,9 +59,11 @@
 
     <?php include('template/footer.php') ?>
 
+<!---->change product function 
     <script type="text/javascript">
       changeContent('all' , true);
 
+// add to cart functions 
       $('.prevent').on('click', function(e) {
         e.preventDefault();
       })

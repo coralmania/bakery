@@ -22,7 +22,6 @@ class Workshop
       while ($row = $result->fetch_assoc()) {
         $data[] = $row;
       }
-
       $this->workshops = $data;
       return $data;
     }
@@ -43,8 +42,6 @@ class Workshop
   }
 
   public function addWorkshop(array $arr){
-    // echo '<pre>';
-    // print_r($arr);die;
     $id_teacher = $arr['id_teacher'];
     $max_attending = $arr['max_attending'];
     $be_at = $arr['be_at'];

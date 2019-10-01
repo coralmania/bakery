@@ -1,11 +1,5 @@
 <?php
-
 session_start();
-// echo '<pre>';
-// print_r($_SESSION);die;
-// print_r($_POST);die;
-
-
 include('Recipes.php');
 if (isset($_POST['submit'])) {
   $id_teacher = strval($_SESSION['user_id']);

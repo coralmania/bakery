@@ -70,7 +70,6 @@ if (!isset($_SESSION['user_name'])) {
                 error_password.innerHTML = '';
             },2000);
           }else if (data == 'OK') {
-            console.log('END');
             show_password_form();
           }
         }
@@ -101,7 +100,6 @@ if (!isset($_SESSION['user_name'])) {
           data:{password:new_password, re_new_password: re_new_password, user_id:'<?php echo $_SESSION['user_id'] ?>'},
           success:function (data){
             if (data == 'OK') {
-              
               window.location = "profilePage.php";
             }else{
               error_password.innerHTML = "סיסמא צריכה להיות לפחות מעל 5 תווים";

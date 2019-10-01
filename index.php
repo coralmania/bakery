@@ -3,6 +3,8 @@
   $product = new Product;
   $products = $product->get_products(3);
 
+// echo '<pre>';
+// print_r($user);die;
 ?>
 
 
@@ -60,7 +62,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-5">

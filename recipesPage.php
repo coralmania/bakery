@@ -14,10 +14,9 @@ if (isset($_GET['submit'])) {
 }
 
  ?>
-
-<br><br>
-  <br>
-  <form method="GET" action="#">
+<center>
+<br><br><br>
+<form method="GET" action="#">
     <div class="row right_pulling" style="margin-right:300px">
       <input name="submit" type="submit" class="btn btn-primary"  value="חפש מתכון"></input>
       &nbsp;&nbsp;
@@ -32,36 +31,27 @@ if (isset($_GET['submit'])) {
       <label for="search">:חיפוש חופשי </label>
     </div>
 </form>
-
+</center>
 <br><br><br>
-  <?php if (count($relevantRecipes)): ?>
-  <div class="row">
-    <?php foreach ($relevantRecipes as $key => $value): ?>
-    <div class="col-lg-4 mb-5 col-md-6">
-      <div class="wine_v_1 text-center pb-4">
-        <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>" class="thumbnail d-block mb-4"><img src="images/<?php echo $value['image'] ?>" alt="Image" width="350" height="197"></a>
-        <div>
-          <h3 class="heading-2"><?php echo $value['title'] ?></h3>
+
+<?php if (count($relevantRecipes)): ?>
+
+        <div class="row">
+
+        <?php foreach ($relevantRecipes as $key => $value): ?>
+        <div class="col-lg-4 mb-5 col-md-6">
+            <div class="wine_v_1 text-center pb-4">
+                <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>" class="thumbnail d-block mb-4"> <img src="images/<?php echo $value['image'] ?>" alt="Image" width="100%" height="200px"></a>
+                <div><h3 class="heading-2"><?php echo $value['title'] ?></h3></div>
+                <div class="wine-actions">
+                    <h3 class="heading-2"><a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>"><?php echo $value['title'] ?></a></h3>
+                    <span class="price d-block"><?php echo $value['time_frame'] ?> דקות</span>
+                    <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>" class="btn "><span class="icon-shopping-bag mr-3"></span> עבור למתכון</a>
+                </div>
+            </div>
         </div>
-        <div class="wine-actions">
-          <h3 class="heading-2"><a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>"><?php echo $value['title'] ?></a></h3>
-          <span class="price d-block"><?php echo $value['time_frame'] ?> דקות</span>
-          <a href="recipeItemPage.php?id=<?php echo $value['id_recipe'] ?>" class="btn "><span class="icon-shopping-bag mr-3"></span> עבור למתכון</a>
+            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-      </div>
-    </div>
-  <?php endforeach; ?>
-
-  </div>
-<?php endif; ?>
-
-
-
-
-
-
-
-
-
 
 <?php include('template/footer.php') ?>

@@ -1,0 +1,128 @@
+[30-Sep-2019 15:42:25 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[30-Sep-2019 15:42:25 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[30-Sep-2019 15:42:25 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:42:25 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 7
+[30-Sep-2019 15:42:30 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[30-Sep-2019 15:42:30 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[30-Sep-2019 15:42:30 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:42:30 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 7
+[30-Sep-2019 15:42:35 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[30-Sep-2019 15:42:35 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 4
+[30-Sep-2019 15:42:35 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:42:35 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 7
+[30-Sep-2019 15:42:58 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:42:58 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:42:58 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 15:42:58 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 15:43:09 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:43:09 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:43:09 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 15:43:09 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 15:44:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:44:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:44:13 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 15:44:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 15:44:20 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:44:20 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:44:20 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 15:44:20 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 15:45:15 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:45:15 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:45:15 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 15:45:15 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 15:46:07 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:46:07 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 15:46:07 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 15:46:07 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 20:23:04 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 20:23:04 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 20:23:04 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 20:23:04 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 20:23:14 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 20:23:14 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[30-Sep-2019 20:23:14 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[30-Sep-2019 20:23:14 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[30-Sep-2019 20:33:21 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on null in /home/coralma/public_html/server/signin.php on line 52
+[01-Oct-2019 08:58:23 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:58:23 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:58:23 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 08:58:23 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 08:58:29 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:58:29 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:58:29 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 08:58:29 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 08:58:37 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:58:37 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:58:37 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 08:58:37 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 08:59:23 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:59:23 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:59:23 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 08:59:23 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 08:59:28 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:59:28 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:59:28 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 08:59:28 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 08:59:36 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:59:36 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 08:59:36 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 08:59:36 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:06:54 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:06:54 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:06:54 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:06:54 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:07:00 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:07:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:07:00 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:07:00 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:07:13 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:07:13 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:07:13 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:07:13 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:07:36 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:07:36 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:07:36 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:07:36 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:11:09 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:11:09 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:11:09 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:11:09 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:12:32 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:12:32 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:12:32 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:12:32 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:20:45 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:20:45 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:20:45 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:20:45 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:20:56 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:20:56 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:20:56 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:20:56 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:32:44 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:32:44 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:32:44 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:32:44 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:37:01 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:37:01 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:37:01 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:37:01 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:41:24 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:41:24 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:41:24 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:41:24 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:44:16 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:44:16 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:44:16 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:44:16 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:47:14 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:47:14 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:47:14 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:47:14 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:50:37 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:50:37 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:50:37 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[01-Oct-2019 09:50:37 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 8
+[01-Oct-2019 09:55:52 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:55:52 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
+[01-Oct-2019 09:55:52 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6

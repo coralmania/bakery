@@ -15,7 +15,6 @@ class User
 
   private function getUserData(){
     $user_id = $this->user_id = $_SESSION['user_id'];
-
     $sql = "SELECT * FROM `users` WHERE `user_id` = '$user_id' ";
     $result = $this->db->query($sql);
     if ($result = $this->db->query($sql)) {

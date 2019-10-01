@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user_name'])) {
-  die('Have SESSION');
-}
+
 include('db/config.php');
 $email = !empty($_POST['data']['email']) ? ($_POST['data']['email']) : '';
 

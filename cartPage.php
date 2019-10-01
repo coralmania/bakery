@@ -1,9 +1,5 @@
 <?php
 include('template/head.php');
-
-// echo '<pre>';
-// print_r($_SESSION);
-// print_r($cart->totalCart);die;
 ?>
     <div class="site-section">
       <div class="container">

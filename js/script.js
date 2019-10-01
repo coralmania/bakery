@@ -42,37 +42,46 @@ function clearMsg(inputs){
 
 
 function onLogIn(googleUser){
-  var token = googleUser.getAuthResponse().id_token;
-  if(token){
-    $.ajax({
-      url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
-      success:function (data){
-        if(data){
-          googleLogin(data);
+  if (confirm('?המעכת זיהתה שהינך משתמש גוגל , האם להתחבר מגוגל')) {
+    var token = googleUser.getAuthResponse().id_token;
+    if(token){
+      $.ajax({
+        url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
+        success:function (data){
+          if(data){
+            googleLogin(data);
+          }
         }
-      }
-    })
+      })
+    }
   }
 }
 
 function onSignIn(googleUser){
-  var token = googleUser.getAuthResponse().id_token;
-  if(token){
-    $.ajax({
-      url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
-      success:function (data){
-        if(data){
-          if (isUserExists(data)) {
-            // alert();
-            // window.location = 'index.php';
-          }else{
-            fillInForm(data);
+  if (confirm('?המעכת זיהתה שהינך משתמש גוגל , האם להתחבר מגוגל')) {
+    var token = googleUser.getAuthResponse().id_token;
+    if(token){
+      $.ajax({
+        url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
+        success:function (data){
+          if(data){
+            if (isUserExists(data)) {
+
+            }else{
+              fillInForm(data);
+            }
           }
         }
-      }
-    })
+      })
+    }
   }
 }
+
+  function logInGooleUser(data){
+    console.log(data);
+  }
+
+
 function isUserExists(data){
   $.ajax({
     url:'server/checkUser.php',
@@ -86,10 +95,12 @@ function isUserExists(data){
           data:({user_info:data}),
           type:'POST',
           success:function (data){
+            console.log(data);
             window.location = 'index.php';
           }
         })
       }
+      return false;
     }
   })
 }
@@ -120,7 +131,7 @@ function fillInForm(data){
     })
 
     var pgoneMsgGoogle = $('#phoneMsgGoogle');
-    pgoneMsgGoogle.text('We Got you info from google, phone requerd');
+    pgoneMsgGoogle.text('יש לנו מה שאנחנו צריכים, רק טלפון וסיימנו');
     pgoneMsgGoogle.css({
       "color":"green"
     })
@@ -143,7 +154,11 @@ function fillInForm(data){
       data:{user_info:data},
       type:'POST',
       success:function (data){
-        window.location =  'index.php';
+        if (data == 'OK') {
+          window.location = 'index.php';
+        }else{
+          window.location = 'signinPage.php';
+        }
       }
     })
   }
@@ -212,10 +227,6 @@ function fillInForm(data){
         success:function (data){
           if (data == 'OK') {
             window.location = 'index.php';
-          }else if(data == 'have') {
-            var msg = $('#emailHelp');
-              msg.html('This Email is taken <a href="loginPage.php" > Maby its yours</a>')
-              msg.focus();
           }
         }
       })

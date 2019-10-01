@@ -1,13 +1,11 @@
-<?php include('template/head.php') ?>
 <?php
+include('template/head.php');
  if(isset($_POST['submit'])){
    $tmp = $_POST['submit'];
    unset($_POST['submit']);
    $cart->addToCart($tmp);
    $cart->totalCart->$tmp = $cart->totalCart->$tmp+1;
 }
-  // $items = get_items(0);
-
 ?>
 <br><br><br><br>
 <center><h2>הסדנאות שלנו</h2></center>

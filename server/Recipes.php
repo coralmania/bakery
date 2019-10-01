@@ -1,6 +1,5 @@
 <?php
 require_once('db/config.php');
-// echo 'OK2';die;
 /**
  *
  */
@@ -49,8 +48,6 @@ class Recipes
   }
 
   public function addRecipe($arr){
-    //
-
     $baker_id = $arr['id_teacher'];
     $title = $arr['title'];
     $time_frame = $arr['time_frame'];

@@ -1,11 +1,5 @@
 <?php
-
 session_start();
-// echo '<pre>';
-// print_r($_SESSION);die;
-// print_r($_POST);die;
-
-
 include('Workshop.php');
 if (isset($_POST['submit'])) {
   $id_teacher = $_SESSION['user_id'];
@@ -17,8 +11,6 @@ if (isset($_POST['submit'])) {
   $long_in_hours = !empty($_POST['hours']) ? trim($_POST['hours']) : '';
   $item_description = !empty($_POST['item_description']) ? trim($_POST['item_description']) : '';
   $price = !empty($_POST['price']) ? trim($_POST['price']) : '';
-
-
 
   if ($price && $item_description &&$id_teacher && $title && $long_in_hours && $max_attending && $be_at && $workshop_role && isset($_FILES) && $_FILES['error'] == 0) {
     $workshop = new Workshop();
