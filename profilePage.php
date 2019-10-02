@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
 	                    <form method="POST" action="#">
                          <div class="form-group row">
                            <div class="col-8">
-                             <input value="<?php if ($signed_in): ?><?php echo $_SESSION['user_name'] ?><?php endif; ?>"  id="name" name="user_name" placeholder="First Name" class="form-control here" type="text">
+                             <input dir="rtl" value="<?php if ($signed_in): ?><?php echo $_SESSION['user_name'] ?><?php endif; ?>"  id="name" name="user_name" placeholder="First Name" class="form-control here" type="text">
                            </div>
                            <label for="name" class="col-4 col-form-label">שם פרטי</label>
                          </div>

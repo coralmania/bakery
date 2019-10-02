@@ -44,7 +44,7 @@
 			$shipToCity			= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOCITY"]; // ' Name of city.
 			$shipToState		= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOSTATE"]; // ' State or province
 			$shipToCntryCode	= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE"]; // ' Country code. 
-			$shipToZip			= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOZIP"]; // ' U.S. Zip code or other country-specific postal code.
+			$shipToZip			= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOZIP"]; // ' Zip code or other country-specific postal code.
 			$addressStatus 		= $resArrayGetExpressCheckout["ADDRESSSTATUS"]; // ' Status of street address on file with PayPal 
 			$totalAmt   		= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_AMT"]; // ' Total Amount to be paid by buyer
 			$currencyCode       = $resArrayGetExpressCheckout["PAYMENTREQUEST_0_CURRENCYCODE"]; // 'Currency being used 
@@ -88,20 +88,20 @@
 				<tr><td colspan="2">&nbsp;</td></tr>
 				<tr><td colspan="2">&nbsp;</td></tr>
 				<tr><td>Total Amount:</td><td><?php echo $totalAmt   		?></td></tr>
-				<tr><td>Currency Code:</td><td><?php echo $currencyCode   	?></td></tr>
+				<tr><td>Currency Code:</td><td><?php echo 'NIS'   	?></td></tr>
 				<tr><td>&nbsp;</td></tr>
 				<tr><td><h3>Shipping Method</h3></td></tr>
 				<form action="return.php" name="order_confirm" method="POST">
 					<tr><td>Shipping methods: </td><td><select name="shipping_method" id="shipping_method" style="width: 250px;" class="required-entry">
 						<optgroup label="United Parcel Service" style="font-style:normal;">
 						<option value="2.00">
-						Worldwide Expedited - $2.00</option>
+						Worldwide Expedited - NIS 2.00</option>
 						<option value="3.00">
-						Worldwide Express Saver - $3.00</option>
+						Worldwide Express Saver - NIS 3.00</option>
 						</optgroup>
 						<optgroup label="Flat Rate" style="font-style:normal;">
 						<option value="0.00" selected>
-						Fixed - $0.00</option>
+						Fixed - NIS 0.00</option>
 						</optgroup>
 						</select><br></td></tr>
 					<tr><td><input type="Submit" name="confirm" alt="Check out with PayPal" class="btn btn-primary btn-large" value="Pay Now"></td></tr>

@@ -80,11 +80,6 @@ class Cart
     return;
   }
 
-  public function removeItem($input){
-    unset($this->totalCart->$input);
-    $this->totalCart->total = $this->totalCart->total - 1;
-    return $this->updateSession();
-  }
 
   public function getItemId($item){
     $connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB);

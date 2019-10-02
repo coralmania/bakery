@@ -9,26 +9,25 @@ include('template/head.php');
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <h2 class="h3 mb-3 text-black font-heading-serif">Billing Details</h2>
+        <div class="row ">
+          <div class="col-md-6 mb-5 mb-md-0 ">
+            <h2 class="h3 mb-3 text-black font-heading-serif right_pulling">פרטים אישיים</h2>
             <div class="p-3 p-lg-5 border">
-
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_fname" name="c_fname" value="<?php if ($_SESSION['user_name'] ) {echo $_SESSION['user_name'];}?>">
+              <div class="form-group row right_pulling">
+                <div class="col-md-6 right_pulling">
+                  <label for="c_lname" class="text-black right_pulling ">שם משפחה <span class="text-danger right_pulling">*</span></label>
+                  <input type="text" class="form-control " dir="rtl" id="c_lname" name="c_lname" value="<?php if ($_SESSION['user_lname'] ) {echo $_SESSION['user_lname'];}?>">
                 </div>
-                <div class="col-md-6">
-                  <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_lname" name="c_lname" value="<?php if ($_SESSION['user_lname'] ) {echo $_SESSION['user_lname'];}?>">
+                <div class="col-md-6 right_pulling">
+                  <label for="c_fname" class="text-black right_pulling">שם פרטי<span class="text-danger right_pulling">*</span></label>
+                  <input type="text" class="form-control right_pulling" dir="rtl" id="c_fname" name="c_fname" value="<?php if ($_SESSION['user_name'] ) {echo $_SESSION['user_name'];}?>">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black">Phone </label>
-                  <input type="text" class="form-control" id="c_companyname" name="phone" value="<?php if ($_SESSION['user_phone'] ) {echo $_SESSION['user_phone'];}?>">
+                  <label for="c_companyname" class="text-black right_pulling">טלפון </label>
+                  <input type="text" class="form-control right_pulling"  dir="rtl" id="c_companyname" name="phone" value="<?php if ($_SESSION['user_phone'] ) {echo $_SESSION['user_phone'];}?>">
                 </div>
               </div>
 
@@ -39,33 +38,34 @@ include('template/head.php');
 
             <div class="row mb-5">
               <div class="col-md-12">
-                <h2 class="h3 mb-3 text-black font-heading-serif">Your Order</h2>
+                <h2 class="h3 mb-3 text-black font-heading-serif right_pulling">פרטי ההזמנה שלך</h2>
                 <div class="p-3 p-lg-5 border">
                   <table class="table site-block-order-table mb-5">
                     <thead>
-                      <th>Product</th>
-                      <th>Total</th>
+                      <th class="right_pulling" >סכום כולל</th>
+                      <th class="right_pulling">מוצר</th>
                     </thead>
-                    <tbody>
+                    <tbody class="right_pulling">
                       <?php foreach ($cart->totalCart as $key => $value): ?>
                         <?php if ($key != 'total'): ?>
-                          <tr>
-                            <td><?php echo $key ?><strong class="mx-2">x</strong> <?php echo $value ?></td>
-                            <td><?php echo $value * $cart->getPrice($key) ?>&#8362;</td>
+                          <tr class="right_pulling">
+                            <td class="right_pulling"><?php echo $value * $cart->getPrice($key) ?> &#8362;</td>
+                            <td class="right_pulling"><?php echo $key ?><strong class="mx-2">x</strong> <?php echo $value ?></td>
                           </tr>
-                      <?php endif; ?>
-                    <?php endforeach; ?>
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                      
                       <tr>
-                        <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong><?php echo $cart->getOrderTotal() ?>&#8362;</strong></td>
+                        <td class="text-black font-weight-bold right_pulling" ><strong style="color:green">סכום סופי</strong></td>
+                        <td class="text-black font-weight-bold right_pulling"><strong style="color:green"><?php echo $cart->getOrderTotal() ?> &#8362;</strong></td>
                       </tr>
                     </tbody>
                   </table>
 
                   <div class="border mb-5 p-3">
                     <input type="radio" checked name="" value="">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button"
-                        aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
+                    <h3 class="h6 mb-0 right_pulling"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button"
+                        aria-expanded="false" aria-controls="collapsepaypal">Paypal הזמנה באמצעות </a></h3>
 
                     <div class="collapse" id="collapsepaypal">
                       <div class="py-2 pl-0">
@@ -97,7 +97,7 @@ include('template/head.php');
     </div>
 
   <script>
-    var formdata = {PAYMENTREQUEST_0_AMT: 10 , paymentType:'SALE', PAYMENTREQUEST_0_CURRENCYCODE: 'USD'};
+    var formdata = {PAYMENTREQUEST_0_AMT: 10 , paymentType:'SALE', PAYMENTREQUEST_0_CURRENCYCODE: 'NIS'};
       paypal.Button.render({
             env: 'sandbox',  // sandbox | production
             locale: 'en_US',

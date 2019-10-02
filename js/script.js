@@ -42,7 +42,7 @@ function clearMsg(inputs){
 
 
 function onLogIn(googleUser){
-  if (confirm('?המעכת זיהתה שהינך משתמש גוגל , האם להתחבר מגוגל')) {
+  if (confirm('?המערכת זיהתה שהינך משתמש גוגל , האם להתחבר מגוגל')) {
     var token = googleUser.getAuthResponse().id_token;
     if(token){
       $.ajax({
@@ -58,7 +58,7 @@ function onLogIn(googleUser){
 }
 
 function onSignIn(googleUser){
-  if (confirm('?המעכת זיהתה שהינך משתמש גוגל , האם להתחבר מגוגל')) {
+  if (confirm('?המערכת זיהתה שהינך משתמש גוגל , האם להתחבר מגוגל')) {
     var token = googleUser.getAuthResponse().id_token;
     if(token){
       $.ajax({

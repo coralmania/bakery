@@ -15,7 +15,8 @@
   cursor: pointer;
   font-weight: bold;
   color:black;
-  border-radius:60px 60px 60px 60px;
+  border-radius:60px;
+  padding:5px;
 }
 .img_product{
   width: 100%;
@@ -59,7 +60,6 @@
 
     <?php include('template/footer.php') ?>
 
-<!---->change product function 
     <script type="text/javascript">
       changeContent('all' , true);
 

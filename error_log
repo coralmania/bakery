@@ -1,2 +1,11 @@
 [30-Sep-2019 10:27:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/userOrders.php on line 32
 [30-Sep-2019 10:28:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/coralma/public_html/userOrders.php on line 32
+[01-Oct-2019 15:57:48 UTC] PHP Parse error:  syntax error, unexpected '':מחיר למשתתף '' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/coralma/public_html/workshopItemPage.php on line 24
+[01-Oct-2019 17:22:18 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:22:37 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:23:14 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:23:23 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:23:30 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:23:33 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:23:41 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9
+[01-Oct-2019 17:24:57 UTC] PHP Fatal error:  Call to undefined method Cart::addToCartProdect() in /home/coralma/public_html/addToCart.php on line 9

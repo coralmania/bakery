@@ -57,7 +57,6 @@ if (!isset($_SESSION['user_name'])) {
     var userInputPasswordValue = userInputPassword.value;
     var error_password = document.getElementById('error_password_');
     if (userInputPasswordValue) {
-      console.log('start');
       $.ajax({
         url:'server/checkPassword.php',
         type:'POST',
@@ -76,6 +75,7 @@ if (!isset($_SESSION['user_name'])) {
       })
     }
   }
+  
   function changePassword(){
     let new_password = document.querySelector('input[name="pass"]').value;
     let re_new_password = document.querySelector('input[name="re_pass"]').value;

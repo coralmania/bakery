@@ -20,7 +20,9 @@ $workshopsById = $workshop->getWorkShopsById($id)[0];
           <div class="col-lg-5">
             <h2 class=" right_pulling text-primary"><?php echo $workshopsById['title'] ?></h2>
             <br><br>
-            <h3 class="right_pulling"><b><?php echo $workshopsById['fname'] . ' ' . $workshopsById['lname'] ?></b></h3>
+            <h3 class="right_pulling"><b><?php echo $workshopsById['fname'] . ' ' . $workshopsById['lname'] ?></b></h3><br><br>
+            <h3 class="right_pulling"><b><?php echo $workshopsById['price']. ' :מחיר למשתתף '  ?></b></h3>
+
             <br>
             <br>
             <div class="right_pulling">

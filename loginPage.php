@@ -38,7 +38,7 @@ if(isset($_SESSION['user_name'])){
       </div>
       <input style="float:right;cursor: pointer!important;" class="btn btn-primary" onclick="login()" value="התחבר"></input>
       <br><br>
-      <p style="float:right"><a href="signinPage.php">לא חבר שלנו?</a></p>
+      <p style="float:right"><a href="signinPage.php">לא חבר שלנו? הירשם כאן </a></p>
     </form>
     <div class="g-signin2" data-onsuccess="onLogIn"></div>
     </div>

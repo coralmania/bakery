@@ -17,9 +17,10 @@ if (isset($_GET['submit'])) {
 <center>
 <br><br><br>
 <form method="GET" action="#">
-    <div class="row right_pulling" style="margin-right:300px">
+    <div class="row filter_recipes"  >
       <input name="submit" type="submit" class="btn btn-primary"  value="חפש מתכון"></input>
       &nbsp;&nbsp;
+      <br>
       <select name="hours" id="" class="pull-right">
         <option value="all">לא משנה </option>
         <option value="60">עד שעה</option>
