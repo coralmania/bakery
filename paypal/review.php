@@ -1,16 +1,16 @@
-<?php 
+<?php
 	/*
 	* Call to GetExpressCheckoutDetails
 	*/
 
-	require_once ("paypal_functions.php"); 
+	require_once ("paypal_functions.php");
 
 	/*
-    * in paypalfunctions.php in a session variable 
+    * in paypalfunctions.php in a session variable
 	*/
 	$_SESSION['payer_id'] =	$_GET['PayerID'];
 
-	// Check to see if the Request object contains a variable named 'token'	
+	// Check to see if the Request object contains a variable named 'token'
 	$token = "";
 
 	if (isset($_REQUEST['token']))
@@ -19,19 +19,19 @@
 		$_SESSION['TOKEN'] = $token;
 	}
 
-	// If the Request object contains the variable 'token' then it means that the user is coming from PayPal site.	
+	// If the Request object contains the variable 'token' then it means that the user is coming from PayPal site.
 	if ( $token != "" )
 	{
 		/*
 		* Calls the GetExpressCheckoutDetails API call
 		*/
 		$resArrayGetExpressCheckout = GetShippingDetails( $token );
-		$ackGetExpressCheckout = strtoupper($resArrayGetExpressCheckout["ACK"]);	 
-		if( $ackGetExpressCheckout == "SUCCESS" || $ackGetExpressCheckout == "SUCESSWITHWARNING") 
+		$ackGetExpressCheckout = strtoupper($resArrayGetExpressCheckout["ACK"]);
+		if( $ackGetExpressCheckout == "SUCCESS" || $ackGetExpressCheckout == "SUCESSWITHWARNING")
 		{
 			/*
-			* The information that is returned by the GetExpressCheckoutDetails call should be integrated by the partner into his Order Review 
-			* page		
+			* The information that is returned by the GetExpressCheckoutDetails call should be integrated by the partner into his Order Review
+			* page
 			*/
 			$email 				= $resArrayGetExpressCheckout["EMAIL"]; // ' Email address of payer.
 			$payerId 			= $resArrayGetExpressCheckout["PAYERID"]; // ' Unique PayPal customer account identification number.
@@ -43,20 +43,20 @@
 			$shipToStreet		= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOSTREET"]; // ' First street address.
 			$shipToCity			= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOCITY"]; // ' Name of city.
 			$shipToState		= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOSTATE"]; // ' State or province
-			$shipToCntryCode	= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE"]; // ' Country code. 
+			$shipToCntryCode	= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE"]; // ' Country code.
 			$shipToZip			= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPTOZIP"]; // ' Zip code or other country-specific postal code.
-			$addressStatus 		= $resArrayGetExpressCheckout["ADDRESSSTATUS"]; // ' Status of street address on file with PayPal 
+			$addressStatus 		= $resArrayGetExpressCheckout["ADDRESSSTATUS"]; // ' Status of street address on file with PayPal
 			$totalAmt   		= $resArrayGetExpressCheckout["PAYMENTREQUEST_0_AMT"]; // ' Total Amount to be paid by buyer
-			$currencyCode       = $resArrayGetExpressCheckout["PAYMENTREQUEST_0_CURRENCYCODE"]; // 'Currency being used 
-			$shippingAmt        = $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPPINGAMT"]; // 'Currency being used 
+			$currencyCode       = $resArrayGetExpressCheckout["PAYMENTREQUEST_0_CURRENCYCODE"]; // 'Currency being used
+			$shippingAmt        = $resArrayGetExpressCheckout["PAYMENTREQUEST_0_SHIPPINGAMT"]; // 'Currency being used
 			/*
 			* Add check here to verify if the payment amount stored in session is the same as the one returned from GetExpressCheckoutDetails API call
 			* Checks whether the session has been compromised
 			*/
 			if($_SESSION["Payment_Amount"] != $totalAmt || $_SESSION["currencyCodeType"] != $currencyCode)
 			exit("Parameters in session do not match those in PayPal API calls");
-		} 
-		else  
+		}
+		else
 		{
 			//Display a user friendly Error on the page using any of the following error information returned by PayPal
 			$ErrorCode = urldecode($resArrayGetExpressCheckout["L_ERRORCODE0"]);
@@ -72,14 +72,14 @@
 		}
 	}
 	include("header.php");
-?>	
+?>
 	<div class="span4">
 	</div>
 	<div class="span5">
 		<table>
 			<tbody>
 				<tr><td><h5>Shipping Address</h5></td><td><h4>Billing Address</h4></td></tr>
-				<tr><td><?php echo $shipToName;		?></td><td><?php echo $shipToName;		?></td></tr>
+				<tr><td><?php echo $_SESSION['user_name'];		?></td><td><?php echo 'Sweet Story';		?></td></tr>
 				<tr><td><?php echo $shipToStreet;	?></td><td><?php echo $shipToStreet;	?></td></tr>
 				<tr><td><?php echo $shipToCity;		?></td><td><?php echo $shipToCity;		?></td></tr>
 				<tr><td><?php echo $shipToState;	?></td><td><?php echo $shipToState;		?></td></tr>

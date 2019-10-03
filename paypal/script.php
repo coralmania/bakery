@@ -69,38 +69,6 @@ EOT;
   // setEventGoogleCalendar();
 }
 
-function setEventGoogleCalendar($workShops) {
-  require_once ('vendor/autoload.php');
-
-  // $client = new Google_Client();
-  // $client->setAuthConfig('client_secret_522541522704-lhhvic5no1kv2lgbsb42o61a28jca3jh.apps.googleusercontent.com.json');
-  // $client->addScope(Google_Service_Drive::Calendar);
-  // $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
-  // $client->setRedirectUri($redirect_uri);
-
-  // if (isset($_GET['code'])) {
-  //   $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-  // var_dump($token);
-  // }
-
-  // https://www.googleapis.com/auth/admin.directory.resource.calendar
-  // Create a state token to prevent request forgery.
-  // Store it in the session for later validation.
-  // $client = new Google_Client();
-  // $client->setApplicationName("Client_Library_Examples");
-  // $client->setDeveloperKey("YOUR_APP_KEY");
-
-  // $service = new Google_Service_Books($client);
-  // $optParams = array('filter' => 'free-ebooks');
-  // $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);
-
-  // foreach ($results as $item) {
-  //   echo $item['volumeInfo']['title'], "<br /> \n";
-  // }
-}
-
-
-
 
 
 

@@ -126,3 +126,6 @@
 [01-Oct-2019 09:55:52 UTC] PHP Warning:  mysqli::mysqli(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
 [01-Oct-2019 09:55:52 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/coralma/public_html/server/logedInGoogle.php on line 5
 [01-Oct-2019 09:55:52 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/coralma/public_html/server/logedInGoogle.php on line 6
+[02-Oct-2019 21:32:04 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/server/signin.php on line 39
+[02-Oct-2019 21:32:54 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/server/signin.php on line 39
+[02-Oct-2019 21:33:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/coralma/public_html/server/signin.php on line 39

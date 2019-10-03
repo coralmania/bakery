@@ -10,7 +10,8 @@ if ($email && $fname && $lname && $tel && $msg) {
     $headers = $email;
     $subject = "צור קשר מייל";
     $to = "From: koralsadna@gmail.com";
-    mail($to,$subject,$msg,$headers);
+    if(mail($to,$subject,$msg,$headers));
+    $ms = 'ההודעה נשלחה למערכת, ניהיה בקשר';
   }
 }
 
@@ -27,6 +28,14 @@ if ($email && $fname && $lname && $tel && $msg) {
         <div class="section-title mb-5 ">
           <center><h2>דברו איתנו</h2></center>
         </div>
+        <?php if (isset($ms)): ?>
+     <div class="alert alert-success" role="alert">
+          <center>
+            <?php echo $ms;
+            unset($ms); ?>
+           </center>
+        </div>
+        <?php endif; ?>
         <form method="post" action="#">
 
               <div class="row">

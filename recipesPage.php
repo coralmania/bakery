@@ -37,8 +37,7 @@ if (isset($_GET['submit'])) {
 
 <?php if (count($relevantRecipes)): ?>
 
-        <div class="row">
-
+    <div class="row">
         <?php foreach ($relevantRecipes as $key => $value): ?>
         <div class="col-lg-4 mb-5 col-md-6">
             <div class="wine_v_1 text-center pb-4">
@@ -53,6 +52,6 @@ if (isset($_GET['submit'])) {
         </div>
             <?php endforeach; ?>
             <?php endif; ?>
-        </div>
+    </div>
 
 <?php include('template/footer.php') ?>

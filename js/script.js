@@ -64,10 +64,9 @@ function onSignIn(googleUser){
       $.ajax({
         url:'https://oauth2.googleapis.com/tokeninfo?id_token='+token,
         success:function (data){
-          if(data){
-            if (isUserExists(data)) {
-
-            }else{
+            var userData = data;
+          if(userData){
+            if (!isUserExists(data)) {
               fillInForm(data);
             }
           }
@@ -77,9 +76,7 @@ function onSignIn(googleUser){
   }
 }
 
-  function logInGooleUser(data){
-    console.log(data);
-  }
+  
 
 
 function isUserExists(data){
@@ -95,7 +92,6 @@ function isUserExists(data){
           data:({user_info:data}),
           type:'POST',
           success:function (data){
-            console.log(data);
             window.location = 'index.php';
           }
         })
@@ -104,6 +100,26 @@ function isUserExists(data){
     }
   })
 }
+
+
+
+  function googleLogin(data){
+    $.ajax({
+      url:'server/logedInGoogle.php',
+      data:{user_info:data},
+      type:'POST',
+      success:function (data){
+        if (data == 'OK') {
+          window.location = 'index.php';
+        }else{
+          window.location = 'signinPage.php';
+        }
+      }
+    })
+  }
+
+
+
 
 function fillInForm(data){
     let email = document.querySelector('input[name="email"]');
@@ -148,20 +164,6 @@ function fillInForm(data){
 
 
 
-  function googleLogin(data){
-    $.ajax({
-      url:'server/logedInGoogle.php',
-      data:{user_info:data},
-      type:'POST',
-      success:function (data){
-        if (data == 'OK') {
-          window.location = 'index.php';
-        }else{
-          window.location = 'signinPage.php';
-        }
-      }
-    })
-  }
 
   function signin(){
     var valid_signin = true;
@@ -227,6 +229,9 @@ function fillInForm(data){
         success:function (data){
           if (data == 'OK') {
             window.location = 'index.php';
+          }else{
+             emailInputErrorMsg.html('מייל זה כבר קיים במערכת');
+             document.getElementById('exampleInputEmail1').focus();
           }
         }
       })

@@ -1,11 +1,5 @@
-<?php include('template/head.php') ?>
-<?php
- if(isset($_POST['submit'])){
-   $tmp = $_POST['submit'];
-   unset($_POST['submit']);
-   $cart->addToCart($tmp);
-   $cart->totalCart->$tmp = $cart->totalCart->$tmp+1;
-}
+<?php 
+include('template/head.php');
   $items = get_items(1);
 ?>
 
@@ -63,10 +57,6 @@
     <script type="text/javascript">
       changeContent('all' , true);
 
-// add to cart functions 
-      $('.prevent').on('click', function(e) {
-        e.preventDefault();
-      })
 
       $('.product-add-to-cart').on('click', function(e) {
         e.preventDefault();

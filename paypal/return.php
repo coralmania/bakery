@@ -106,6 +106,8 @@
 	$resArrayDoExpressCheckout = ConfirmPayment ( $finalPaymentAmount );
 	$ackDoExpressCheckout = strtoupper($resArrayDoExpressCheckout["ACK"]);
 	//include('header.php');
+	$user_name = $_SESSION['user_name'];
+	$user_last_name = $_SESSION['lname'];
 	include('script.php');
 	session_unset();   // free all session variables
 	session_destroy(); //destroy session
@@ -138,8 +140,8 @@
 
     			<div class="hero-unit">
     			<!-- Display the Transaction Details-->
-    			<h4> <?php echo($firstName); ?>
-    				<?php echo($lastName); ?> , Thank you for your Order </h4>
+    			<h4> <?php echo($user_name); ?>
+    				<?php echo($user_last_name); ?> , Thank you for your Order </h4>
 
     			<h4> Shipping Details: </h4>
 				<?php echo($shipToName) ?><br>

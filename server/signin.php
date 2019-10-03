@@ -22,18 +22,7 @@
         $_SESSION['user_email'] = $email;
         echo 'OK';die;
       }else{
-        $sql = "SELECT * from users WHERE email = '$email'";
-        if ($result = $connection->query($sql)) {
-          while ($row = $result->fetch_assoc()) {
-            $_SESSION['user_name'] = $row['fname'];
-            $_SESSION['user_lname'] = $row['lname'];
-            $_SESSION['user_phone'] = $row['phone'];
-            $_SESSION['user_role'] = $row['role'];
-            $_SESSION['user_id'] = $row['user_id'];
-            $_SESSION['user_email'] = $email;
-          }
-          echo 'OK';die;
-        }
+       
       }
     }
   }
